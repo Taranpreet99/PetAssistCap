@@ -16,7 +16,7 @@ class TableCell: UITableViewCell {
         
         
         primaryLabel.textAlignment = NSTextAlignment.left
-        primaryLabel.font = UIFont.boldSystemFont(ofSize: 15)
+        primaryLabel.font = UIFont.boldSystemFont(ofSize: 20)
         primaryLabel.backgroundColor = UIColor.clear
         primaryLabel.textColor = UIColor.black
         

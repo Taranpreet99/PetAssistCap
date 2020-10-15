@@ -31,7 +31,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // The hight of each row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
+        return 50
     }
     
     // Row content
@@ -42,8 +42,21 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
         let article = listData[rowNum]
         
         tableCell.primaryLabel.text =  article
+        tableCell.textLabel?.numberOfLines = 2
+        
+        if (indexPath.item % 2 == 0) {
+            // odd
+            tableCell.backgroundColor = .white
+          //  [tableCell, setBackgroundColor:[UIColor blueColor]];
+        } else {
+            // even
+            tableCell.backgroundColor = .gray
+          //  [tableCell, setBackgroundColor:[UIColor whiteColor]];
+        }
         
         tableCell.accessoryType = .disclosureIndicator
+        
+        
         
         return tableCell
     }
