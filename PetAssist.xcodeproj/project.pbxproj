@@ -161,6 +161,7 @@
 		AEABA03E2418116600733848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEABA0412418116600733848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEABA0432418116600733848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB2CBAC253896F900E4D1E8 /* PetAssist-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PetAssist-Bridging-Header.h"; sourceTree = "<group>"; };
 		AEC41D58252B44B500C00B2C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		AEC41D5A252B451200C00B2C /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
 		AEC41D5C252B465000C00B2C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -335,6 +336,7 @@
 		AEABA04C2418169700733848 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AEB2CBAC253896F900E4D1E8 /* PetAssist-Bridging-Header.h */,
 				AEABA0392418116200733848 /* ViewController.swift */,
 				AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */,
 				AE53F5E2242DFB73005F9FC3 /* ViewSiteViewController.swift */,
