@@ -8,6 +8,6 @@
 
 #ifndef PetAssist_Bridging_Header_h
 #define PetAssist_Bridging_Header_h
-
+#import "FSCalendar.h";
 
 #endif /* PetAssist_Bridging_Header_h */
