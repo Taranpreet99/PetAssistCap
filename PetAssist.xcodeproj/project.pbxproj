@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE0A5A6424353EB100D91828 /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0A5A6324353EB100D91828 /* EventsViewController.swift */; };
+		AE0A5A6624354B4600D91828 /* petBg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6524354B4600D91828 /* petBg.jpg */; };
+		AE0A5A6C24354DD400D91828 /* petBg1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6924354DD400D91828 /* petBg1.jpg */; };
+		AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6D24354F7B00D91828 /* petBg2.jpg */; };
+		AE0A5A742435522900D91828 /* bonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6F2435522900D91828 /* bonbg.png */; };
+		AE0A5A8124355BE600D91828 /* buttons2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A7F24355BE600D91828 /* buttons2.png */; };
+		AE39037D252CB3BE00642FAC /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037C252CB3BE00642FAC /* signin.png */; };
+		AE39037F252CB3C400642FAC /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037E252CB3C300642FAC /* signup.png */; };
+		AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE390385252CC3EB00642FAC /* InformationViewController.swift */; };
+		AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F1831252F58AE00453A01 /* TableCell.swift */; };
+		AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */; };
+		AE53F5CB242DEA33005F9FC3 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */; };
+		AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5CD242DF1A3005F9FC3 /* burns.png */; };
+		AE53F5D6242DF1A3005F9FC3 /* resuscitation.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5CE242DF1A3005F9FC3 /* resuscitation.png */; };
+		AE53F5D8242DF1A3005F9FC3 /* bleeding.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5D0242DF1A3005F9FC3 /* bleeding.png */; };
+		AE53F5D9242DF1A3005F9FC3 /* eyeinjury.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5D1242DF1A3005F9FC3 /* eyeinjury.png */; };
+		AE53F5DA242DF1A3005F9FC3 /* choking.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5D2242DF1A3005F9FC3 /* choking.png */; };
+		AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5D3242DF1A3005F9FC3 /* convulsions.png */; };
+		AE53F5E1242DFB49005F9FC3 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5E0242DFB49005F9FC3 /* WebKit.framework */; };
+		AE53F5E3242DFB73005F9FC3 /* ViewSiteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5E2242DFB73005F9FC3 /* ViewSiteViewController.swift */; };
+		AE53F5E824308C3B005F9FC3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5E724308C3A005F9FC3 /* MapKit.framework */; };
+		AE53F5EA24308C4D005F9FC3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5E924308C4D005F9FC3 /* CoreLocation.framework */; };
+		AE53F5EC24308C76005F9FC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */; };
+		AE53F5EE24308EF1005F9FC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */; };
+		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
+		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
+		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
+		AE888EE1252F2AC5009AAC21 /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC3252F2AC4009AAC21 /* FSCalendarDelegationProxy.m */; };
+		AE888EE2252F2AC5009AAC21 /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC5252F2AC4009AAC21 /* FSCalendarDelegationFactory.m */; };
+		AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ECC252F2AC4009AAC21 /* FSCalendarCell.m */; };
+		AE888EE4252F2AC5009AAC21 /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ECD252F2AC4009AAC21 /* FSCalendarStickyHeader.m */; };
+		AE888EE5252F2AC5009AAC21 /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ECE252F2AC4009AAC21 /* FSCalendar.m */; };
+		AE888EE6252F2AC5009AAC21 /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ECF252F2AC4009AAC21 /* FSCalendarCollectionViewLayout.m */; };
+		AE888EE7252F2AC5009AAC21 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED0252F2AC4009AAC21 /* FSCalendarWeekdayView.m */; };
+		AE888EE8252F2AC5009AAC21 /* FSCalendarSeparatorDecorationView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED3252F2AC4009AAC21 /* FSCalendarSeparatorDecorationView.m */; };
+		AE888EE9252F2AC5009AAC21 /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED5252F2AC4009AAC21 /* FSCalendarExtensions.m */; };
+		AE888EEA252F2AC5009AAC21 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED7252F2AC4009AAC21 /* FSCalendarConstants.m */; };
+		AE888EEB252F2AC5009AAC21 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED8252F2AC4009AAC21 /* FSCalendarCalculator.m */; };
+		AE888EEC252F2AC5009AAC21 /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888ED9252F2AC4009AAC21 /* FSCalendarHeaderView.m */; };
+		AE888EED252F2AC5009AAC21 /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EDD252F2AC4009AAC21 /* FSCalendarTransitionCoordinator.m */; };
+		AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EDF252F2AC4009AAC21 /* FSCalendarAppearance.m */; };
+		AE8E76632435644500AC80DF /* petBg3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E76622435644400AC80DF /* petBg3.jpg */; };
+		AE8E7670243578FB00AC80DF /* petbg8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766A243578FA00AC80DF /* petbg8.jpg */; };
+		AE8E7671243578FB00AC80DF /* petbg9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766B243578FA00AC80DF /* petbg9.jpg */; };
+		AE8E7672243578FB00AC80DF /* petbg5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766C243578FA00AC80DF /* petbg5.jpeg */; };
+		AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766D243578FA00AC80DF /* petbg4.jpg */; };
+		AE8E7674243578FB00AC80DF /* petbg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766E243578FA00AC80DF /* petbg6.jpg */; };
+		AE8E7675243578FB00AC80DF /* petbg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766F243578FA00AC80DF /* petbg7.jpg */; };
+		AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */ = {isa = PBXBuildFile; fileRef = AE97D36E252CCCC400E7D3F6 /* firstAid.png */; };
+		AE97D371252F476600E7D3F6 /* articles.png in Resources */ = {isa = PBXBuildFile; fileRef = AE97D370252F476600E7D3F6 /* articles.png */; };
+		AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */; };
+		AEA0D275242E682C001D0CF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */; };
+		AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D279242E6DC8001D0CF9 /* Data.swift */; };
+		AEA0D27D242E72E4001D0CF9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */; };
+		AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */; };
+		AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */; };
+		AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */ = {isa = PBXBuildFile; fileRef = AEA0D288242E863E001D0CF9 /* PetAssistDB.db */; };
+		AEA0D28B242FF284001D0CF9 /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */; };
+		AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */; };
+		AEABA0382418116200733848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0372418116200733848 /* AppDelegate.swift */; };
+		AEABA03A2418116200733848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0392418116200733848 /* ViewController.swift */; };
+		AEABA03D2418116200733848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03B2418116200733848 /* Main.storyboard */; };
+		AEABA03F2418116600733848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03E2418116600733848 /* Assets.xcassets */; };
+		AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA0402418116600733848 /* LaunchScreen.storyboard */; };
+		AEC41D59252B44B500C00B2C /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D58252B44B500C00B2C /* map.png */; };
+		AEC41D5B252B451300C00B2C /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5A252B451200C00B2C /* reminder.png */; };
+		AEC41D5D252B465100C00B2C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5C252B465000C00B2C /* info.png */; };
+		AEC41D5F252B470700C00B2C /* training.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5E252B470700C00B2C /* training.png */; };
+		AEC41D61252B48E300C00B2C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D60252B48E200C00B2C /* menu.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AE0A5A6324353EB100D91828 /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		AE0A5A6524354B4600D91828 /* petBg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petBg.jpg; sourceTree = "<group>"; };
+		AE0A5A6924354DD400D91828 /* petBg1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petBg1.jpg; sourceTree = "<group>"; };
+		AE0A5A6D24354F7B00D91828 /* petBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petBg2.jpg; sourceTree = "<group>"; };
+		AE0A5A6F2435522900D91828 /* bonbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonbg.png; sourceTree = "<group>"; };
+		AE0A5A7F24355BE600D91828 /* buttons2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttons2.png; sourceTree = "<group>"; };
+		AE39037C252CB3BE00642FAC /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
+		AE39037E252CB3C300642FAC /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
+		AE390385252CC3EB00642FAC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		AE3F1831252F58AE00453A01 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidViewController.swift; sourceTree = "<group>"; };
+		AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
+		AE53F5CD242DF1A3005F9FC3 /* burns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burns.png; sourceTree = "<group>"; };
+		AE53F5CE242DF1A3005F9FC3 /* resuscitation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = resuscitation.png; sourceTree = "<group>"; };
+		AE53F5D0242DF1A3005F9FC3 /* bleeding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bleeding.png; sourceTree = "<group>"; };
+		AE53F5D1242DF1A3005F9FC3 /* eyeinjury.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eyeinjury.png; sourceTree = "<group>"; };
+		AE53F5D2242DF1A3005F9FC3 /* choking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choking.png; sourceTree = "<group>"; };
+		AE53F5D3242DF1A3005F9FC3 /* convulsions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convulsions.png; sourceTree = "<group>"; };
+		AE53F5E0242DFB49005F9FC3 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		AE53F5E2242DFB73005F9FC3 /* ViewSiteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSiteViewController.swift; sourceTree = "<group>"; };
+		AE53F5E724308C3A005F9FC3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		AE53F5E924308C4D005F9FC3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		AE888EC1252F2AC4009AAC21 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		AE888EC2252F2AC4009AAC21 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		AE888EC3252F2AC4009AAC21 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		AE888EC4252F2AC4009AAC21 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		AE888EC5252F2AC4009AAC21 /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		AE888EC6252F2AC4009AAC21 /* FSCalendarSeparatorDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarSeparatorDecorationView.h; sourceTree = "<group>"; };
+		AE888EC7252F2AC4009AAC21 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		AE888EC8252F2AC4009AAC21 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		AE888EC9252F2AC4009AAC21 /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		AE888ECA252F2AC4009AAC21 /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		AE888ECB252F2AC4009AAC21 /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		AE888ECC252F2AC4009AAC21 /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		AE888ECD252F2AC4009AAC21 /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		AE888ECE252F2AC4009AAC21 /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		AE888ECF252F2AC4009AAC21 /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		AE888ED0252F2AC4009AAC21 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		AE888ED1252F2AC4009AAC21 /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		AE888ED2252F2AC4009AAC21 /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		AE888ED3252F2AC4009AAC21 /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
+		AE888ED4252F2AC4009AAC21 /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		AE888ED5252F2AC4009AAC21 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		AE888ED6252F2AC4009AAC21 /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		AE888ED7252F2AC4009AAC21 /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		AE888ED8252F2AC4009AAC21 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		AE888ED9252F2AC4009AAC21 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		AE888EDA252F2AC4009AAC21 /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		AE888EDB252F2AC4009AAC21 /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		AE888EDC252F2AC4009AAC21 /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		AE888EDD252F2AC4009AAC21 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		AE888EDF252F2AC4009AAC21 /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		AE8E76622435644400AC80DF /* petBg3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petBg3.jpg; sourceTree = "<group>"; };
+		AE8E766A243578FA00AC80DF /* petbg8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg8.jpg; sourceTree = "<group>"; };
+		AE8E766B243578FA00AC80DF /* petbg9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg9.jpg; sourceTree = "<group>"; };
+		AE8E766C243578FA00AC80DF /* petbg5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg5.jpeg; sourceTree = "<group>"; };
+		AE8E766D243578FA00AC80DF /* petbg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg4.jpg; sourceTree = "<group>"; };
+		AE8E766E243578FA00AC80DF /* petbg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg6.jpg; sourceTree = "<group>"; };
+		AE8E766F243578FA00AC80DF /* petbg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg7.jpg; sourceTree = "<group>"; };
+		AE97D36E252CCCC400E7D3F6 /* firstAid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstAid.png; sourceTree = "<group>"; };
+		AE97D370252F476600E7D3F6 /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articles.png; sourceTree = "<group>"; };
+		AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
+		AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		AEA0D279242E6DC8001D0CF9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AEA0D288242E863E001D0CF9 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
+		AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
+		AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPickerViewController.swift; sourceTree = "<group>"; };
+		AEABA0342418116200733848 /* PetAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEABA0372418116200733848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AEABA0392418116200733848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEABA03C2418116200733848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AEABA03E2418116600733848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AEABA0412418116600733848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AEABA0432418116600733848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEC41D58252B44B500C00B2C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		AEC41D5A252B451200C00B2C /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
+		AEC41D5C252B465000C00B2C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
+		AEC41D5E252B470700C00B2C /* training.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = training.png; sourceTree = "<group>"; };
+		AEC41D60252B48E200C00B2C /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AEABA0312418116200733848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE53F5EC24308C76005F9FC3 /* CoreGraphics.framework in Frameworks */,
+				AE53F5EA24308C4D005F9FC3 /* CoreLocation.framework in Frameworks */,
+				AE53F5E824308C3B005F9FC3 /* MapKit.framework in Frameworks */,
+				AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */,
+				AEA0D27D242E72E4001D0CF9 /* libsqlite3.tbd in Frameworks */,
+				AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */,
+				AE53F5E1242DFB49005F9FC3 /* WebKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE53F5CC242DF18D005F9FC3 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				AE97D370252F476600E7D3F6 /* articles.png */,
+				AE97D36E252CCCC400E7D3F6 /* firstAid.png */,
+				AE39037E252CB3C300642FAC /* signup.png */,
+				AE39037C252CB3BE00642FAC /* signin.png */,
+				AEC41D60252B48E200C00B2C /* menu.png */,
+				AEC41D5E252B470700C00B2C /* training.png */,
+				AEC41D5C252B465000C00B2C /* info.png */,
+				AEC41D58252B44B500C00B2C /* map.png */,
+				AEC41D5A252B451200C00B2C /* reminder.png */,
+				AE8E766D243578FA00AC80DF /* petbg4.jpg */,
+				AE8E766C243578FA00AC80DF /* petbg5.jpeg */,
+				AE8E766E243578FA00AC80DF /* petbg6.jpg */,
+				AE8E766F243578FA00AC80DF /* petbg7.jpg */,
+				AE8E766A243578FA00AC80DF /* petbg8.jpg */,
+				AE8E766B243578FA00AC80DF /* petbg9.jpg */,
+				AE8E76622435644400AC80DF /* petBg3.jpg */,
+				AE0A5A7F24355BE600D91828 /* buttons2.png */,
+				AE0A5A6F2435522900D91828 /* bonbg.png */,
+				AE0A5A6D24354F7B00D91828 /* petBg2.jpg */,
+				AE0A5A6924354DD400D91828 /* petBg1.jpg */,
+				AE0A5A6524354B4600D91828 /* petBg.jpg */,
+				AE53F5D1242DF1A3005F9FC3 /* eyeinjury.png */,
+				AE53F5CD242DF1A3005F9FC3 /* burns.png */,
+				AE53F5D2242DF1A3005F9FC3 /* choking.png */,
+				AE53F5D0242DF1A3005F9FC3 /* bleeding.png */,
+				AE53F5CE242DF1A3005F9FC3 /* resuscitation.png */,
+				AE53F5D3242DF1A3005F9FC3 /* convulsions.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		AE53F5DF242DFB49005F9FC3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */,
+				AE53F5E924308C4D005F9FC3 /* CoreLocation.framework */,
+				AE53F5E724308C3A005F9FC3 /* MapKit.framework */,
+				AE7E9E0024300A4600E68054 /* AVFoundation.framework */,
+				AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */,
+				AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */,
+				AE53F5E0242DFB49005F9FC3 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE888EBF252F2AC4009AAC21 /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */,
+				AE888EC1252F2AC4009AAC21 /* FSCalendarWeekdayView.h */,
+				AE888EC2252F2AC4009AAC21 /* FSCalendarCollectionViewLayout.h */,
+				AE888EC3252F2AC4009AAC21 /* FSCalendarDelegationProxy.m */,
+				AE888EC4252F2AC4009AAC21 /* FSCalendarExtensions.h */,
+				AE888EC5252F2AC4009AAC21 /* FSCalendarDelegationFactory.m */,
+				AE888EC6252F2AC4009AAC21 /* FSCalendarSeparatorDecorationView.h */,
+				AE888EC7252F2AC4009AAC21 /* FSCalendarCalculator.h */,
+				AE888EC8252F2AC4009AAC21 /* FSCalendarHeaderView.h */,
+				AE888EC9252F2AC4009AAC21 /* FSCalendarConstants.h */,
+				AE888ECA252F2AC4009AAC21 /* FSCalendarAppearance.h */,
+				AE888ECB252F2AC4009AAC21 /* FSCalendarTransitionCoordinator.h */,
+				AE888ECC252F2AC4009AAC21 /* FSCalendarCell.m */,
+				AE888ECD252F2AC4009AAC21 /* FSCalendarStickyHeader.m */,
+				AE888ECE252F2AC4009AAC21 /* FSCalendar.m */,
+				AE888ECF252F2AC4009AAC21 /* FSCalendarCollectionViewLayout.m */,
+				AE888ED0252F2AC4009AAC21 /* FSCalendarWeekdayView.m */,
+				AE888ED1252F2AC4009AAC21 /* FSCalendarCollectionView.h */,
+				AE888ED2252F2AC4009AAC21 /* FSCalendarDynamicHeader.h */,
+				AE888ED3252F2AC4009AAC21 /* FSCalendarSeparatorDecorationView.m */,
+				AE888ED4252F2AC4009AAC21 /* FSCalendarDelegationFactory.h */,
+				AE888ED5252F2AC4009AAC21 /* FSCalendarExtensions.m */,
+				AE888ED6252F2AC4009AAC21 /* FSCalendarDelegationProxy.h */,
+				AE888ED7252F2AC4009AAC21 /* FSCalendarConstants.m */,
+				AE888ED8252F2AC4009AAC21 /* FSCalendarCalculator.m */,
+				AE888ED9252F2AC4009AAC21 /* FSCalendarHeaderView.m */,
+				AE888EDA252F2AC4009AAC21 /* FSCalendarStickyHeader.h */,
+				AE888EDB252F2AC4009AAC21 /* FSCalendar.h */,
+				AE888EDC252F2AC4009AAC21 /* FSCalendarCell.h */,
+				AE888EDD252F2AC4009AAC21 /* FSCalendarTransitionCoordinator.m */,
+				AE888EDF252F2AC4009AAC21 /* FSCalendarAppearance.m */,
+			);
+			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+		AEA0D276242E6B58001D0CF9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0D288242E863E001D0CF9 /* PetAssistDB.db */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		AEABA02B2418116200733848 = {
+			isa = PBXGroup;
+			children = (
+				AEABA0362418116200733848 /* PetAssist */,
+				AEABA0352418116200733848 /* Products */,
+				AE53F5DF242DFB49005F9FC3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AEABA0352418116200733848 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AEABA0342418116200733848 /* PetAssist.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEABA0362418116200733848 /* PetAssist */ = {
+			isa = PBXGroup;
+			children = (
+				AE888EBF252F2AC4009AAC21 /* FSCalendar */,
+				AEA0D276242E6B58001D0CF9 /* Database */,
+				AE53F5CC242DF18D005F9FC3 /* Images */,
+				AEABA04C2418169700733848 /* ViewControllers */,
+				AEABA04B2418167000733848 /* Classes */,
+				AEABA04A2418166600733848 /* Storyboards */,
+				AEABA03E2418116600733848 /* Assets.xcassets */,
+				AEABA0432418116600733848 /* Info.plist */,
+			);
+			path = PetAssist;
+			sourceTree = "<group>";
+		};
+		AEABA04A2418166600733848 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				AEABA0402418116600733848 /* LaunchScreen.storyboard */,
+				AEABA03B2418116200733848 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		AEABA04B2418167000733848 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */,
+				AEABA0372418116200733848 /* AppDelegate.swift */,
+				AEA0D279242E6DC8001D0CF9 /* Data.swift */,
+				AE3F1831252F58AE00453A01 /* TableCell.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AEABA04C2418169700733848 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				AEABA0392418116200733848 /* ViewController.swift */,
+				AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */,
+				AE53F5E2242DFB73005F9FC3 /* ViewSiteViewController.swift */,
+				AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */,
+				AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */,
+				AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */,
+				AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */,
+				AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */,
+				AE0A5A6324353EB100D91828 /* EventsViewController.swift */,
+				AE390385252CC3EB00642FAC /* InformationViewController.swift */,
+				AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */,
+				AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AEABA0332418116200733848 /* PetAssist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEABA0462418116600733848 /* Build configuration list for PBXNativeTarget "PetAssist" */;
+			buildPhases = (
+				AEABA0302418116200733848 /* Sources */,
+				AEABA0312418116200733848 /* Frameworks */,
+				AEABA0322418116200733848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PetAssist;
+			productName = PetAssist;
+			productReference = AEABA0342418116200733848 /* PetAssist.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AEABA02C2418116200733848 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Taranpreet Singh Yu Zhang";
+				TargetAttributes = {
+					AEABA0332418116200733848 = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+				};
+			};
+			buildConfigurationList = AEABA02F2418116200733848 /* Build configuration list for PBXProject "PetAssist" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AEABA02B2418116200733848;
+			productRefGroup = AEABA0352418116200733848 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AEABA0332418116200733848 /* PetAssist */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEABA0322418116200733848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE8E7674243578FB00AC80DF /* petbg6.jpg in Resources */,
+				AE8E76632435644500AC80DF /* petBg3.jpg in Resources */,
+				AE39037F252CB3C400642FAC /* signup.png in Resources */,
+				AE8E7675243578FB00AC80DF /* petbg7.jpg in Resources */,
+				AE8E7670243578FB00AC80DF /* petbg8.jpg in Resources */,
+				AE0A5A6C24354DD400D91828 /* petBg1.jpg in Resources */,
+				AEC41D61252B48E300C00B2C /* menu.png in Resources */,
+				AE39037D252CB3BE00642FAC /* signin.png in Resources */,
+				AE8E7671243578FB00AC80DF /* petbg9.jpg in Resources */,
+				AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */,
+				AE53F5D8242DF1A3005F9FC3 /* bleeding.png in Resources */,
+				AE0A5A8124355BE600D91828 /* buttons2.png in Resources */,
+				AE53F5DA242DF1A3005F9FC3 /* choking.png in Resources */,
+				AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */,
+				AEC41D5D252B465100C00B2C /* info.png in Resources */,
+				AEC41D59252B44B500C00B2C /* map.png in Resources */,
+				AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */,
+				AE53F5D9242DF1A3005F9FC3 /* eyeinjury.png in Resources */,
+				AE8E7672243578FB00AC80DF /* petbg5.jpeg in Resources */,
+				AE0A5A742435522900D91828 /* bonbg.png in Resources */,
+				AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */,
+				AE0A5A6624354B4600D91828 /* petBg.jpg in Resources */,
+				AEC41D5B252B451300C00B2C /* reminder.png in Resources */,
+				AE53F5D6242DF1A3005F9FC3 /* resuscitation.png in Resources */,
+				AE97D371252F476600E7D3F6 /* articles.png in Resources */,
+				AEC41D5F252B470700C00B2C /* training.png in Resources */,
+				AEABA03F2418116600733848 /* Assets.xcassets in Resources */,
+				AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */,
+				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,
+				AEABA03D2418116200733848 /* Main.storyboard in Resources */,
+				AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AEABA0302418116200733848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */,
+				AE888EEA252F2AC5009AAC21 /* FSCalendarConstants.m in Sources */,
+				AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */,
+				AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */,
+				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
+				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
+				AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */,
+				AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */,
+				AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */,
+				AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */,
+				AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */,
+				AEA0D275242E682C001D0CF9 /* HomePageViewController.swift in Sources */,
+				AE888EE1252F2AC5009AAC21 /* FSCalendarDelegationProxy.m in Sources */,
+				AE888EED252F2AC5009AAC21 /* FSCalendarTransitionCoordinator.m in Sources */,
+				AE888EE6252F2AC5009AAC21 /* FSCalendarCollectionViewLayout.m in Sources */,
+				AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */,
+				AE53F5EE24308EF1005F9FC3 /* MapViewController.swift in Sources */,
+				AE888EE9252F2AC5009AAC21 /* FSCalendarExtensions.m in Sources */,
+				AE53F5CB242DEA33005F9FC3 /* SiteCell.swift in Sources */,
+				AEA0D28B242FF284001D0CF9 /* TutorialsViewController.swift in Sources */,
+				AE888EE7252F2AC5009AAC21 /* FSCalendarWeekdayView.m in Sources */,
+				AEABA0382418116200733848 /* AppDelegate.swift in Sources */,
+				AE888EE5252F2AC5009AAC21 /* FSCalendar.m in Sources */,
+				AE888EE8252F2AC5009AAC21 /* FSCalendarSeparatorDecorationView.m in Sources */,
+				AE888EEB252F2AC5009AAC21 /* FSCalendarCalculator.m in Sources */,
+				AE888EE4252F2AC5009AAC21 /* FSCalendarStickyHeader.m in Sources */,
+				AE53F5E3242DFB73005F9FC3 /* ViewSiteViewController.swift in Sources */,
+				AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */,
+				AE888EE2252F2AC5009AAC21 /* FSCalendarDelegationFactory.m in Sources */,
+				AE888EEC252F2AC5009AAC21 /* FSCalendarHeaderView.m in Sources */,
+				AE0A5A6424353EB100D91828 /* EventsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AEABA03B2418116200733848 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEABA03C2418116200733848 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AEABA0402418116600733848 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AEABA0412418116600733848 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AEABA0442418116600733848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AEABA0452418116600733848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AEABA0472418116600733848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PetAssist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AEABA0482418116600733848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PetAssist/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AEABA02F2418116200733848 /* Build configuration list for PBXProject "PetAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEABA0442418116600733848 /* Debug */,
+				AEABA0452418116600733848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEABA0462418116600733848 /* Build configuration list for PBXNativeTarget "PetAssist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEABA0472418116600733848 /* Debug */,
+				AEABA0482418116600733848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AEABA02C2418116200733848 /* Project object */;
+}
