@@ -17,6 +17,10 @@ class EventsViewController: UIViewController {
     //Connected to date picker
     @IBOutlet weak var myDatePicker: UIDatePicker!
     
+    @IBAction func unwindToEvents(sender: UIStoryboardSegue){
+        
+    }
+    
     //app delegate object ot use AppDelegate in this file
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     

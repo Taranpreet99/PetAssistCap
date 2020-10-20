@@ -42,7 +42,8 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
         let article = listData[rowNum]
         
         tableCell.primaryLabel.text =  article
-        tableCell.textLabel?.numberOfLines = 2
+        tableCell.textLabel?.numberOfLines = 0
+        tableCell.textLabel?.lineBreakMode = .byWordWrapping
         
         if (indexPath.item % 2 == 0) {
             // odd
