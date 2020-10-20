@@ -71,6 +71,9 @@
 		AEABA03D2418116200733848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03B2418116200733848 /* Main.storyboard */; };
 		AEABA03F2418116600733848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03E2418116600733848 /* Assets.xcassets */; };
 		AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA0402418116600733848 /* LaunchScreen.storyboard */; };
+		AEBF5ADC253F112D00B92721 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AD9253F112C00B92721 /* food.png */; };
+		AEBF5ADD253F112D00B92721 /* problems.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADA253F112C00B92721 /* problems.png */; };
+		AEBF5ADE253F112D00B92721 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADB253F112D00B92721 /* new.png */; };
 		AEC41D59252B44B500C00B2C /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D58252B44B500C00B2C /* map.png */; };
 		AEC41D5B252B451300C00B2C /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5A252B451200C00B2C /* reminder.png */; };
 		AEC41D5D252B465100C00B2C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5C252B465000C00B2C /* info.png */; };
@@ -162,6 +165,9 @@
 		AEABA0412418116600733848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEABA0432418116600733848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEB2CBAC253896F900E4D1E8 /* PetAssist-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PetAssist-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEBF5AD9253F112C00B92721 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		AEBF5ADA253F112C00B92721 /* problems.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = problems.png; sourceTree = "<group>"; };
+		AEBF5ADB253F112D00B92721 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
 		AEC41D58252B44B500C00B2C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		AEC41D5A252B451200C00B2C /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
 		AEC41D5C252B465000C00B2C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 		AE53F5CC242DF18D005F9FC3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AEBF5AD9253F112C00B92721 /* food.png */,
+				AEBF5ADB253F112D00B92721 /* new.png */,
+				AEBF5ADA253F112C00B92721 /* problems.png */,
 				AE97D370252F476600E7D3F6 /* articles.png */,
 				AE97D36E252CCCC400E7D3F6 /* firstAid.png */,
 				AE39037E252CB3C300642FAC /* signup.png */,
@@ -415,10 +424,12 @@
 				AE8E7674243578FB00AC80DF /* petbg6.jpg in Resources */,
 				AE8E76632435644500AC80DF /* petBg3.jpg in Resources */,
 				AE39037F252CB3C400642FAC /* signup.png in Resources */,
+				AEBF5ADC253F112D00B92721 /* food.png in Resources */,
 				AE8E7675243578FB00AC80DF /* petbg7.jpg in Resources */,
 				AE8E7670243578FB00AC80DF /* petbg8.jpg in Resources */,
 				AE0A5A6C24354DD400D91828 /* petBg1.jpg in Resources */,
 				AEC41D61252B48E300C00B2C /* menu.png in Resources */,
+				AEBF5ADE253F112D00B92721 /* new.png in Resources */,
 				AE39037D252CB3BE00642FAC /* signin.png in Resources */,
 				AE8E7671243578FB00AC80DF /* petbg9.jpg in Resources */,
 				AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */,
@@ -438,6 +449,7 @@
 				AE53F5D6242DF1A3005F9FC3 /* resuscitation.png in Resources */,
 				AE97D371252F476600E7D3F6 /* articles.png in Resources */,
 				AEC41D5F252B470700C00B2C /* training.png in Resources */,
+				AEBF5ADD253F112D00B92721 /* problems.png in Resources */,
 				AEABA03F2418116600733848 /* Assets.xcassets in Resources */,
 				AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */,
 				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,

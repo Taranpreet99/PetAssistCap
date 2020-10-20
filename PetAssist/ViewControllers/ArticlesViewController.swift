@@ -42,18 +42,18 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
         let article = listData[rowNum]
         
         tableCell.primaryLabel.text =  article
-        tableCell.textLabel?.numberOfLines = 0
-        tableCell.textLabel?.lineBreakMode = .byWordWrapping
+       tableCell.textLabel?.numberOfLines = 0
+       // tableCell.textLabel?.lineBreakMode = .byWordWrapping
         
-        if (indexPath.item % 2 == 0) {
+      ///  if (indexPath.item % 2 == 0) {
             // odd
-            tableCell.backgroundColor = .white
+        //    tableCell.backgroundColor = .white
           //  [tableCell, setBackgroundColor:[UIColor blueColor]];
-        } else {
+      //  } else {
             // even
-            tableCell.backgroundColor = .gray
+          //  tableCell.backgroundColor = .gray
           //  [tableCell, setBackgroundColor:[UIColor whiteColor]];
-        }
+        //}
         
         tableCell.accessoryType = .disclosureIndicator
         
