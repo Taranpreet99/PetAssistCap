@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reminders-->
+        <!--Events View Controller-->
         <scene sceneID="byS-Fj-gW3">
             <objects>
                 <viewController id="sEd-Jq-0hd" customClass="EventsViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,11 +38,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Reminder" id="dOA-0X-I0S">
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pxs-hN-WoY">
-                                            <connections>
-                                                <segue destination="tKP-n0-N7S" kind="presentation" id="0GE-XN-lCX"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Pxs-hN-WoY"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -72,7 +68,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="naC-Mc-0DL"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reminders" image="reminder.png" id="xiB-3V-ue5"/>
                     <connections>
                         <outlet property="myDatePicker" destination="rJI-D2-SfB" id="qYJ-we-2xy"/>
                         <outlet property="reminderText" destination="pwp-xU-5PM" id="Qcl-LC-dM7"/>
@@ -137,7 +132,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XA0-yh-eMS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reminers" selectedImage="reminder.png" id="30e-mb-qi3"/>
+                    <tabBarItem key="tabBarItem" title="Reminders" image="reminder.png" selectedImage="reminder.png" id="zJ0-G1-T6x"/>
                     <connections>
                         <outlet property="calendar" destination="vYa-qP-Gdy" id="hIp-sQ-kuF"/>
                     </connections>
@@ -341,10 +336,10 @@
             </objects>
             <point key="canvasLocation" x="-3529" y="1547"/>
         </scene>
-        <!--View Controller-->
+        <!--Dog Food View Controller-->
         <scene sceneID="zCK-5S-ePR">
             <objects>
-                <viewController id="T4W-GH-4QW" sceneMemberID="viewController">
+                <viewController id="T4W-GH-4QW" customClass="DogFoodViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O9U-Mk-xzi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -593,10 +588,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tKP-n0-N7S" kind="relationship" relationship="viewControllers" id="LgZ-XD-Qj9"/>
+                        <segue destination="tKP-n0-N7S" kind="relationship" relationship="viewControllers" id="6Dm-L1-FMf"/>
                         <segue destination="pqw-WR-WJE" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
-                        <segue destination="fsq-J2-Yvo" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
                         <segue destination="CEv-7j-fqv" kind="relationship" relationship="viewControllers" id="Xa3-OT-dVz"/>
+                        <segue destination="fsq-J2-Yvo" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4yv-wa-8ZI"/>
                     </connections>
                 </tabBarController>
@@ -806,7 +801,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="L0K-8G-AVC" kind="presentation" id="hQq-8F-OdF"/>
+                                                        <action selector="onClickNewPet" destination="fsq-J2-Yvo" eventType="touchUpInside" id="baA-9F-3hF"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-LM-EMc">
@@ -825,10 +820,13 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="4BP-rH-46x"/>
+                    <connections>
+                        <segue destination="hTy-xE-Uz3" kind="presentation" identifier="infoToNav" id="IJI-4a-64P"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVq-1Q-8l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2626.0869565217395" y="86.383928571428569"/>
+            <point key="canvasLocation" x="-2728" y="49"/>
         </scene>
         <!--Training Picker View Controller-->
         <scene sceneID="gOi-sg-d1W">
@@ -1095,6 +1093,9 @@
                                                     <state key="normal" title="Dog Food">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="T4W-GH-4QW" kind="presentation" id="Pdi-NT-USp"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="atz-Ht-vvx">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
@@ -1350,6 +1351,9 @@
                                                     <state key="normal" title="Foods to Avoid">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onClickNewPet" destination="vG9-QE-t6U" eventType="touchDragInside" id="OX0-Ju-pOj"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="PwT-b0-zXM">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
@@ -1371,174 +1375,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pHm-6y-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="j5a-Bl-17P" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-1771" y="802"/>
+            <point key="canvasLocation" x="-1781" y="897"/>
         </scene>
-        <!--Information Center-->
-        <scene sceneID="cf6-Oe-IHc">
+        <!--PetAssist-->
+        <scene sceneID="jzq-4f-ffj">
             <objects>
-                <tableViewController id="L0K-8G-AVC" customClass="InformationViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Zx0-Uf-Ob0">
+                <viewController id="heB-Fy-odz" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fd4-Xt-8Ot">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mno-i2-40b">
+                                <rect key="frame" x="0.0" y="26" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="PetAssist" id="LX7-vW-rrH"/>
+                                </items>
+                            </navigationBar>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K2V-K1-SVp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="5iY-5y-KCC">
+                                <rect key="frame" x="190" y="431" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" name="selectedContentBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="GEF-J8-UL1">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Adopt a pet" id="LhL-RP-EZt">
-                                    <barButtonItem key="leftBarButtonItem" title="Back" id="HuE-8n-twO">
-                                        <connections>
-                                            <segue destination="kJC-dU-VNI" kind="unwind" unwindAction="unwindToInformationWithSender:" id="95G-WO-4mg"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
-                        <sections>
-                            <tableViewSection id="Uan-Ic-Fgc">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="WwB-1k-TJy">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WwB-1k-TJy" id="hw2-fl-suK">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thinking of adopting a pet?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-tX-WYc">
-                                                    <rect key="frame" x="20" y="0.0" width="322" height="83"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="yKr-rj-7Bf">
-                                        <rect key="frame" x="0.0" y="127" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yKr-rj-7Bf" id="EVz-NK-c9b">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SeK-Fv-vVq">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Dog Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstAid.png" translatesAutoresizingMaskIntoConstraints="NO" id="xAk-EY-lIN">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="0mW-U0-3HV">
-                                        <rect key="frame" x="0.0" y="179" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0mW-U0-3HV" id="4v1-Bf-MPB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBc-zX-LXt">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Cat Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="articles.png" translatesAutoresizingMaskIntoConstraints="NO" id="GBK-ef-RGq">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="TBm-Z2-q2y">
-                                        <rect key="frame" x="0.0" y="231" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TBm-Z2-q2y" id="4qo-H3-6jI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djb-VD-7Y7">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Bird Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="Efh-35-pMx">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="yiw-YJ-vCy">
-                                        <rect key="frame" x="0.0" y="283" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yiw-YJ-vCy" id="e6H-Dk-YAa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="one-AD-bhh">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Fish Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="problems.png" translatesAutoresizingMaskIntoConstraints="NO" id="dOa-1i-adF">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="LjP-hg-CyI">
-                                        <rect key="frame" x="0.0" y="335" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LjP-hg-CyI" id="Xet-VP-7e2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyR-nI-Fom">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Foods to Avoid">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="2ne-jZ-2Cc">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="L0K-8G-AVC" id="Dk5-dq-hY8"/>
-                            <outlet property="delegate" destination="L0K-8G-AVC" id="PYs-Sa-XMw"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="rCw-GF-oVe"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nA8-YY-7Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="kJC-dU-VNI" userLabel="Exit" sceneMemberID="exit"/>
+                        <viewLayoutGuide key="safeArea" id="j2a-RV-gik"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PetAssist" id="kdF-F5-Hy7"/>
+                    <connections>
+                        <outlet property="activity" destination="5iY-5y-KCC" id="c0U-Mo-WHN"/>
+                        <outlet property="webView" destination="K2V-K1-SVp" id="ooH-cC-SeA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixa-vz-eaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-952.17391304347836" y="801.5625"/>
+            <point key="canvasLocation" x="-89.855072463768124" y="801.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="L5X-iR-dLv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTy-xE-Uz3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="US9-vs-ZYS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="heB-Fy-odz" kind="relationship" relationship="rootViewController" id="tZH-5c-yX9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhx-lj-Wyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-980" y="802"/>
         </scene>
     </scenes>
     <resources>
@@ -1565,6 +1463,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="4yv-wa-8ZI"/>
         <segue reference="KVh-QB-OBX"/>
-        <segue reference="LgZ-XD-Qj9"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -16,7 +16,7 @@ class TableCell: UITableViewCell {
         
         
         primaryLabel.textAlignment = NSTextAlignment.left
-        primaryLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        primaryLabel.font = UIFont.boldSystemFont(ofSize: 30)
         primaryLabel.backgroundColor = UIColor.clear
         primaryLabel.textColor = UIColor.black
         
@@ -40,7 +40,7 @@ class TableCell: UITableViewCell {
     
     override func layoutSubviews() {
         
-        var f = CGRect(x: 5, y: 5, width: 460, height: 15)
+        var f = CGRect(x: 10, y: 5, width: 460, height: 30)
         primaryLabel.frame = f
         
         

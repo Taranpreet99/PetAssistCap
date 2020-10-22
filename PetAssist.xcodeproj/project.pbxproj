@@ -32,6 +32,7 @@
 		AE53F5EC24308C76005F9FC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */; };
 		AE53F5EE24308EF1005F9FC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */; };
 		AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62F81225419D6000107D36 /* DogFoodViewController.swift */; };
+		AE62F8172541A82600107D36 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62F8162541A82600107D36 /* NavigationViewController.swift */; };
 		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
 		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
 		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
@@ -113,6 +114,7 @@
 		AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		AE62F81225419D6000107D36 /* DogFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFoodViewController.swift; sourceTree = "<group>"; };
+		AE62F8162541A82600107D36 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				AE390385252CC3EB00642FAC /* InformationViewController.swift */,
 				AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */,
 				AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */,
+				AE62F8162541A82600107D36 /* NavigationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */,
 				AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */,
 				AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */,
+				AE62F8172541A82600107D36 /* NavigationViewController.swift in Sources */,
 				AEA0D275242E682C001D0CF9 /* HomePageViewController.swift in Sources */,
 				AE888EE1252F2AC5009AAC21 /* FSCalendarDelegationProxy.m in Sources */,
 				AE888EED252F2AC5009AAC21 /* FSCalendarTransitionCoordinator.m in Sources */,
