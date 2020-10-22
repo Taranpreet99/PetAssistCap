@@ -19,7 +19,7 @@ class InformationViewController: UITableViewController{
     
     @IBAction func onClickNewPet(){
         mainDelegate.selectedURL = "https://www.raywenderlich.com/5758454-uiscrollview-tutorial-getting-started"
-        performSegue(withIdentifier: "infoToNav", sender: nil)
+        performSegue(withIdentifier: "infoToWeb", sender: nil)
         
     }
     
