@@ -88,6 +88,7 @@
 		AEC41D61252B48E300C00B2C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D60252B48E200C00B2C /* menu.png */; };
 		AEC856222541AAC7005BBD52 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AEC856212541AAC7005BBD52 /* Assets.bundle */; };
 		AEC856252541AB21005BBD52 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC856242541AB21005BBD52 /* YTPlayerView.m */; };
+		AEC856272541B0AE005BBD52 /* TrainingVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC856262541B0AD005BBD52 /* TrainingVideoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -192,6 +193,7 @@
 		AEC856212541AAC7005BBD52 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		AEC856232541AB21005BBD52 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		AEC856242541AB21005BBD52 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		AEC856262541B0AD005BBD52 /* TrainingVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TrainingVideoViewController.swift; path = ../../../../Documents/PetAssistCap/PetAssist/ViewControllers/TrainingVideoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -350,9 +352,9 @@
 		AEABA0362418116200733848 /* PetAssist */ = {
 			isa = PBXGroup;
 			children = (
+				AEC856212541AAC7005BBD52 /* Assets.bundle */,
 				AEC856232541AB21005BBD52 /* YTPlayerView.h */,
 				AEC856242541AB21005BBD52 /* YTPlayerView.m */,
-				AEC856212541AAC7005BBD52 /* Assets.bundle */,
 				AE888EBF252F2AC4009AAC21 /* FSCalendar */,
 				AEA0D276242E6B58001D0CF9 /* Database */,
 				AE53F5CC242DF18D005F9FC3 /* Images */,
@@ -403,6 +405,7 @@
 				AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */,
 				AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */,
 				AE62F8162541A82600107D36 /* NavigationViewController.swift */,
+				AEC856262541B0AD005BBD52 /* TrainingVideoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -527,9 +530,9 @@
 				AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */,
 				AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */,
 				AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */,
-				AE54598225419BFA00A85809 /* TrainingVideoViewController.swift in Sources */,
 				AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */,
 				AE62F8172541A82600107D36 /* NavigationViewController.swift in Sources */,
+				AEC856272541B0AE005BBD52 /* TrainingVideoViewController.swift in Sources */,
 				AEA0D275242E682C001D0CF9 /* HomePageViewController.swift in Sources */,
 				AE888EE1252F2AC5009AAC21 /* FSCalendarDelegationProxy.m in Sources */,
 				AE888EED252F2AC5009AAC21 /* FSCalendarTransitionCoordinator.m in Sources */,
