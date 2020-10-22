@@ -31,6 +31,7 @@
 		AE53F5EA24308C4D005F9FC3 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5E924308C4D005F9FC3 /* CoreLocation.framework */; };
 		AE53F5EC24308C76005F9FC3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */; };
 		AE53F5EE24308EF1005F9FC3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */; };
+		AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62F81225419D6000107D36 /* DogFoodViewController.swift */; };
 		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
 		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
 		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
@@ -74,6 +75,11 @@
 		AEBF5ADC253F112D00B92721 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AD9253F112C00B92721 /* food.png */; };
 		AEBF5ADD253F112D00B92721 /* problems.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADA253F112C00B92721 /* problems.png */; };
 		AEBF5ADE253F112D00B92721 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADB253F112D00B92721 /* new.png */; };
+		AEBF5AE4253F253E00B92721 /* bird.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADF253F253D00B92721 /* bird.png */; };
+		AEBF5AE5253F253E00B92721 /* avoid.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AE0253F253D00B92721 /* avoid.png */; };
+		AEBF5AE7253F253E00B92721 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AE2253F253E00B92721 /* dog.png */; };
+		AEBF5AE8253F253E00B92721 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AE3253F253E00B92721 /* fish.png */; };
+		AEBF5AEA253F25A100B92721 /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AE9253F25A100B92721 /* cat.png */; };
 		AEC41D59252B44B500C00B2C /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D58252B44B500C00B2C /* map.png */; };
 		AEC41D5B252B451300C00B2C /* reminder.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5A252B451200C00B2C /* reminder.png */; };
 		AEC41D5D252B465100C00B2C /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D5C252B465000C00B2C /* info.png */; };
@@ -106,6 +112,7 @@
 		AE53F5E924308C4D005F9FC3 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AE53F5EB24308C76005F9FC3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		AE62F81225419D6000107D36 /* DogFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFoodViewController.swift; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -168,6 +175,11 @@
 		AEBF5AD9253F112C00B92721 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		AEBF5ADA253F112C00B92721 /* problems.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = problems.png; sourceTree = "<group>"; };
 		AEBF5ADB253F112D00B92721 /* new.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = new.png; sourceTree = "<group>"; };
+		AEBF5ADF253F253D00B92721 /* bird.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bird.png; sourceTree = "<group>"; };
+		AEBF5AE0253F253D00B92721 /* avoid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avoid.png; sourceTree = "<group>"; };
+		AEBF5AE2253F253E00B92721 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		AEBF5AE3253F253E00B92721 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		AEBF5AE9253F25A100B92721 /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
 		AEC41D58252B44B500C00B2C /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		AEC41D5A252B451200C00B2C /* reminder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reminder.png; sourceTree = "<group>"; };
 		AEC41D5C252B465000C00B2C /* info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = info.png; sourceTree = "<group>"; };
@@ -196,18 +208,7 @@
 		AE53F5CC242DF18D005F9FC3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AEBF5AD9253F112C00B92721 /* food.png */,
-				AEBF5ADB253F112D00B92721 /* new.png */,
-				AEBF5ADA253F112C00B92721 /* problems.png */,
-				AE97D370252F476600E7D3F6 /* articles.png */,
-				AE97D36E252CCCC400E7D3F6 /* firstAid.png */,
-				AE39037E252CB3C300642FAC /* signup.png */,
-				AE39037C252CB3BE00642FAC /* signin.png */,
-				AEC41D60252B48E200C00B2C /* menu.png */,
-				AEC41D5E252B470700C00B2C /* training.png */,
-				AEC41D5C252B465000C00B2C /* info.png */,
-				AEC41D58252B44B500C00B2C /* map.png */,
-				AEC41D5A252B451200C00B2C /* reminder.png */,
+				AE62F81525419DAA00107D36 /* Icons */,
 				AE8E766D243578FA00AC80DF /* petbg4.jpg */,
 				AE8E766C243578FA00AC80DF /* petbg5.jpeg */,
 				AE8E766E243578FA00AC80DF /* petbg6.jpg */,
@@ -242,6 +243,38 @@
 				AE53F5E0242DFB49005F9FC3 /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE62F81425419D6800107D36 /* PetFood */ = {
+			isa = PBXGroup;
+			children = (
+				AE62F81225419D6000107D36 /* DogFoodViewController.swift */,
+			);
+			path = PetFood;
+			sourceTree = "<group>";
+		};
+		AE62F81525419DAA00107D36 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				AEBF5AE9253F25A100B92721 /* cat.png */,
+				AEBF5AE0253F253D00B92721 /* avoid.png */,
+				AEBF5ADF253F253D00B92721 /* bird.png */,
+				AEBF5AE2253F253E00B92721 /* dog.png */,
+				AEBF5AE3253F253E00B92721 /* fish.png */,
+				AEBF5AD9253F112C00B92721 /* food.png */,
+				AEBF5ADB253F112D00B92721 /* new.png */,
+				AEBF5ADA253F112C00B92721 /* problems.png */,
+				AE97D370252F476600E7D3F6 /* articles.png */,
+				AE97D36E252CCCC400E7D3F6 /* firstAid.png */,
+				AE39037E252CB3C300642FAC /* signup.png */,
+				AE39037C252CB3BE00642FAC /* signin.png */,
+				AEC41D60252B48E200C00B2C /* menu.png */,
+				AEC41D5E252B470700C00B2C /* training.png */,
+				AEC41D5C252B465000C00B2C /* info.png */,
+				AEC41D58252B44B500C00B2C /* map.png */,
+				AEC41D5A252B451200C00B2C /* reminder.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 		AE888EBF252F2AC4009AAC21 /* FSCalendar */ = {
@@ -345,6 +378,7 @@
 		AEABA04C2418169700733848 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AE62F81425419D6800107D36 /* PetFood */,
 				AEB2CBAC253896F900E4D1E8 /* PetAssist-Bridging-Header.h */,
 				AEABA0392418116200733848 /* ViewController.swift */,
 				AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */,
@@ -421,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEBF5AEA253F25A100B92721 /* cat.png in Resources */,
 				AE8E7674243578FB00AC80DF /* petbg6.jpg in Resources */,
 				AE8E76632435644500AC80DF /* petBg3.jpg in Resources */,
 				AE39037F252CB3C400642FAC /* signup.png in Resources */,
@@ -437,6 +472,7 @@
 				AE0A5A8124355BE600D91828 /* buttons2.png in Resources */,
 				AE53F5DA242DF1A3005F9FC3 /* choking.png in Resources */,
 				AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */,
+				AEBF5AE7253F253E00B92721 /* dog.png in Resources */,
 				AEC41D5D252B465100C00B2C /* info.png in Resources */,
 				AEC41D59252B44B500C00B2C /* map.png in Resources */,
 				AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */,
@@ -446,11 +482,14 @@
 				AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */,
 				AE0A5A6624354B4600D91828 /* petBg.jpg in Resources */,
 				AEC41D5B252B451300C00B2C /* reminder.png in Resources */,
+				AEBF5AE8253F253E00B92721 /* fish.png in Resources */,
 				AE53F5D6242DF1A3005F9FC3 /* resuscitation.png in Resources */,
+				AEBF5AE4253F253E00B92721 /* bird.png in Resources */,
 				AE97D371252F476600E7D3F6 /* articles.png in Resources */,
 				AEC41D5F252B470700C00B2C /* training.png in Resources */,
 				AEBF5ADD253F112D00B92721 /* problems.png in Resources */,
 				AEABA03F2418116600733848 /* Assets.xcassets in Resources */,
+				AEBF5AE5253F253E00B92721 /* avoid.png in Resources */,
 				AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */,
 				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,
 				AEABA03D2418116200733848 /* Main.storyboard in Resources */,
@@ -471,6 +510,7 @@
 				AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */,
 				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
 				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
+				AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */,
 				AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */,
 				AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */,
 				AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */,

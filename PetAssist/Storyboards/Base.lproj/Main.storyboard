@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="sEd-Jq-0hd" customClass="EventsViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1V2-L6-M4o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petbg6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-tI-9Zp">
@@ -80,14 +80,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGc-iI-mW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-749.27536231884062" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-880" y="82"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="fQt-Oc-nBo">
             <objects>
                 <viewController id="tKP-n0-N7S" customClass="CalendarViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VEr-7b-3hC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYa-qP-Gdy" customClass="FSCalendar">
@@ -100,50 +100,51 @@
                                 </connections>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Event Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w2l-hW-ubm">
-                                <rect key="frame" x="20" y="373" width="374" height="46"/>
+                                <rect key="frame" x="19" y="514" width="374" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Event Description" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4mO-OY-W4z">
-                                <rect key="frame" x="18" y="446" width="374" height="46"/>
+                                <rect key="frame" x="17" y="573" width="374" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uoW-bp-QVY">
                                 <rect key="frame" x="-2" y="42" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Scheduler" id="6JV-rW-xbq">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="rV8-wN-Qun">
-                                            <connections>
-                                                <segue destination="kME-xQ-jnu" kind="unwind" unwindAction="unwindToEventsWithSender:" id="fts-NM-sCH"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="PetAssist" id="6JV-rW-xbq"/>
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JWy-Gc-agI">
-                                <rect key="frame" x="180" y="549" width="50" height="46"/>
+                                <rect key="frame" x="179" y="684" width="50" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Add"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add a new event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBC-ks-Iar">
+                                <rect key="frame" x="20" y="459" width="229" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XA0-yh-eMS"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Reminers" selectedImage="reminder.png" id="30e-mb-qi3"/>
                     <connections>
                         <outlet property="calendar" destination="vYa-qP-Gdy" id="hIp-sQ-kuF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gb-Ga-Mfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="kME-xQ-jnu" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="13" y="86"/>
+            <point key="canvasLocation" x="-112" y="82"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="l1U-vh-uvL">
@@ -340,6 +341,41 @@
             </objects>
             <point key="canvasLocation" x="-3529" y="1547"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zCK-5S-ePR">
+            <objects>
+                <viewController id="T4W-GH-4QW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O9U-Mk-xzi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJg-Fv-FUM">
+                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Dog food" id="rs3-LJ-pZ0">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="b5o-hO-77Y"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-lA-2pZ">
+                                <rect key="frame" x="0.0" y="76" width="414" height="820"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="T4W-GH-4QW" id="E4s-4R-Pfu"/>
+                                    <outlet property="delegate" destination="T4W-GH-4QW" id="ASI-dM-iv4"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Lzb-hC-v8M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oXs-6R-447" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2626.0869565217395" y="1502.6785714285713"/>
+        </scene>
         <!--First Aid View Controller-->
         <scene sceneID="cIT-Pu-Tk8">
             <objects>
@@ -469,7 +505,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petBg1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="7B2-hn-t3q">
@@ -557,7 +593,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="sEd-Jq-0hd" kind="relationship" relationship="viewControllers" id="qSo-ax-Ypg"/>
+                        <segue destination="tKP-n0-N7S" kind="relationship" relationship="viewControllers" id="LgZ-XD-Qj9"/>
                         <segue destination="pqw-WR-WJE" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
                         <segue destination="fsq-J2-Yvo" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
                         <segue destination="CEv-7j-fqv" kind="relationship" relationship="viewControllers" id="Xa3-OT-dVz"/>
@@ -1060,7 +1096,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstAid.png" translatesAutoresizingMaskIntoConstraints="NO" id="atz-Ht-vvx">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="atz-Ht-vvx">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1082,7 +1118,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="articles.png" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-ch-p4I">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="qWV-ch-p4I">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1104,7 +1140,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ED-h2-Q6B">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="4ED-h2-Q6B">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1126,7 +1162,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="problems.png" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-SG-qTv">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fish.png" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-SG-qTv">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1148,7 +1184,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-cW-XJf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avoid.png" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-cW-XJf">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1369,10 +1405,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Adopt a pet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-tX-WYc">
-                                                    <rect key="frame" x="20" y="17" width="322" height="49"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thinking of adopting a pet?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-tX-WYc">
+                                                    <rect key="frame" x="20" y="0.0" width="322" height="83"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1502,13 +1538,18 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nA8-YY-7Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="kJC-dU-VNI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-951" y="802"/>
+            <point key="canvasLocation" x="-952.17391304347836" y="801.5625"/>
         </scene>
     </scenes>
     <resources>
         <image name="articles.png" width="24" height="24"/>
+        <image name="avoid.png" width="50" height="50"/>
+        <image name="bird.png" width="50" height="50"/>
         <image name="buttons2.png" width="801" height="414"/>
+        <image name="cat.png" width="50" height="50"/>
+        <image name="dog.png" width="30" height="30"/>
         <image name="firstAid.png" width="24" height="24"/>
+        <image name="fish.png" width="50" height="50"/>
         <image name="food.png" width="200" height="200"/>
         <image name="info.png" width="24" height="24"/>
         <image name="map.png" width="24" height="24"/>
@@ -1522,7 +1563,8 @@
         <image name="training.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ttT-Mo-Cyn"/>
+        <segue reference="4yv-wa-8ZI"/>
         <segue reference="KVh-QB-OBX"/>
+        <segue reference="LgZ-XD-Qj9"/>
     </inferredMetricsTieBreakers>
 </document>
