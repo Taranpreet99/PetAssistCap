@@ -18,7 +18,7 @@ class InformationViewController: UITableViewController{
     }
     
     @IBAction func onClickNewPet(){
-        mainDelegate.selectedURL = "https://www.raywenderlich.com/5758454-uiscrollview-tutorial-getting-started"
+        mainDelegate.selectedURL = "https://www.petmd.com/dog/care/evr_multi_10_things_consider_before_pet_adoption"
         performSegue(withIdentifier: "infoToWeb", sender: nil)
         
     }

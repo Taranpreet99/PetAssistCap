@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PcS-FW-tMk">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PcS-FW-tMk">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +15,7 @@
             <objects>
                 <viewController id="sEd-Jq-0hd" customClass="EventsViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1V2-L6-M4o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petbg6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-tI-9Zp">
@@ -69,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGc-iI-mW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-880" y="82"/>
+            <point key="canvasLocation" x="28.985507246376812" y="81.696428571428569"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="fQt-Oc-nBo">
@@ -135,14 +137,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gb-Ga-Mfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-112" y="82"/>
+            <point key="canvasLocation" x="797.10144927536237" y="81.696428571428569"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="l1U-vh-uvL">
             <objects>
                 <viewController id="Wyo-IQ-XLO" customClass="RegisterViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ulp-pf-8No">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0ip-Qc-7BI">
@@ -240,7 +242,7 @@
             <objects>
                 <viewController id="80a-wr-I0s" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rog-x1-V0P">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQU-LY-y3n">
@@ -288,7 +290,7 @@
             <objects>
                 <viewController id="TrQ-Rd-SqG" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUP-zl-ndx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxZ-Pe-gQG">
@@ -337,7 +339,7 @@
             <objects>
                 <viewController id="T4W-GH-4QW" customClass="DogFoodViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="O9U-Mk-xzi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EJg-Fv-FUM">
@@ -365,29 +367,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXs-6R-447" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2626.0869565217395" y="1502.6785714285713"/>
+            <point key="canvasLocation" x="-2229" y="1575"/>
         </scene>
         <!--First Aid View Controller-->
         <scene sceneID="cIT-Pu-Tk8">
             <objects>
                 <viewController storyboardIdentifier="FirstAid" id="Thm-Da-id7" customClass="FirstAidViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fMP-uC-ItW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qm-yx-iQg">
-                                <rect key="frame" x="0.0" y="32" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="First Aid" id="Mgw-dc-kh6">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="seA-gC-hLD">
-                                            <connections>
-                                                <segue destination="yXp-vQ-wef" kind="unwind" unwindAction="unwindToInformationWithSender:" id="Rqo-96-Sgw"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-Fb-LEm">
                                 <rect key="frame" x="0.0" y="248" width="414" height="648"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -427,53 +416,45 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zz-aX-X5u" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="yXp-vQ-wef" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4258" y="812"/>
+            <point key="canvasLocation" x="-4442" y="812"/>
         </scene>
         <!--Articles View Controller-->
         <scene sceneID="QaM-J9-AWT">
             <objects>
                 <viewController id="cav-rh-v8f" customClass="ArticlesViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kA3-q5-6ZZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A16-cM-yHF">
-                                <rect key="frame" x="0.0" y="30" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Articles" id="HgI-y4-trS">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Jmc-xj-xib">
-                                            <connections>
-                                                <segue destination="flP-hJ-xMd" kind="unwind" unwindAction="unwindToInformationWithSender:" id="vWi-st-tge"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbj-kn-z9v">
-                                <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="JqQ-z3-wxX">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JqQ-z3-wxX" id="ree-Wp-eTS">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <sections/>
-                                <connections>
-                                    <outlet property="dataSource" destination="cav-rh-v8f" id="njc-WT-8n5"/>
-                                    <outlet property="delegate" destination="cav-rh-v8f" id="d1i-sy-lDL"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zZB-ud-6FG"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="Lbj-kn-z9v" id="RAU-6x-FIx"/>
                         <segue destination="TrQ-Rd-SqG" kind="show" identifier="ArticleToSite" id="bWc-ft-iUA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Prh-10-ga5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="flP-hJ-xMd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-3528" y="812"/>
+            <point key="canvasLocation" x="-3528.985507246377" y="811.60714285714278"/>
         </scene>
         <!--Training-->
         <scene sceneID="aRF-o8-Zmp">
@@ -492,7 +473,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="137"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UuY-TT-6kK" id="H1b-0l-4U5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="137"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="136.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -515,7 +496,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSt-lb-pXz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1677" y="82"/>
+            <point key="canvasLocation" x="-768.11594202898561" y="81.696428571428569"/>
         </scene>
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
@@ -611,7 +592,7 @@
                         <segue destination="tKP-n0-N7S" kind="relationship" relationship="viewControllers" id="6Dm-L1-FMf"/>
                         <segue destination="pqw-WR-WJE" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
                         <segue destination="CEv-7j-fqv" kind="relationship" relationship="viewControllers" id="Xa3-OT-dVz"/>
-                        <segue destination="fsq-J2-Yvo" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
+                        <segue destination="7jH-Fp-8YB" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4yv-wa-8ZI"/>
                     </connections>
                 </tabBarController>
@@ -687,13 +668,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
-                            <tableViewSection headerTitle="Articles" id="sF0-sP-Voz">
+                            <tableViewSection id="sF0-sP-Voz">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="gfK-n5-hZr">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gfK-n5-hZr" id="vpQ-G3-108">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Information Center" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLN-a3-M1E">
@@ -707,10 +688,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="0SI-Rm-mzY">
-                                        <rect key="frame" x="0.0" y="111" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="83" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0SI-Rm-mzY" id="tfM-0M-RJo">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bv-Za-QKr">
@@ -721,7 +702,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="Thm-Da-id7" kind="presentation" id="0ww-hY-3PQ"/>
+                                                        <segue destination="Thm-Da-id7" kind="show" id="FUR-51-HlV"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstAid.png" translatesAutoresizingMaskIntoConstraints="NO" id="IJh-j8-BV9">
@@ -732,10 +713,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="2oF-Fi-04z">
-                                        <rect key="frame" x="0.0" y="163" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="135" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2oF-Fi-04z" id="mQh-XK-cWv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdg-4b-wpT">
@@ -746,7 +727,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="cav-rh-v8f" kind="presentation" id="oqz-so-hLP"/>
+                                                        <segue destination="cav-rh-v8f" kind="show" id="XTN-q1-0Ld"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="articles.png" translatesAutoresizingMaskIntoConstraints="NO" id="TR0-0m-cej">
@@ -757,10 +738,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="bQI-tx-zmG">
-                                        <rect key="frame" x="0.0" y="215" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="187" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQI-tx-zmG" id="TJa-O9-Kw7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q0Y-6P-b5R">
@@ -771,7 +752,7 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="Ect-4Y-9OR" kind="presentation" id="4Ac-Jz-CZE"/>
+                                                        <segue destination="Ect-4Y-9OR" kind="show" id="yRN-Bk-FRy"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="SY6-NH-1sc">
@@ -782,10 +763,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="yew-0u-2bd">
-                                        <rect key="frame" x="0.0" y="267" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="239" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yew-0u-2bd" id="W76-hj-XoZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exe-qf-uUB">
@@ -795,9 +776,6 @@
                                                     <state key="normal" title="Pet Worries">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
-                                                    <connections>
-                                                        <segue destination="vG9-QE-t6U" kind="presentation" id="z4r-un-rvC"/>
-                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="problems.png" translatesAutoresizingMaskIntoConstraints="NO" id="jdz-he-HkU">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
@@ -806,28 +784,28 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="9sA-n8-mrW">
-                                        <rect key="frame" x="0.0" y="319" width="414" height="52"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="73" id="9sA-n8-mrW">
+                                        <rect key="frame" x="0.0" y="291" width="414" height="73"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9sA-n8-mrW" id="qHA-c3-4tu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="72.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7e-8C-RCF">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-LM-EMc">
+                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="k7e-8C-RCF">
+                                                    <rect key="frame" x="86" y="-14" width="318" height="94"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Want to adopt a pet?">
+                                                    <state key="normal" title="Things to consider before getting a pet?">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="onClickNewPet" destination="fsq-J2-Yvo" eventType="touchUpInside" id="baA-9F-3hF"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="qGh-LM-EMc">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -839,21 +817,21 @@
                             <outlet property="delegate" destination="fsq-J2-Yvo" id="00i-oi-ZIi"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="4BP-rH-46x"/>
+                    <navigationItem key="navigationItem" title="Information Center" id="LOV-PG-D5P"/>
                     <connections>
-                        <segue destination="hTy-xE-Uz3" kind="presentation" identifier="infoToNav" id="IJI-4a-64P"/>
+                        <segue destination="heB-Fy-odz" kind="show" identifier="infoToWeb" id="9vi-vk-lNn"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EVq-1Q-8l0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2728" y="49"/>
+            <point key="canvasLocation" x="-1794.2028985507247" y="81.696428571428569"/>
         </scene>
         <!--Training Picker View Controller-->
         <scene sceneID="gOi-sg-d1W">
             <objects>
                 <viewController id="M15-6c-0NU" customClass="TrainingPickerViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TwU-Pp-qwL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petbg6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="qiO-SW-zlE">
@@ -966,7 +944,7 @@
             <objects>
                 <viewController id="m8u-wv-R53" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6uq-rd-Xhx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f1q-or-ydv">
@@ -1014,7 +992,7 @@
             <objects>
                 <viewController id="hdJ-Kh-JPm" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAd-xp-N2Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-8g-o25">
@@ -1062,31 +1040,18 @@
             <objects>
                 <tableViewController id="Ect-4Y-9OR" customClass="InformationViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qLU-4x-9To">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="6xe-EA-kv1">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Pet Food" id="fHK-qz-zHM">
-                                    <barButtonItem key="leftBarButtonItem" title="Back" id="djY-Gv-wqU">
-                                        <connections>
-                                            <segue destination="FJf-rR-1gZ" kind="unwind" unwindAction="unwindToInformationWithSender:" id="e3U-3i-sBA"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <sections>
                             <tableViewSection id="FXU-2M-JST">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="QLj-AN-lAb">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QLj-AN-lAb" id="muG-Uc-PDg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="82.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cR-jL-anM">
@@ -1100,10 +1065,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="O40-y6-iEX">
-                                        <rect key="frame" x="0.0" y="155" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="83" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O40-y6-iEX" id="Gmr-7M-8fS">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rlw-Ux-hla">
@@ -1125,10 +1090,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="SkC-aU-poh">
-                                        <rect key="frame" x="0.0" y="207" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="135" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SkC-aU-poh" id="JW3-KP-qtB">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWR-UU-4L5">
@@ -1147,10 +1112,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="VPQ-rl-OXD">
-                                        <rect key="frame" x="0.0" y="259" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="187" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VPQ-rl-OXD" id="1Zf-bv-yUa">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPJ-Qb-Qpq">
@@ -1169,10 +1134,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="yWt-uP-Ssv">
-                                        <rect key="frame" x="0.0" y="311" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="239" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yWt-uP-Ssv" id="eFG-qe-O5w">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e01-cg-q8R">
@@ -1191,10 +1156,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="YtC-V3-UMQ">
-                                        <rect key="frame" x="0.0" y="363" width="414" height="52"/>
+                                        <rect key="frame" x="0.0" y="291" width="414" height="52"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YtC-V3-UMQ" id="exn-wy-UgZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="51.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zb1-Ns-MLc">
@@ -1223,186 +1188,15 @@
                     <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="Pbi-Qi-tns"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjX-Mc-cly" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="FJf-rR-1gZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2626" y="802"/>
-        </scene>
-        <!--Information Center-->
-        <scene sceneID="Pce-T5-h9I">
-            <objects>
-                <tableViewController id="vG9-QE-t6U" customClass="InformationViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0EO-uo-cgc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="sdI-Eb-Zdz">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Pet Worries" id="Ej3-hs-bG7">
-                                    <barButtonItem key="leftBarButtonItem" title="Back" id="KB8-ue-EJk">
-                                        <connections>
-                                            <segue destination="j5a-Bl-17P" kind="unwind" unwindAction="unwindToInformationWithSender:" id="lld-58-hO7"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
-                        <sections>
-                            <tableViewSection id="kNJ-5N-p0H">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="D87-gj-XbT">
-                                        <rect key="frame" x="0.0" y="72" width="414" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D87-gj-XbT" id="y1u-yc-PN7">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pet Worries" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o13-CU-UNC">
-                                                    <rect key="frame" x="20" y="17" width="322" height="49"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="Yau-y8-8fI">
-                                        <rect key="frame" x="0.0" y="155" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yau-y8-8fI" id="ve4-7e-56D">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWv-z4-QaP">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Dog Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="firstAid.png" translatesAutoresizingMaskIntoConstraints="NO" id="sqC-Xe-Q9R">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="FK8-Qt-C1Z">
-                                        <rect key="frame" x="0.0" y="207" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FK8-Qt-C1Z" id="Vkq-e5-IEr">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eW6-vn-52a">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Cat Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="articles.png" translatesAutoresizingMaskIntoConstraints="NO" id="grT-BI-r1t">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="1ES-uM-2T4">
-                                        <rect key="frame" x="0.0" y="259" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ES-uM-2T4" id="cXC-kk-y24">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cfF-x5-LJc">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Bird Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="6VA-NC-9ag">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="pHN-uc-szF">
-                                        <rect key="frame" x="0.0" y="311" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pHN-uc-szF" id="hbu-Ih-PKX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-GX-Lh1">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Fish Food">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="problems.png" translatesAutoresizingMaskIntoConstraints="NO" id="TZf-ET-ExT">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="52" id="IEd-i0-6uO">
-                                        <rect key="frame" x="0.0" y="363" width="414" height="52"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IEd-i0-6uO" id="1uR-lQ-i9i">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hhx-BW-Td6">
-                                                    <rect key="frame" x="86" y="3" width="318" height="48"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Foods to Avoid">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="onClickNewPet" destination="vG9-QE-t6U" eventType="touchDragInside" id="OX0-Ju-pOj"/>
-                                                    </connections>
-                                                </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="new.png" translatesAutoresizingMaskIntoConstraints="NO" id="PwT-b0-zXM">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="vG9-QE-t6U" id="HZl-h9-QRQ"/>
-                            <outlet property="delegate" destination="vG9-QE-t6U" id="WEJ-jN-TtS"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="3r4-xS-jZA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pHm-6y-jWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="j5a-Bl-17P" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="-1781" y="897"/>
+            <point key="canvasLocation" x="-2720" y="812"/>
         </scene>
         <!--PetAssist-->
         <scene sceneID="jzq-4f-ffj">
             <objects>
                 <viewController id="heB-Fy-odz" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd4-Xt-8Ot">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mno-i2-40b">
@@ -1438,25 +1232,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixa-vz-eaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-89.855072463768124" y="801.5625"/>
+            <point key="canvasLocation" x="-1348" y="834"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="L5X-iR-dLv">
+        <!--Information Center-->
+        <scene sceneID="Dta-SQ-gCq">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTy-xE-Uz3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7jH-Fp-8YB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Information Center" image="info.png" id="4BP-rH-46x"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="US9-vs-ZYS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DbU-Z4-FN4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="heB-Fy-odz" kind="relationship" relationship="rootViewController" id="tZH-5c-yX9"/>
+                        <segue destination="fsq-J2-Yvo" kind="relationship" relationship="rootViewController" id="6zv-8k-c2j"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhx-lj-Wyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="49r-V1-xLC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980" y="802"/>
+            <point key="canvasLocation" x="-2704.347826086957" y="81.696428571428569"/>
         </scene>
     </scenes>
     <resources>

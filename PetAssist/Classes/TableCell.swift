@@ -16,10 +16,13 @@ class TableCell: UITableViewCell {
         
         
         primaryLabel.textAlignment = NSTextAlignment.left
-        primaryLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        primaryLabel.font = UIFont.systemFont(ofSize: 25)
         primaryLabel.backgroundColor = UIColor.clear
         primaryLabel.textColor = UIColor.black
+        primaryLabel.numberOfLines = 3
+        primaryLabel.lineBreakMode = .byWordWrapping
         
+    
       
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         contentView.addSubview(primaryLabel)
@@ -40,7 +43,7 @@ class TableCell: UITableViewCell {
     
     override func layoutSubviews() {
         
-        var f = CGRect(x: 10, y: 5, width: 460, height: 30)
+        var f = CGRect(x: 10, y: 5, width: 200, height: 30)
         primaryLabel.frame = f
         
         

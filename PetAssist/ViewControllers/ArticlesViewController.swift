@@ -14,6 +14,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
    
+    @IBOutlet var tableView : UITableView!
 
     var listData = ["The Health and Mood-Boosting Benefits of Pets","Pet obesity is an epidemic","Obesity in Dogs","11 Facts about pet obesity","How to Prevent Obesity In Pets","Treatment of Obesity in Cats and Dogs","5 Reasons Why Pet Obesity Is a Serious Problem","Everything you should know about feeding human food to Dogs and Cats","People Foods to Avoid Feeding Your Pets"]
     
@@ -21,8 +22,13 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.delegate = self
+        tableView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,31 +37,29 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // The hight of each row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return UITableView.automaticDimension
+        
     }
     
     // Row content
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableCell : TableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableCell ?? TableCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
+        let tableCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let rowNum = indexPath.row
         let article = listData[rowNum]
+        tableCell.textLabel?.text = "\(rowNum+1). \(article)"
         
-        tableCell.primaryLabel.text =  article
-       tableCell.textLabel?.numberOfLines = 0
-       // tableCell.textLabel?.lineBreakMode = .byWordWrapping
         
-      ///  if (indexPath.item % 2 == 0) {
-            // odd
-        //    tableCell.backgroundColor = .white
-          //  [tableCell, setBackgroundColor:[UIColor blueColor]];
-      //  } else {
-            // even
-          //  tableCell.backgroundColor = .gray
-          //  [tableCell, setBackgroundColor:[UIColor whiteColor]];
-        //}
+       // tableCell.primaryLabel.text =  article
+        tableCell.textLabel?.numberOfLines = 0
+        tableCell.textLabel?.font = UIFont.systemFont(ofSize: 20)
+        tableCell.textLabel?.lineBreakMode = NSLineBreakMode.byWordWrapping
+        //tableCell.primaryLabel.numberOfLines = 0
+       // /tableCell.primaryLabel.lineBreakMode = NSLineBreakMode.byWordWrapping
         
-        tableCell.accessoryType = .disclosureIndicator
+        
+        
+        //tableCell.accessoryType = .disclosureIndicator
         
         
         
