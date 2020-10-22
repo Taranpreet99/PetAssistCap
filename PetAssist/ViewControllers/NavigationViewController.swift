@@ -1,31 +1,15 @@
 //
-//  InformationViewController.swift
+//  NavigationViewController.swift
 //  PetAssist
 //
-//  Created by xcode on 2020-10-06.
+//  Created by xcode on 2020-10-22.
 //  Copyright © 2020 Taranpreet Singh Yu Zhang. All rights reserved.
 //
 
 import UIKit
 
-class InformationViewController: UITableViewController{
-    
-    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    
-    @IBAction func unwindToInformation(sender : UIStoryboardSegue){
-        
-    }
-    
-    @IBAction func onClickNewPet(){
-        mainDelegate.selectedURL = "https://www.raywenderlich.com/5758454-uiscrollview-tutorial-getting-started"
-        performSegue(withIdentifier: "infoToNav", sender: nil)
-        
-    }
-    
-    
-  
-    
+class NavigationViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
