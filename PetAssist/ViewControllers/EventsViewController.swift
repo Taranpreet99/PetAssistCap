@@ -21,13 +21,22 @@ class EventsViewController: UIViewController {
         
     }
     
+    var chosenDate = ""
+    let dateFormat = "yyyy-MM-dd"
+    let dateFormatter = DateFormatter()
+
     //app delegate object ot use AppDelegate in this file
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print("\(chosenDate)")
+        dateFormatter.dateFormat = dateFormat
         
+        let dateRecieved = dateFormatter.date(from: chosenDate) ?? Date()
+        myDatePicker.setDate(dateRecieved, animated: true)
     }
     
     //Function to set reminder in the reminders app
