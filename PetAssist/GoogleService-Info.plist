@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>28479166249-0hdpva3aklkbjt8pa3su6qjti27cbn2h.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.28479166249-0hdpva3aklkbjt8pa3su6qjti27cbn2h</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0FjzCg_kyuwDEE6xxqCB3676m6KeOUaI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>28479166249</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Taran-Yu.PetAssist</string>
+	<key>PROJECT_ID</key>
+	<string>petassist-12463</string>
+	<key>STORAGE_BUCKET</key>
+	<string>petassist-12463.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:28479166249:ios:e89ca08d9ee1c75f3a0938</string>
+	<key>DATABASE_URL</key>
+	<string>https://petassist-12463.firebaseio.com</string>
+</dict>
+</plist>

@@ -10,10 +10,10 @@ import UIKit
 
 class DogFoodViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    var listData = ["1. Labrador Retriever", "2. German Shepherd", "3. Golden Retrievers", "4. French Bulldogs", "5. Bulldogs", "6. Beagles", "7. Poodles", "8. Rottweilers", "9. German Shorthaired Pointers", "10. Yorkshire Terriers", "11. Boxers" , "12. Dachshunds", "13. Pembroke Welsh Corgis", "14. Siberian Huskies"  ]
+    var listData = ["Labrador Retriever", "German Shepherd", "Golden Retrievers", "French Bulldogs", "Bulldogs", "Beagles", "Poodles", "Rottweilers", "German Shorthaired Pointers", "Yorkshire Terriers", "Boxers" , "Dachshunds" ]
     
     //Array to store source of information URL for each first aid
-    var siteData: [String] = ["https://vcahospitals.com/know-your-pet/testing-for-signs-of-bleeding", "https://animals.howstuffworks.com/pets/how-to-give-first-aid-to-your-dog6.htm", "https://www.youtube.com/watch?v=eo_1OHNc_w4", "https://www.youtube.com/watch?v=ZWQXtlBHU6k", "https://www.thesprucepets.com/eye-injuries-in-dogs-4126601", "https://www.youtube.com/watch?v=cMYSVin-Itw"]
+    var siteData: [String] = ["https://dogfood.guide/labrador-retrievers/","https://dogfood.guide/german-shepherd/", "https://dogfood.guide/golden-retrievers/", "https://dogfood.guide/french-bulldog/", "https://dogfood.guide/bulldog/", "https://dogfood.guide/beagles/","https://dogfood.guide/poodles/", "https://dogfood.guide/rottweilers/", "https://dogfood.guide/german-shorthaired-pointers/","https://dogfood.guide/yorkshire-terriers/", "https://dogfood.guide/boxers/", "https://dogfood.guide/dachshund/"]
     
     
     // Unwind segue to first aid page
@@ -45,7 +45,7 @@ class DogFoodViewController: UIViewController, UITableViewDelegate, UITableViewD
         let tableCell : TableCell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TableCell ?? TableCell(style:UITableViewCell.CellStyle.default, reuseIdentifier: "cell")
         
         let rowNum = indexPath.row
-        let article = listData[rowNum]
+        let article = "\(rowNum+1). " + listData[rowNum]
         
         tableCell.primaryLabel.text =  article
         tableCell.textLabel?.numberOfLines = 0
@@ -60,7 +60,7 @@ class DogFoodViewController: UIViewController, UITableViewDelegate, UITableViewD
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         mainDelegate.selectedURL = siteData[indexPath.row]
         
-        performSegue(withIdentifier: "FirstAidToSite", sender: nil)
+        performSegue(withIdentifier: "DogToSite", sender: nil)
     }
     
     
