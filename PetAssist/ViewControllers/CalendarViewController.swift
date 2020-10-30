@@ -9,10 +9,26 @@
 import UIKit
 import EventKit
 
-class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
-
+class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // create a new cell if needed or reuse an old one
+        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: "cell")!)
+        
+        // set the text from the data model
+        //cell.textLabel?.text = self.animals[indexPath.row]
+        
+        return cell
+    }
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var eventContainer: UIView!
+    @IBOutlet weak var reminderContainer: UIView!
     //Connected to reminder textfield
     @IBOutlet weak var eventText: UITextField!
     @IBOutlet var calendar: FSCalendar!
@@ -60,6 +76,40 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         
     }
     
+    
+    @IBAction func indexChanged(sender: UISegmentedControl) {
+
+        switch segmentedControl.selectedSegmentIndex
+        {
+        case 0:
+            DispatchQueue.main.async {
+
+            
+            self.tableView.isHidden = false
+                self.eventContainer.isHidden = true
+                self.reminderContainer.isHidden = true
+            }
+        case 1:
+            DispatchQueue.main.async {
+                self.tableView.isHidden = true
+                self.eventContainer.isHidden = false
+                self.reminderContainer.isHidden = true
+            }
+
+        case 2:
+            DispatchQueue.main.async {
+            
+                self.tableView.isHidden = true
+                self.eventContainer.isHidden = true
+                self.reminderContainer.isHidden = false
+            }
+        default:
+            break;
+        }
+    }
+
+    
+    
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
 
         guard let eventDate = dateFormatter.date(from: "2020-10-28") else { return 0 }
@@ -81,12 +131,12 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         performSegue(withIdentifier: "goToReminder", sender: self)
     }
     
-    
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        var rvc = segue.destination as! EventsViewController
+        let rvc = segue.destination as! EventsViewController
         rvc.chosenDate = self.dateText
     }
-
+*/
     //Function to set event in the event app
     @IBAction func setEvent(_ sender: AnyObject) {
         

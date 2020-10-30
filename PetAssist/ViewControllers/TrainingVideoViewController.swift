@@ -13,21 +13,33 @@ class TrainingVideoViewController: UIViewController , UITableViewDelegate, UITab
     
     @IBOutlet weak var playerView: YTPlayerView!
     
+    var items: [String] = ["48kekFLZkXU", "B5-1_aR20rE"]
+    //var ytVideos = [Video]()
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath) as! CustomTableViewCell
+        
+       // cell.ytImage.image = UIImage ( named : ytVideos[indexPath.row].)
+        cell.ytVideoName.text = items[indexPath.row]
+        print("\(items[indexPath.row])")
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.playerView.load(withVideoId: items[indexPath.row])
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.playerView.load(withVideoId: "M7lc1UVf-VE")
+        tableView.dataSource = self
+        tableView.delegate = self
+        //self.playerView.load(withVideoId: "M7lc1UVf-VE")
     }
     
     

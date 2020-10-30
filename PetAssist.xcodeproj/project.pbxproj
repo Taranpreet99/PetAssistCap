@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6D24354F7B00D91828 /* petBg2.jpg */; };
 		AE0A5A742435522900D91828 /* bonbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A6F2435522900D91828 /* bonbg.png */; };
 		AE0A5A8124355BE600D91828 /* buttons2.png in Resources */ = {isa = PBXBuildFile; fileRef = AE0A5A7F24355BE600D91828 /* buttons2.png */; };
+		AE3875F7254A8DE500EC1D9E /* YTPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3875F6254A8DE500EC1D9E /* YTPlayerViewController.swift */; };
+		AE3875FA254B19DB00EC1D9E /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3875F9254B19DB00EC1D9E /* Video.swift */; };
+		AE3875FC254BF9FA00EC1D9E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3875FB254BF9FA00EC1D9E /* CustomTableViewCell.swift */; };
 		AE39037D252CB3BE00642FAC /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037C252CB3BE00642FAC /* signin.png */; };
 		AE39037F252CB3C400642FAC /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037E252CB3C300642FAC /* signup.png */; };
 		AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE390385252CC3EB00642FAC /* InformationViewController.swift */; };
@@ -100,6 +103,9 @@
 		AE0A5A6D24354F7B00D91828 /* petBg2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petBg2.jpg; sourceTree = "<group>"; };
 		AE0A5A6F2435522900D91828 /* bonbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bonbg.png; sourceTree = "<group>"; };
 		AE0A5A7F24355BE600D91828 /* buttons2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttons2.png; sourceTree = "<group>"; };
+		AE3875F6254A8DE500EC1D9E /* YTPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTPlayerViewController.swift; sourceTree = "<group>"; };
+		AE3875F9254B19DB00EC1D9E /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		AE3875FB254BF9FA00EC1D9E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		AE39037C252CB3BE00642FAC /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		AE39037E252CB3C300642FAC /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		AE390385252CC3EB00642FAC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -397,6 +403,7 @@
 				AEABA0372418116200733848 /* AppDelegate.swift */,
 				AEA0D279242E6DC8001D0CF9 /* Data.swift */,
 				AE3F1831252F58AE00453A01 /* TableCell.swift */,
+				AE3875F9254B19DB00EC1D9E /* Video.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -420,6 +427,8 @@
 				AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */,
 				AE62F8162541A82600107D36 /* NavigationViewController.swift */,
 				AE6BFBF02547030D008578E5 /* TrainingVideoViewController.swift */,
+				AE3875F6254A8DE500EC1D9E /* YTPlayerViewController.swift */,
+				AE3875FB254BF9FA00EC1D9E /* CustomTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,12 +546,14 @@
 			files = (
 				AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */,
 				AE888EEA252F2AC5009AAC21 /* FSCalendarConstants.m in Sources */,
+				AE3875FA254B19DB00EC1D9E /* Video.swift in Sources */,
 				AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */,
 				AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */,
 				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
 				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
 				AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */,
 				AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */,
+				AE3875F7254A8DE500EC1D9E /* YTPlayerViewController.swift in Sources */,
 				AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */,
 				AE888EE3252F2AC5009AAC21 /* FSCalendarCell.m in Sources */,
 				AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */,
@@ -557,6 +568,7 @@
 				AE53F5EE24308EF1005F9FC3 /* MapViewController.swift in Sources */,
 				AE888EE9252F2AC5009AAC21 /* FSCalendarExtensions.m in Sources */,
 				AE53F5CB242DEA33005F9FC3 /* SiteCell.swift in Sources */,
+				AE3875FC254BF9FA00EC1D9E /* CustomTableViewCell.swift in Sources */,
 				AEA0D28B242FF284001D0CF9 /* TutorialsViewController.swift in Sources */,
 				AE888EE7252F2AC5009AAC21 /* FSCalendarWeekdayView.m in Sources */,
 				AEABA0382418116200733848 /* AppDelegate.swift in Sources */,
