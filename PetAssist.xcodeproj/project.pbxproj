@@ -92,6 +92,11 @@
 		AEC41D61252B48E300C00B2C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D60252B48E200C00B2C /* menu.png */; };
 		AEC856222541AAC7005BBD52 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AEC856212541AAC7005BBD52 /* Assets.bundle */; };
 		AEC856252541AB21005BBD52 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC856242541AB21005BBD52 /* YTPlayerView.m */; };
+		AEE54A37254C9C6300EE6315 /* petIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A36254C9C6200EE6315 /* petIcon.png */; };
+		AEE54A39254C9E8900EE6315 /* OneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */; };
+		AEE54A3B254CD9D500EE6315 /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3A254CD9D400EE6315 /* health.png */; };
+		AEE54A3D254CDCC600EE6315 /* disease.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3C254CDCC600EE6315 /* disease.png */; };
+		AEE54A3F254CE95000EE6315 /* tutorials.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3E254CE95000EE6315 /* tutorials.png */; };
 		AEF7F1AE254885E900BDF6D7 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF7F1AD254885E900BDF6D7 /* Home.png */; };
 		AEF7F1B02548D46900BDF6D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF7F1AF2548D46900BDF6D7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -202,6 +207,11 @@
 		AEC856212541AAC7005BBD52 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		AEC856232541AB21005BBD52 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		AEC856242541AB21005BBD52 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		AEE54A36254C9C6200EE6315 /* petIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petIcon.png; sourceTree = "<group>"; };
+		AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewController.swift; sourceTree = "<group>"; };
+		AEE54A3A254CD9D400EE6315 /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health.png; sourceTree = "<group>"; };
+		AEE54A3C254CDCC600EE6315 /* disease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disease.png; sourceTree = "<group>"; };
+		AEE54A3E254CE95000EE6315 /* tutorials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorials.png; sourceTree = "<group>"; };
 		AEF7F1AD254885E900BDF6D7 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
 		AEF7F1AF2548D46900BDF6D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +292,10 @@
 		AE62F81525419DAA00107D36 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				AEE54A3E254CE95000EE6315 /* tutorials.png */,
+				AEE54A3C254CDCC600EE6315 /* disease.png */,
+				AEE54A3A254CD9D400EE6315 /* health.png */,
+				AEE54A36254C9C6200EE6315 /* petIcon.png */,
 				AEF7F1AD254885E900BDF6D7 /* Home.png */,
 				AEBF5AE9253F25A100B92721 /* cat.png */,
 				AEBF5AE0253F253D00B92721 /* avoid.png */,
@@ -429,6 +443,7 @@
 				AE6BFBF02547030D008578E5 /* TrainingVideoViewController.swift */,
 				AE3875F6254A8DE500EC1D9E /* YTPlayerViewController.swift */,
 				AE3875FB254BF9FA00EC1D9E /* CustomTableViewCell.swift */,
+				AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -513,7 +528,9 @@
 				AEC41D5D252B465100C00B2C /* info.png in Resources */,
 				AEC41D59252B44B500C00B2C /* map.png in Resources */,
 				AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */,
+				AEE54A37254C9C6300EE6315 /* petIcon.png in Resources */,
 				AE53F5D9242DF1A3005F9FC3 /* eyeinjury.png in Resources */,
+				AEE54A3F254CE95000EE6315 /* tutorials.png in Resources */,
 				AE8E7672243578FB00AC80DF /* petbg5.jpeg in Resources */,
 				AE0A5A742435522900D91828 /* bonbg.png in Resources */,
 				AEF7F1AE254885E900BDF6D7 /* Home.png in Resources */,
@@ -525,11 +542,13 @@
 				AEBF5AE4253F253E00B92721 /* bird.png in Resources */,
 				AE97D371252F476600E7D3F6 /* articles.png in Resources */,
 				AEC41D5F252B470700C00B2C /* training.png in Resources */,
+				AEE54A3D254CDCC600EE6315 /* disease.png in Resources */,
 				AEBF5ADD253F112D00B92721 /* problems.png in Resources */,
 				AEABA03F2418116600733848 /* Assets.xcassets in Resources */,
 				AEBF5AE5253F253E00B92721 /* avoid.png in Resources */,
 				AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */,
 				AEC856222541AAC7005BBD52 /* Assets.bundle in Resources */,
+				AEE54A3B254CD9D500EE6315 /* health.png in Resources */,
 				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,
 				AEABA03D2418116200733848 /* Main.storyboard in Resources */,
 				AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */,
@@ -551,6 +570,7 @@
 				AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */,
 				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
 				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
+				AEE54A39254C9E8900EE6315 /* OneTableViewController.swift in Sources */,
 				AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */,
 				AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */,
 				AE3875F7254A8DE500EC1D9E /* YTPlayerViewController.swift in Sources */,

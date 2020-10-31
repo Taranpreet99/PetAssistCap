@@ -14,6 +14,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
    
+    
     @IBOutlet var tableView : UITableView!
 
     var listData = ["The Health and Mood-Boosting Benefits of Pets","Pet obesity is an epidemic","Obesity in Dogs","11 Facts about pet obesity","How to Prevent Obesity In Pets","Treatment of Obesity in Cats and Dogs","5 Reasons Why Pet Obesity Is a Serious Problem","Everything you should know about feeding human food to Dogs and Cats","People Foods to Avoid Feeding Your Pets"]

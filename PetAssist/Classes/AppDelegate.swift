@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventStore: EKEventStore?
     
     var selectedURL : String = ""
-
+    
+    var siteData = [String]()
+    var listData = [String]()
+    var identifier : String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

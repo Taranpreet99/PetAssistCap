@@ -12,6 +12,25 @@ class InformationViewController: UITableViewController{
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBAction func onClickPetWorries(sender : Any){
+        mainDelegate.listData = ["Aggression","Barking","Destructive Chewing","Food Guarding", "Howling", "Mounting and Masturbation","Mouthing, Nipping and Play Biting in Adult Dogs","Mouthing, Nipping and Biting in Puppies", "Separation Anxiety", "Whining"]
+        
+        mainDelegate.siteData = ["https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/aggression","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/barking","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/destructive-chewing","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/food-guarding", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/howling", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mounting-and-masturbation","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mouthing-nipping-and-play-biting-adult-dogs", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mouthing-nipping-and-biting-puppies","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/whining"]
+        print(mainDelegate.siteData[0])
+        
+        //performSegue(withIdentifier: "InfoToOneTable", sender: nil)
+    }
+    
+    @IBAction func onClickHelathIssues(sender: Any){
+        mainDelegate.listData = ["Arthritis","Bloat & Gastric Torsion","Cancer in Animals", "Canine Parvovirus(CPV)"]
+        mainDelegate.siteData = ["https://www.ardmoreah.com/pet-care/common-pet-health-issues/arthritis/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/bloat-gastric-torsion/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/cancer-in-animals/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/canine-parvovirus/"]
+    }
+    
+    @IBAction func onClickDiseaseSpread(sender: Any){
+        mainDelegate.listData = ["Aeromonas hydrophila","Zoonotic hookworms","Avian influenza","Bartonella henselae", "Baylisascaris","B virus infection"]
+        
+        mainDelegate.siteData = ["https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/aeromonas-hydrophila.html","https://www.cdc.gov/parasites/zoonotichookworm/","https://www.cdc.gov/flu/avianflu/","https://www.cdc.gov/healthypets/diseases/cat-scratch.html","https://www.cdc.gov/parasites/baylisascaris/index.html","https://www.cdc.gov/herpesbvirus/index.html" ]
+    }
     
     @IBAction func unwindToInformation(sender : UIStoryboardSegue){
         
