@@ -37,6 +37,12 @@
 		AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62F81225419D6000107D36 /* DogFoodViewController.swift */; };
 		AE62F8172541A82600107D36 /* NavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE62F8162541A82600107D36 /* NavigationViewController.swift */; };
 		AE6BFBF12547030D008578E5 /* TrainingVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6BFBF02547030D008578E5 /* TrainingVideoViewController.swift */; };
+		AE7228F82550C545008387CC /* petIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AE7228F72550C544008387CC /* petIcon.png */; };
+		AE7228FA2550C584008387CC /* petIcon1.png in Resources */ = {isa = PBXBuildFile; fileRef = AE7228F92550C584008387CC /* petIcon1.png */; };
+		AE7228FC2550CC71008387CC /* petArticles.png in Resources */ = {isa = PBXBuildFile; fileRef = AE7228FB2550CC71008387CC /* petArticles.png */; };
+		AE7228FE2550CC7B008387CC /* petFood (1).png in Resources */ = {isa = PBXBuildFile; fileRef = AE7228FD2550CC7B008387CC /* petFood (1).png */; };
+		AE7229002550CC82008387CC /* newPet (1).png in Resources */ = {isa = PBXBuildFile; fileRef = AE7228FF2550CC82008387CC /* newPet (1).png */; };
+		AE7229022550CC8B008387CC /* loginHome.png in Resources */ = {isa = PBXBuildFile; fileRef = AE7229012550CC8A008387CC /* loginHome.png */; };
 		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
 		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
 		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
@@ -70,8 +76,6 @@
 		AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */; };
 		AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */; };
 		AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */ = {isa = PBXBuildFile; fileRef = AEA0D288242E863E001D0CF9 /* PetAssistDB.db */; };
-		AEA0D28B242FF284001D0CF9 /* TutorialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */; };
-		AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */; };
 		AEABA0382418116200733848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0372418116200733848 /* AppDelegate.swift */; };
 		AEABA03A2418116200733848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0392418116200733848 /* ViewController.swift */; };
 		AEABA03D2418116200733848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03B2418116200733848 /* Main.storyboard */; };
@@ -132,6 +136,12 @@
 		AE62F81225419D6000107D36 /* DogFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogFoodViewController.swift; sourceTree = "<group>"; };
 		AE62F8162541A82600107D36 /* NavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewController.swift; sourceTree = "<group>"; };
 		AE6BFBF02547030D008578E5 /* TrainingVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingVideoViewController.swift; sourceTree = "<group>"; };
+		AE7228F72550C544008387CC /* petIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = petIcon.png; path = ../../../../../Downloads/petIcon.png; sourceTree = "<group>"; };
+		AE7228F92550C584008387CC /* petIcon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petIcon1.png; sourceTree = "<group>"; };
+		AE7228FB2550CC71008387CC /* petArticles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = petArticles.png; sourceTree = "<group>"; };
+		AE7228FD2550CC7B008387CC /* petFood (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petFood (1).png"; sourceTree = "<group>"; };
+		AE7228FF2550CC82008387CC /* newPet (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newPet (1).png"; sourceTree = "<group>"; };
+		AE7229012550CC8A008387CC /* loginHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginHome.png; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -181,8 +191,6 @@
 		AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		AEA0D288242E863E001D0CF9 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
-		AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialsViewController.swift; sourceTree = "<group>"; };
-		AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingPickerViewController.swift; sourceTree = "<group>"; };
 		AEABA0342418116200733848 /* PetAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEABA0372418116200733848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEABA0392418116200733848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +252,10 @@
 		AE53F5CC242DF18D005F9FC3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AE7229012550CC8A008387CC /* loginHome.png */,
+				AE7228FF2550CC82008387CC /* newPet (1).png */,
+				AE7228FD2550CC7B008387CC /* petFood (1).png */,
+				AE7228FB2550CC71008387CC /* petArticles.png */,
 				AE62F81525419DAA00107D36 /* Icons */,
 				AE8E766D243578FA00AC80DF /* petbg4.jpg */,
 				AE8E766C243578FA00AC80DF /* petbg5.jpeg */,
@@ -292,6 +304,8 @@
 		AE62F81525419DAA00107D36 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				AE7228F92550C584008387CC /* petIcon1.png */,
+				AE7228F72550C544008387CC /* petIcon.png */,
 				AEE54A3E254CE95000EE6315 /* tutorials.png */,
 				AEE54A3C254CDCC600EE6315 /* disease.png */,
 				AEE54A3A254CD9D400EE6315 /* health.png */,
@@ -432,8 +446,6 @@
 				AE53F5E2242DFB73005F9FC3 /* ViewSiteViewController.swift */,
 				AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */,
 				AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */,
-				AEA0D28A242FF284001D0CF9 /* TutorialsViewController.swift */,
-				AEA0D28C242FF454001D0CF9 /* TrainingPickerViewController.swift */,
 				AE53F5ED24308EF1005F9FC3 /* MapViewController.swift */,
 				AE0A5A6324353EB100D91828 /* EventsViewController.swift */,
 				AE390385252CC3EB00642FAC /* InformationViewController.swift */,
@@ -522,6 +534,7 @@
 				AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */,
 				AE53F5D8242DF1A3005F9FC3 /* bleeding.png in Resources */,
 				AE0A5A8124355BE600D91828 /* buttons2.png in Resources */,
+				AE7228FE2550CC7B008387CC /* petFood (1).png in Resources */,
 				AE53F5DA242DF1A3005F9FC3 /* choking.png in Resources */,
 				AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */,
 				AEBF5AE7253F253E00B92721 /* dog.png in Resources */,
@@ -535,21 +548,26 @@
 				AE0A5A742435522900D91828 /* bonbg.png in Resources */,
 				AEF7F1AE254885E900BDF6D7 /* Home.png in Resources */,
 				AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */,
+				AE7228FC2550CC71008387CC /* petArticles.png in Resources */,
 				AE0A5A6624354B4600D91828 /* petBg.jpg in Resources */,
 				AEC41D5B252B451300C00B2C /* reminder.png in Resources */,
 				AEBF5AE8253F253E00B92721 /* fish.png in Resources */,
 				AE53F5D6242DF1A3005F9FC3 /* resuscitation.png in Resources */,
 				AEBF5AE4253F253E00B92721 /* bird.png in Resources */,
 				AE97D371252F476600E7D3F6 /* articles.png in Resources */,
+				AE7228FA2550C584008387CC /* petIcon1.png in Resources */,
 				AEC41D5F252B470700C00B2C /* training.png in Resources */,
+				AE7229022550CC8B008387CC /* loginHome.png in Resources */,
 				AEE54A3D254CDCC600EE6315 /* disease.png in Resources */,
 				AEBF5ADD253F112D00B92721 /* problems.png in Resources */,
 				AEABA03F2418116600733848 /* Assets.xcassets in Resources */,
+				AE7229002550CC82008387CC /* newPet (1).png in Resources */,
 				AEBF5AE5253F253E00B92721 /* avoid.png in Resources */,
 				AE53F5DB242DF1A3005F9FC3 /* convulsions.png in Resources */,
 				AEC856222541AAC7005BBD52 /* Assets.bundle in Resources */,
 				AEE54A3B254CD9D500EE6315 /* health.png in Resources */,
 				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,
+				AE7228F82550C545008387CC /* petIcon.png in Resources */,
 				AEABA03D2418116200733848 /* Main.storyboard in Resources */,
 				AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */,
 				AEF7F1B02548D46900BDF6D7 /* GoogleService-Info.plist in Resources */,
@@ -567,7 +585,6 @@
 				AE888EEA252F2AC5009AAC21 /* FSCalendarConstants.m in Sources */,
 				AE3875FA254B19DB00EC1D9E /* Video.swift in Sources */,
 				AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */,
-				AEA0D28D242FF454001D0CF9 /* TrainingPickerViewController.swift in Sources */,
 				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
 				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
 				AEE54A39254C9E8900EE6315 /* OneTableViewController.swift in Sources */,
@@ -589,7 +606,6 @@
 				AE888EE9252F2AC5009AAC21 /* FSCalendarExtensions.m in Sources */,
 				AE53F5CB242DEA33005F9FC3 /* SiteCell.swift in Sources */,
 				AE3875FC254BF9FA00EC1D9E /* CustomTableViewCell.swift in Sources */,
-				AEA0D28B242FF284001D0CF9 /* TutorialsViewController.swift in Sources */,
 				AE888EE7252F2AC5009AAC21 /* FSCalendarWeekdayView.m in Sources */,
 				AEABA0382418116200733848 /* AppDelegate.swift in Sources */,
 				AEC856252541AB21005BBD52 /* YTPlayerView.m in Sources */,
