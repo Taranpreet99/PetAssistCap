@@ -15,19 +15,16 @@
             <objects>
                 <viewController id="sEd-Jq-0hd" customClass="EventsViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1V2-L6-M4o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="petbg6.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="J0j-tI-9Zp">
-                                <rect key="frame" x="1" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="376-Bg-hfV">
-                                <rect key="frame" x="263" y="812" width="138" height="50"/>
+                                <rect key="frame" x="20" y="686" width="371" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="32"/>
-                                <state key="normal" title="Save" backgroundImage="buttons2.png">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="32"/>
+                                <state key="normal" title="Add Reminder!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="setReminder:" destination="sEd-Jq-0hd" eventType="touchUpInside" id="nxR-g6-WGn"/>
@@ -42,24 +39,37 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGt-zv-MGY">
-                                <rect key="frame" x="32" y="90" width="359" height="115"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter task name:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGt-zv-MGY">
+                                <rect key="frame" x="25" y="224" width="359" height="62"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">Do you often miss important tasks/appointemnts related to you pet? Dom't worry, mention you task and date and we will remind you on time.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwp-xU-5PM">
-                                <rect key="frame" x="21" y="213" width="374" height="47"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwp-xU-5PM">
+                                <rect key="frame" x="17" y="282" width="374" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="rJI-D2-SfB">
-                                <rect key="frame" x="11" y="268" width="390" height="243"/>
+                                <rect key="frame" x="11" y="404" width="390" height="243"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select time and Date:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AN7-Dt-hgM">
+                                <rect key="frame" x="20" y="349" width="359" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQN-lY-TUQ">
+                                <rect key="frame" x="111" y="124" width="176" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="naC-Mc-0DL"/>
@@ -71,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dGc-iI-mW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4378.2608695652179" y="152.67857142857142"/>
+            <point key="canvasLocation" x="5288.4057971014499" y="152.67857142857142"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="fQt-Oc-nBo">
@@ -85,6 +95,18 @@
                                 <rect key="frame" x="-2" y="86" width="414" height="258"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="tKP-n0-N7S" id="8Ag-hL-ASW"/>
                                     <outlet property="delegate" destination="tKP-n0-N7S" id="hYP-xd-tqv"/>
@@ -113,7 +135,9 @@
                                 <rect key="frame" x="241" y="725" width="171" height="46"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Add Reminder"/>
+                                <state key="normal" title="Add Reminder">
+                                    <color key="titleColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="sendDate:" destination="tKP-n0-N7S" eventType="touchUpInside" id="PVR-xb-ZC0"/>
                                 </connections>
@@ -122,7 +146,9 @@
                                 <rect key="frame" x="233" y="763" width="179" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <state key="normal" title="Add Events"/>
+                                <state key="normal" title="Add Events">
+                                    <color key="titleColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="weg-IK-ezM">
                                 <rect key="frame" x="-2" y="660" width="412" height="72"/>
@@ -154,6 +180,7 @@
                                     <segment title="Reminders"/>
                                     <segment title="Events"/>
                                 </segments>
+                                <color key="tintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="indexChangedWithSender:" destination="tKP-n0-N7S" eventType="touchUpInside" id="dBR-wL-7zs"/>
                                 </connections>
@@ -176,7 +203,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="XA0-yh-eMS"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reminders" image="reminder.png" selectedImage="reminder.png" id="zJ0-G1-T6x"/>
+                    <navigationItem key="navigationItem" title="Scheduler" id="lNC-t1-0Ss"/>
                     <connections>
                         <outlet property="calendar" destination="vYa-qP-Gdy" id="hIp-sQ-kuF"/>
                         <outlet property="eventContainer" destination="oJ0-KI-8Vp" id="KdP-pc-rq7"/>
@@ -184,12 +211,12 @@
                         <outlet property="reminderContainer" destination="Zai-Rq-ehV" id="3ke-cB-ZZv"/>
                         <outlet property="segmentedControl" destination="RMC-Ny-rZx" id="tyT-1S-ULe"/>
                         <outlet property="tableView" destination="weg-IK-ezM" id="87q-F2-f1l"/>
-                        <segue destination="sEd-Jq-0hd" kind="presentation" identifier="goToReminder" id="JcB-L1-unx"/>
+                        <segue destination="sEd-Jq-0hd" kind="show" identifier="goToReminder" id="JcB-L1-unx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Gb-Ga-Mfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3527.5362318840585" y="81.696428571428569"/>
+            <point key="canvasLocation" x="4412" y="185"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="l1U-vh-uvL">
@@ -751,7 +778,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Q0p-WU-gCL" kind="relationship" relationship="viewControllers" id="RUN-hm-6wW"/>
-                        <segue destination="tKP-n0-N7S" kind="relationship" relationship="viewControllers" id="6Dm-L1-FMf"/>
+                        <segue destination="gqv-nR-8LZ" kind="relationship" relationship="viewControllers" id="6Dm-L1-FMf"/>
                         <segue destination="6El-Gd-pPy" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
                         <segue destination="7jH-Fp-8YB" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
                         <segue destination="P3P-61-1UL" kind="relationship" relationship="viewControllers" id="4yv-wa-8ZI"/>
@@ -1502,7 +1529,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRF-9T-TFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1198.5507246376812" y="-406.80803571428572"/>
+            <point key="canvasLocation" x="3555" y="-316"/>
         </scene>
         <!--One Table View Controller-->
         <scene sceneID="71r-0A-C8a">
@@ -1612,13 +1639,36 @@
             </objects>
             <point key="canvasLocation" x="-5249" y="82"/>
         </scene>
+        <!--Reminders-->
+        <scene sceneID="BfZ-6b-6Dj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gqv-nR-8LZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Reminders" image="reminder.png" selectedImage="reminder.png" id="zJ0-G1-T6x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5sH-n6-rHX">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tKP-n0-N7S" kind="relationship" relationship="rootViewController" id="dhi-ed-o0m"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UIl-nK-AhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3557.971014492754" y="185.49107142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Home.png" width="24" height="24"/>
         <image name="articles.png" width="24" height="24"/>
         <image name="avoid.png" width="50" height="50"/>
         <image name="bird.png" width="50" height="50"/>
-        <image name="buttons2.png" width="801" height="414"/>
         <image name="cat.png" width="50" height="50"/>
         <image name="disease.png" width="50" height="50"/>
         <image name="dog.png" width="30" height="30"/>
@@ -1634,7 +1684,6 @@
         <image name="petArticles.png" width="512" height="512"/>
         <image name="petFood (1).png" width="512" height="512"/>
         <image name="petIcon1.png" width="78.601280212402344" height="78.601280212402344"/>
-        <image name="petbg6.jpg" width="640" height="1136"/>
         <image name="problems.png" width="512" height="512"/>
         <image name="reminder.png" width="24" height="24"/>
         <image name="signin.png" width="24" height="24"/>
