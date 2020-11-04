@@ -12,6 +12,10 @@ class InformationViewController: UITableViewController{
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBAction func onClickDogToys(sender : Any){
+        mainDelegate.selectedURL = "https://barkpost.com/answers/best-dog-toys-2019/"
+    }
+    
     @IBAction func onClickPetWorries(sender : Any){
         mainDelegate.listData = ["Aggression","Barking","Destructive Chewing","Food Guarding", "Howling", "Mounting and Masturbation","Mouthing, Nipping and Play Biting in Adult Dogs","Mouthing, Nipping and Biting in Puppies", "Separation Anxiety", "Whining"]
         

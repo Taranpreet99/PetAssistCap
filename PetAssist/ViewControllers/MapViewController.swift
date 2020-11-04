@@ -187,6 +187,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             if CLLocationManager.authorizationStatus() == .restricted || CLLocationManager.authorizationStatus() == .denied || CLLocationManager.authorizationStatus() == .notDetermined{
                 
+                locationManager.requestAlwaysAuthorization()
                 locationManager.requestWhenInUseAuthorization()
             }
             
@@ -196,6 +197,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }else{
             print("Please turn on location services.")
         }
+        
+        let dropPin = MKPointAnnotation()
+       // dropPin.coordinate =
+       // dropPin.title = "Sheridan College, Davis Campus"
+       // self.myMapview.addAnnotation(dropPin)
+       // self.myMapview.selectAnnotation(dropPin, animated: true)
+        
     }
     
     // How much zoom in and out in map

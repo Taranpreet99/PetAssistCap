@@ -415,7 +415,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jse-lA-2pZ">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="134" width="414" height="762"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -423,6 +423,13 @@
                                     <outlet property="delegate" destination="T4W-GH-4QW" id="ASI-dM-iv4"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please select dog breed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mzq-gH-i2a">
+                                <rect key="frame" x="7" y="95" width="264" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Lzb-hC-v8M"/>
@@ -850,7 +857,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
-                            <tableViewSection id="zpp-db-Luh">
+                            <tableViewSection id="RtS-Lj-4bg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="83" id="gfK-n5-hZr">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
@@ -1054,7 +1061,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tutorials.png" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-8f-mDc">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="training.png" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-8f-mDc">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -1062,11 +1069,37 @@
                                                     <rect key="frame" x="86" y="-1" width="274" height="59"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Tutorials">
+                                                    <state key="normal" title="Pet Training">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <segue destination="CEv-7j-fqv" kind="show" id="Hax-nc-whs"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="d9h-rR-B6P">
+                                        <rect key="frame" x="0.0" y="573" width="414" height="63"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9h-rR-B6P" id="0lh-fa-DXU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toys.png" translatesAutoresizingMaskIntoConstraints="NO" id="aCb-qB-5nA">
+                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Vd-nK-zPS">
+                                                    <rect key="frame" x="86" y="-1" width="274" height="59"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <state key="normal" title="Dog Toys">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="onClickDogToysWithSender:" destination="fsq-J2-Yvo" eventType="touchUpInside" id="GN2-V8-oQ4"/>
+                                                        <segue destination="heB-Fy-odz" kind="show" id="o96-ZI-4z4"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1141,7 +1174,7 @@
         <!--Pet Food-->
         <scene sceneID="Aqn-gZ-8Dy">
             <objects>
-                <tableViewController id="Ect-4Y-9OR" customClass="InformationViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Ect-4Y-9OR" customClass="PetFoodViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qLU-4x-9To">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1273,6 +1306,10 @@
                                                     <state key="normal" title="Foods to Avoid">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="foodsToAvoidWithSender:" destination="Ect-4Y-9OR" eventType="touchUpInside" id="TE3-Q7-sGT"/>
+                                                        <segue destination="heB-Fy-odz" kind="show" id="PAG-rK-Urd"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avoid.png" translatesAutoresizingMaskIntoConstraints="NO" id="ghe-cW-XJf">
                                                     <rect key="frame" x="20" y="11" width="58" height="34"/>
@@ -1293,7 +1330,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DjX-Mc-cly" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-865" y="812"/>
+            <point key="canvasLocation" x="-865" y="821"/>
         </scene>
         <!--PetAssist-->
         <scene sceneID="jzq-4f-ffj">
@@ -1338,7 +1375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ixa-vz-eaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-864" y="1547"/>
+            <point key="canvasLocation" x="-81" y="1533"/>
         </scene>
         <!--Information Center-->
         <scene sceneID="Dta-SQ-gCq">
@@ -1687,16 +1724,16 @@
         <image name="problems.png" width="512" height="512"/>
         <image name="reminder.png" width="24" height="24"/>
         <image name="signin.png" width="24" height="24"/>
+        <image name="toys.png" width="512" height="512"/>
         <image name="training.png" width="24" height="24"/>
-        <image name="tutorials.png" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ttT-Mo-Cyn"/>
         <segue reference="3be-Ez-oyU"/>
-        <segue reference="9vi-vk-lNn"/>
-        <segue reference="xgV-6I-4UN"/>
+        <segue reference="o96-ZI-4z4"/>
+        <segue reference="N49-Hy-3FA"/>
         <segue reference="rXh-JB-yeS"/>
-        <segue reference="3TC-wL-Mlw"/>
+        <segue reference="XTN-q1-0Ld"/>
         <segue reference="0SL-lM-HnR"/>
         <segue reference="KP3-Tm-NHA"/>
         <segue reference="KVh-QB-OBX"/>
