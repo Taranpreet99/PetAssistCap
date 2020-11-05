@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var people : [Data] = []
     var trainingOptions : [String] = ["Behavioral training", "Obedience training", "Agility training", "Vocational training"]
     
+    var tableName : String = "PetAssist"
+    
     var eventStore: EKEventStore?
     
     var selectedURL : String = ""

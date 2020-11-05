@@ -15,6 +15,18 @@ class PetFoodViewController: UITableViewController {
     @IBAction func foodsToAvoid(sender: Any){
         mainDelegate.selectedURL = "https://www.caninejournal.com/foods-not-to-feed-dog/"
     }
+    
+    @IBAction func catFood(sender : Any){
+        mainDelegate.selectedURL = "https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feeding-your-cat"
+    }
+    
+    @IBAction func birdFood(sender : Any){
+        mainDelegate.selectedURL = "https://www.petcoach.co/article/bird-nutrition-feeding-pet-birds-parrot-diets-and-nutrition/"
+    }
+    
+    @IBAction func fishFood(sender : Any){
+        mainDelegate.selectedURL = "https://www.thesprucepets.com/feeding-your-aquarium-fish-1380920"
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

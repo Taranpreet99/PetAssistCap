@@ -14,12 +14,14 @@ class OneTableViewController: UIViewController, UITableViewDataSource, UITableVi
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
     @IBOutlet var tableView : UITableView!
+    @IBOutlet var tableName : UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableName.text = mainDelegate.tableName
         // Do any additional setup after loading the view.
     }
     
@@ -67,8 +69,6 @@ class OneTableViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         mainDelegate.selectedURL = mainDelegate.siteData[indexPath.row]
-        
-        print("\(mainDelegate.selectedURL)")
         
         performSegue(withIdentifier: "OneTableToSite", sender: nil)
     }

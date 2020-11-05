@@ -17,6 +17,9 @@ class InformationViewController: UITableViewController{
     }
     
     @IBAction func onClickPetWorries(sender : Any){
+        
+        mainDelegate.tableName = "Pet Behavioural Issues"
+        
         mainDelegate.listData = ["Aggression","Barking","Destructive Chewing","Food Guarding", "Howling", "Mounting and Masturbation","Mouthing, Nipping and Play Biting in Adult Dogs","Mouthing, Nipping and Biting in Puppies", "Separation Anxiety", "Whining"]
         
         mainDelegate.siteData = ["https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/aggression","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/barking","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/destructive-chewing","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/food-guarding", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/howling", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mounting-and-masturbation","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mouthing-nipping-and-play-biting-adult-dogs", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/mouthing-nipping-and-biting-puppies","https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/separation-anxiety", "https://www.aspca.org/pet-care/dog-care/common-dog-behavior-issues/whining"]
@@ -26,11 +29,17 @@ class InformationViewController: UITableViewController{
     }
     
     @IBAction func onClickHelathIssues(sender: Any){
+        
+        mainDelegate.tableName = "Common Health Issues"
+        
         mainDelegate.listData = ["Arthritis","Bloat & Gastric Torsion","Cancer in Animals", "Canine Parvovirus(CPV)"]
         mainDelegate.siteData = ["https://www.ardmoreah.com/pet-care/common-pet-health-issues/arthritis/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/bloat-gastric-torsion/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/cancer-in-animals/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/canine-parvovirus/"]
     }
     
     @IBAction func onClickDiseaseSpread(sender: Any){
+        
+        mainDelegate.tableName = "Diseases"
+        
         mainDelegate.listData = ["Aeromonas hydrophila","Zoonotic hookworms","Avian influenza","Bartonella henselae", "Baylisascaris","B virus infection"]
         
         mainDelegate.siteData = ["https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/aeromonas-hydrophila.html","https://www.cdc.gov/parasites/zoonotichookworm/","https://www.cdc.gov/flu/avianflu/","https://www.cdc.gov/healthypets/diseases/cat-scratch.html","https://www.cdc.gov/parasites/baylisascaris/index.html","https://www.cdc.gov/herpesbvirus/index.html" ]
@@ -41,8 +50,10 @@ class InformationViewController: UITableViewController{
     }
     
     @IBAction func onClickNewPet(){
-        mainDelegate.selectedURL = "https://www.petmd.com/dog/care/evr_multi_10_things_consider_before_pet_adoption"
-        performSegue(withIdentifier: "infoToWeb", sender: nil)
+        mainDelegate.tableName = "Getting a new pet?"
+        
+        mainDelegate.listData = ["Things to Consider before getting a pet", "Items to Put on Your Shopping List", "Preparing your pet for new Home", "Pet Health Insurance", "Dog Grooming Tips", "Travelling with a Pet"]
+        mainDelegate.siteData = ["https://www.petmd.com/dog/care/evr_multi_10_things_consider_before_pet_adoption","http://www.vetstreet.com/our-pet-experts/new-dog-owner-guide-21-items-to-put-on-your-shopping-list", "https://www.petcoach.co/article/8-tips-to-prepare-your-home-for-a-new-pet/","https://www.petinsurance.com/healthzone/ownership-adoption/pet-ownership/pet-owner-topics/8-tips-for-choosing-pet-health-insurance/", "https://www.dogviously.com/basic-dog-grooming-tips/", "https://www.mentalfloss.com/article/586073/pet-travel-safety-tips"]
         
     }
     
