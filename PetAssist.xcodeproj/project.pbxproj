@@ -82,6 +82,8 @@
 		AEABA03D2418116200733848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03B2418116200733848 /* Main.storyboard */; };
 		AEABA03F2418116600733848 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03E2418116600733848 /* Assets.xcassets */; };
 		AEABA0422418116600733848 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA0402418116600733848 /* LaunchScreen.storyboard */; };
+		AEB11F1F25567EE2001F0CFA /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB11F1E25567EE2001F0CFA /* TrainingViewController.swift */; };
+		AEB11F2125567F9D001F0CFA /* TableDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB11F2025567F9D001F0CFA /* TableDataClass.swift */; };
 		AEBF5ADC253F112D00B92721 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5AD9253F112C00B92721 /* food.png */; };
 		AEBF5ADD253F112D00B92721 /* problems.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADA253F112C00B92721 /* problems.png */; };
 		AEBF5ADE253F112D00B92721 /* new.png in Resources */ = {isa = PBXBuildFile; fileRef = AEBF5ADB253F112D00B92721 /* new.png */; };
@@ -199,6 +201,8 @@
 		AEABA03E2418116600733848 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEABA0412418116600733848 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEABA0432418116600733848 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEB11F1E25567EE2001F0CFA /* TrainingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
+		AEB11F2025567F9D001F0CFA /* TableDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataClass.swift; sourceTree = "<group>"; };
 		AEB2CBAC253896F900E4D1E8 /* PetAssist-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PetAssist-Bridging-Header.h"; sourceTree = "<group>"; };
 		AEBF5AD9253F112C00B92721 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
 		AEBF5ADA253F112C00B92721 /* problems.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = problems.png; sourceTree = "<group>"; };
@@ -456,6 +460,8 @@
 				AE3875F6254A8DE500EC1D9E /* YTPlayerViewController.swift */,
 				AE3875FB254BF9FA00EC1D9E /* CustomTableViewCell.swift */,
 				AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */,
+				AEB11F1E25567EE2001F0CFA /* TrainingViewController.swift */,
+				AEB11F2025567F9D001F0CFA /* TableDataClass.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -611,8 +617,10 @@
 				AEC856252541AB21005BBD52 /* YTPlayerView.m in Sources */,
 				AE888EE5252F2AC5009AAC21 /* FSCalendar.m in Sources */,
 				AE888EE8252F2AC5009AAC21 /* FSCalendarSeparatorDecorationView.m in Sources */,
+				AEB11F2125567F9D001F0CFA /* TableDataClass.swift in Sources */,
 				AE888EEB252F2AC5009AAC21 /* FSCalendarCalculator.m in Sources */,
 				AE888EE4252F2AC5009AAC21 /* FSCalendarStickyHeader.m in Sources */,
+				AEB11F1F25567EE2001F0CFA /* TrainingViewController.swift in Sources */,
 				AE53F5E3242DFB73005F9FC3 /* ViewSiteViewController.swift in Sources */,
 				AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */,
 				AE888EE2252F2AC5009AAC21 /* FSCalendarDelegationFactory.m in Sources */,

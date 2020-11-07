@@ -12,6 +12,16 @@ class PetFoodViewController: UITableViewController {
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBAction func dogFood(sender: Any){
+        
+        mainDelegate.tableName = "Select dog breed:"
+        
+         mainDelegate.listData = ["Labrador Retriever", "German Shepherd", "Golden Retrievers", "French Bulldogs", "Bulldogs", "Beagles", "Poodles", "Rottweilers", "German Shorthaired Pointers", "Yorkshire Terriers", "Boxers" , "Dachshunds" ]
+        
+        //Array to store source of information URL for each first aid
+        mainDelegate.siteData = ["https://dogfood.guide/labrador-retrievers/","https://dogfood.guide/german-shepherd/", "https://dogfood.guide/golden-retrievers/", "https://dogfood.guide/french-bulldog/", "https://dogfood.guide/bulldog/", "https://dogfood.guide/beagles/","https://dogfood.guide/poodles/", "https://dogfood.guide/rottweilers/", "https://dogfood.guide/german-shorthaired-pointers/","https://dogfood.guide/yorkshire-terriers/", "https://dogfood.guide/boxers/", "https://dogfood.guide/dachshund/"]
+    }
+    
     @IBAction func foodsToAvoid(sender: Any){
         mainDelegate.selectedURL = "https://www.caninejournal.com/foods-not-to-feed-dog/"
     }

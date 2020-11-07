@@ -352,7 +352,7 @@
             <objects>
                 <viewController id="TrQ-Rd-SqG" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UUP-zl-ndx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxZ-Pe-gQG">
@@ -441,7 +441,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oXs-6R-447" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1757.9710144927537" y="1546.875"/>
+            <point key="canvasLocation" x="-1739" y="1558"/>
         </scene>
         <!--First Aid-->
         <scene sceneID="cIT-Pu-Tk8">
@@ -499,7 +499,7 @@
             <objects>
                 <viewController id="cav-rh-v8f" customClass="ArticlesViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kA3-q5-6ZZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lbj-kn-z9v">
@@ -544,7 +544,7 @@
             <objects>
                 <viewController id="CEv-7j-fqv" customClass="TrainingVideoViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Cs5-Fz-L3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pYO-LD-DO9">
@@ -710,7 +710,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4442.0289855072469" y="77.678571428571431"/>
+            <point key="canvasLocation" x="-4442" y="129"/>
         </scene>
         <!--PetAssist-->
         <scene sceneID="dRI-mS-b2G">
@@ -776,10 +776,10 @@
             </objects>
             <point key="canvasLocation" x="-2439.130434782609" y="81.696428571428569"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Training-->
         <scene sceneID="PGe-Q9-fQ1">
             <objects>
-                <tabBarController id="PcS-FW-tMk" sceneMemberID="viewController">
+                <tabBarController title="Training" id="PcS-FW-tMk" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BsE-xb-T4m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -791,14 +791,72 @@
                     <connections>
                         <segue destination="Q0p-WU-gCL" kind="relationship" relationship="viewControllers" id="RUN-hm-6wW"/>
                         <segue destination="gqv-nR-8LZ" kind="relationship" relationship="viewControllers" id="6Dm-L1-FMf"/>
-                        <segue destination="6El-Gd-pPy" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
                         <segue destination="7jH-Fp-8YB" kind="relationship" relationship="viewControllers" id="Mda-Y5-6WH"/>
-                        <segue destination="P3P-61-1UL" kind="relationship" relationship="viewControllers" id="4yv-wa-8ZI"/>
+                        <segue destination="6El-Gd-pPy" kind="relationship" relationship="viewControllers" id="bs5-ow-ejL"/>
+                        <segue destination="cGu-bh-3OW" kind="relationship" relationship="viewControllers" id="mtk-o2-DE7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qn-0p-CsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2228" y="-655"/>
+        </scene>
+        <!--Pet Training-->
+        <scene sceneID="MkQ-vZ-XMb">
+            <objects>
+                <viewController id="Am6-UP-5Z8" customClass="TrainingViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y5A-3t-afn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9lX-Qt-XQV">
+                                <rect key="frame" x="0.0" y="31" width="414" height="762"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellid" rowHeight="195" id="ncE-aN-9Ga" customClass="TableDataClass" customModule="PetAssist" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="195"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ncE-aN-9Ga" id="i8r-Eg-iZf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="194.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ho-Ax-QJa">
+                                                    <rect key="frame" x="20" y="11" width="374" height="173"/>
+                                                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="374" id="QjX-r2-kyo"/>
+                                                        <constraint firstAttribute="height" constant="173" id="sJ0-cc-8Dz"/>
+                                                    </constraints>
+                                                    <wkWebViewConfiguration key="configuration">
+                                                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                                        <wkPreferences key="preferences"/>
+                                                    </wkWebViewConfiguration>
+                                                </wkWebView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="2Ho-Ax-QJa" firstAttribute="leading" secondItem="i8r-Eg-iZf" secondAttribute="leadingMargin" id="d4y-R6-MpJ"/>
+                                                <constraint firstItem="2Ho-Ax-QJa" firstAttribute="centerY" secondItem="i8r-Eg-iZf" secondAttribute="centerY" id="kvz-r3-SIQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="webView" destination="2Ho-Ax-QJa" id="hoG-zE-qYY"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Am6-UP-5Z8" id="CaB-Si-ioI"/>
+                                    <outlet property="delegate" destination="Am6-UP-5Z8" id="2Ua-Qj-7xb"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="In7-YQ-adu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pet Training" id="fYa-oh-nKe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xto-Uv-eok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-442.02898550724643" y="-656.25"/>
         </scene>
         <!--What's in my area?-->
         <scene sceneID="bDQ-8z-Dog">
@@ -1060,33 +1118,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="hap-ho-foq">
-                                        <rect key="frame" x="0.0" y="495" width="414" height="63"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hap-ho-foq" id="jzw-hI-Hbi">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="training.png" translatesAutoresizingMaskIntoConstraints="NO" id="JUE-8f-mDc">
-                                                    <rect key="frame" x="20" y="11" width="58" height="34"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8AO-BU-Xub">
-                                                    <rect key="frame" x="86" y="-1" width="274" height="59"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                    <state key="normal" title="Pet Training">
-                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <segue destination="CEv-7j-fqv" kind="show" id="Hax-nc-whs"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="63" id="d9h-rR-B6P">
-                                        <rect key="frame" x="0.0" y="558" width="414" height="63"/>
+                                        <rect key="frame" x="0.0" y="495" width="414" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9h-rR-B6P" id="0lh-fa-DXU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="62.5"/>
@@ -1182,7 +1215,7 @@
             <objects>
                 <tableViewController id="Ect-4Y-9OR" customClass="PetFoodViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qLU-4x-9To">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -1222,7 +1255,8 @@
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <segue destination="T4W-GH-4QW" kind="show" id="KP3-Tm-NHA"/>
+                                                        <action selector="dogFoodWithSender:" destination="Ect-4Y-9OR" eventType="touchUpInside" id="aUn-qc-zsz"/>
+                                                        <segue destination="6XS-6H-iJy" kind="show" id="2Ak-9M-hOB"/>
                                                     </connections>
                                                 </button>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog.png" translatesAutoresizingMaskIntoConstraints="NO" id="atz-Ht-vvx">
@@ -1352,7 +1386,7 @@
             <objects>
                 <viewController id="heB-Fy-odz" customClass="ViewSiteViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd4-Xt-8Ot">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mno-i2-40b">
@@ -1581,14 +1615,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRF-9T-TFn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3555" y="-316"/>
+            <point key="canvasLocation" x="4463.768115942029" y="-316.40625"/>
         </scene>
         <!--One Table View Controller-->
         <scene sceneID="71r-0A-C8a">
             <objects>
                 <viewController id="6XS-6H-iJy" customClass="OneTableViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wUG-y2-UtB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rve-Xc-hOU">
@@ -1723,6 +1757,29 @@
             </objects>
             <point key="canvasLocation" x="3557.971014492754" y="185.49107142857142"/>
         </scene>
+        <!--Training-->
+        <scene sceneID="m81-vE-aIU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cGu-bh-3OW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Training" image="training.png" selectedImage="training.png" id="dmQ-ei-qta"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7kY-C0-eSH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Am6-UP-5Z8" kind="relationship" relationship="rootViewController" id="D2L-1U-k6q"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Spn-Gv-aJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1352.1739130434785" y="-656.25"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Home.png" width="24" height="24"/>
@@ -1751,15 +1808,13 @@
         <image name="training.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ttT-Mo-Cyn"/>
-        <segue reference="3oA-oQ-G8t"/>
-        <segue reference="PAG-rK-Urd"/>
-        <segue reference="xgV-6I-4UN"/>
+        <segue reference="ERK-bV-T0c"/>
+        <segue reference="o96-ZI-4z4"/>
+        <segue reference="N49-Hy-3FA"/>
         <segue reference="AHI-24-gac"/>
         <segue reference="rXh-JB-yeS"/>
-        <segue reference="3TC-wL-Mlw"/>
+        <segue reference="XTN-q1-0Ld"/>
         <segue reference="0SL-lM-HnR"/>
-        <segue reference="KP3-Tm-NHA"/>
         <segue reference="wlX-qV-Z5w"/>
     </inferredMetricsTieBreakers>
 </document>
