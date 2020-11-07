@@ -809,35 +809,29 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9lX-Qt-XQV">
-                                <rect key="frame" x="0.0" y="31" width="414" height="762"/>
+                                <rect key="frame" x="0.0" y="31" width="414" height="782"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellid" rowHeight="195" id="ncE-aN-9Ga" customClass="TableDataClass" customModule="PetAssist" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="195"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellid" rowHeight="225" id="ncE-aN-9Ga" customClass="TableDataClass" customModule="PetAssist" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="225"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ncE-aN-9Ga" id="i8r-Eg-iZf">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="194.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="224.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ho-Ax-QJa">
-                                                    <rect key="frame" x="20" y="11" width="374" height="173"/>
+                                                <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Ho-Ax-QJa">
+                                                    <rect key="frame" x="0.0" y="11" width="414" height="203"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="374" id="QjX-r2-kyo"/>
-                                                        <constraint firstAttribute="height" constant="173" id="sJ0-cc-8Dz"/>
-                                                    </constraints>
                                                     <wkWebViewConfiguration key="configuration">
                                                         <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                                         <wkPreferences key="preferences"/>
                                                     </wkWebViewConfiguration>
                                                 </wkWebView>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="2Ho-Ax-QJa" firstAttribute="leading" secondItem="i8r-Eg-iZf" secondAttribute="leadingMargin" id="d4y-R6-MpJ"/>
-                                                <constraint firstItem="2Ho-Ax-QJa" firstAttribute="centerY" secondItem="i8r-Eg-iZf" secondAttribute="centerY" id="kvz-r3-SIQ"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="webView" destination="2Ho-Ax-QJa" id="hoG-zE-qYY"/>
                                         </connections>

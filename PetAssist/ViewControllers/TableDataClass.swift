@@ -3,12 +3,14 @@
 //  PetAssist
 //
 //  Created by xcode on 2020-11-07.
-//  Copyright © 2020 Taranpreet Singh Yu Zhang. All rights reserved.
+//  Copyright © 2020 Taranpreet Singh. All rights reserved.
 //
 
 import UIKit
 
 class TableDataClass: UITableViewCell {
+    
+
     
     @IBOutlet var webView: WKWebView!
 
