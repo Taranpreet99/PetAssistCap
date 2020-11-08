@@ -68,6 +68,7 @@
 		AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766D243578FA00AC80DF /* petbg4.jpg */; };
 		AE8E7674243578FB00AC80DF /* petbg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766E243578FA00AC80DF /* petbg6.jpg */; };
 		AE8E7675243578FB00AC80DF /* petbg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AE8E766F243578FA00AC80DF /* petbg7.jpg */; };
+		AE96B99B255816DC00E5A8CB /* CalEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE96B99A255816DC00E5A8CB /* CalEventsViewController.swift */; };
 		AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */ = {isa = PBXBuildFile; fileRef = AE97D36E252CCCC400E7D3F6 /* firstAid.png */; };
 		AE97D371252F476600E7D3F6 /* articles.png in Resources */ = {isa = PBXBuildFile; fileRef = AE97D370252F476600E7D3F6 /* articles.png */; };
 		AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */; };
@@ -76,7 +77,6 @@
 		AEA0D27D242E72E4001D0CF9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */; };
 		AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */; };
 		AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */; };
-		AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */ = {isa = PBXBuildFile; fileRef = AEA0D288242E863E001D0CF9 /* PetAssistDB.db */; };
 		AEABA0382418116200733848 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0372418116200733848 /* AppDelegate.swift */; };
 		AEABA03A2418116200733848 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEABA0392418116200733848 /* ViewController.swift */; };
 		AEABA03D2418116200733848 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AEABA03B2418116200733848 /* Main.storyboard */; };
@@ -185,6 +185,8 @@
 		AE8E766D243578FA00AC80DF /* petbg4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg4.jpg; sourceTree = "<group>"; };
 		AE8E766E243578FA00AC80DF /* petbg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg6.jpg; sourceTree = "<group>"; };
 		AE8E766F243578FA00AC80DF /* petbg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg7.jpg; sourceTree = "<group>"; };
+		AE96B99A255816DC00E5A8CB /* CalEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalEventsViewController.swift; sourceTree = "<group>"; };
+		AE96B99D25584ACA00E5A8CB /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE97D36E252CCCC400E7D3F6 /* firstAid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstAid.png; sourceTree = "<group>"; };
 		AE97D370252F476600E7D3F6 /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articles.png; sourceTree = "<group>"; };
 		AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
@@ -193,7 +195,6 @@
 		AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		AEA0D288242E863E001D0CF9 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AEABA0342418116200733848 /* PetAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEABA0372418116200733848 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEABA0392418116200733848 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -377,7 +378,7 @@
 		AEA0D276242E6B58001D0CF9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AEA0D288242E863E001D0CF9 /* PetAssistDB.db */,
+				AE96B99D25584ACA00E5A8CB /* PetAssistDB.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -462,6 +463,7 @@
 				AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */,
 				AEB11F1E25567EE2001F0CFA /* TrainingViewController.swift */,
 				AEB11F2025567F9D001F0CFA /* TableDataClass.swift */,
+				AE96B99A255816DC00E5A8CB /* CalEventsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -537,7 +539,6 @@
 				AEBF5ADE253F112D00B92721 /* new.png in Resources */,
 				AE39037D252CB3BE00642FAC /* signin.png in Resources */,
 				AE8E7671243578FB00AC80DF /* petbg9.jpg in Resources */,
-				AEA0D289242E863E001D0CF9 /* PetAssistDB.db in Resources */,
 				AE53F5D8242DF1A3005F9FC3 /* bleeding.png in Resources */,
 				AE0A5A8124355BE600D91828 /* buttons2.png in Resources */,
 				AE7228FE2550CC7B008387CC /* petFood (1).png in Resources */,
@@ -588,6 +589,7 @@
 			files = (
 				AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */,
 				AE888EEA252F2AC5009AAC21 /* FSCalendarConstants.m in Sources */,
+				AE96B99B255816DC00E5A8CB /* CalEventsViewController.swift in Sources */,
 				AE3875FA254B19DB00EC1D9E /* Video.swift in Sources */,
 				AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */,
 				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
