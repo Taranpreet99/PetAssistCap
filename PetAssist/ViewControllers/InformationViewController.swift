@@ -32,17 +32,17 @@ class InformationViewController: UITableViewController{
         
         mainDelegate.tableName = "Common Health Issues"
         
-        mainDelegate.listData = ["Arthritis","Bloat & Gastric Torsion","Cancer in Animals", "Canine Parvovirus(CPV)"]
-        mainDelegate.siteData = ["https://www.ardmoreah.com/pet-care/common-pet-health-issues/arthritis/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/bloat-gastric-torsion/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/cancer-in-animals/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/canine-parvovirus/"]
+        mainDelegate.listData = ["Arthritis","Bloat & Gastric Torsion","Cancer in Animals", "Canine Parvovirus(CPV)", "Obesity", "Seizures", "Salmonella", "Leptospirosis", "Epilepsy"]
+        mainDelegate.siteData = ["https://www.ardmoreah.com/pet-care/common-pet-health-issues/arthritis/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/bloat-gastric-torsion/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/cancer-in-animals/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/canine-parvovirus/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/obesity/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/seizures/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/salmonella/","https://www.ardmoreah.com/pet-care/common-pet-health-issues/leptospirosis/", "https://www.ardmoreah.com/pet-care/common-pet-health-issues/epilepsy/"]
     }
     
     @IBAction func onClickDiseaseSpread(sender: Any){
         
         mainDelegate.tableName = "Diseases"
         
-        mainDelegate.listData = ["Aeromonas hydrophila","Zoonotic hookworms","Avian influenza","Bartonella henselae", "Baylisascaris","B virus infection"]
+        mainDelegate.listData = ["Aeromonas hydrophila","Zoonotic hookworms","Avian influenza","Bartonella henselae", "Baylisascaris","B virus infection", "Influenza(Flu)", "Plague", "Lyme disease"]
         
-        mainDelegate.siteData = ["https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/aeromonas-hydrophila.html","https://www.cdc.gov/parasites/zoonotichookworm/","https://www.cdc.gov/flu/avianflu/","https://www.cdc.gov/healthypets/diseases/cat-scratch.html","https://www.cdc.gov/parasites/baylisascaris/index.html","https://www.cdc.gov/herpesbvirus/index.html" ]
+        mainDelegate.siteData = ["https://www.canada.ca/en/public-health/services/laboratory-biosafety-biosecurity/pathogen-safety-data-sheets-risk-assessment/aeromonas-hydrophila.html","https://www.cdc.gov/parasites/zoonotichookworm/","https://www.cdc.gov/flu/avianflu/","https://www.cdc.gov/healthypets/diseases/cat-scratch.html","https://www.cdc.gov/parasites/baylisascaris/index.html","https://www.cdc.gov/herpesbvirus/index.html", "https://www.cdc.gov/flu/avianflu/","https://www.cdc.gov/plague/", "https://www.cdc.gov/lyme/index.html" ]
     }
     
     @IBAction func unwindToInformation(sender : UIStoryboardSegue){
