@@ -13,7 +13,7 @@ class FirstAidViewController: UIViewController, UITableViewDelegate, UITableView
     var listData = ["Bleeding Skin", "Burns", "Choking", "Convulsions", "Eye Injury", "Resuscitation" ]
     
     //Array to store source of information URL for each first aid
-    var siteData: [String] = ["https://vcahospitals.com/know-your-pet/testing-for-signs-of-bleeding", "https://animals.howstuffworks.com/pets/how-to-give-first-aid-to-your-dog6.htm", "https://www.youtube.com/watch?v=eo_1OHNc_w4", "https://www.youtube.com/watch?v=ZWQXtlBHU6k", "https://www.thesprucepets.com/eye-injuries-in-dogs-4126601", "https://www.youtube.com/watch?v=cMYSVin-Itw"]
+    var siteData: [String] = ["https://vcahospitals.com/know-your-pet/first-aid-for-bleeding-in-dogs", "https://animals.howstuffworks.com/pets/how-to-give-first-aid-to-your-dog6.htm", "https://www.youtube.com/watch?v=eo_1OHNc_w4", "https://www.youtube.com/watch?v=ZWQXtlBHU6k", "https://www.thesprucepets.com/eye-injuries-in-dogs-4126601", "https://www.youtube.com/watch?v=cMYSVin-Itw"]
     
     //Array to store image name of each injury
     var imageData: [String] = ["bleeding.png", "burns.png", "choking.png", "convulsions.png", "eyeinjury.png", "resuscitation.png"]
