@@ -13,6 +13,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,8 +28,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     }
     
     @IBOutlet weak var tableView: UITableView!
-    //Connected to reminder textfield
-    @IBOutlet weak var eventText: UITextField!
     @IBOutlet var calendar: FSCalendar!
     let dateFormatter = DateFormatter()
     let date1 = Date()
@@ -77,6 +77,43 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     }
     
 
+    //Edit Event
+    @IBAction func deleteEvent(){
+        
+        /*
+        eventStore.requestAccess(to: .event) { (granted, error) in
+          
+          if (granted) && (error == nil) {
+              print("granted \(granted)")
+              print("error \(error)")
+              
+            let event:EKEvent = EKEvent(eventStore: self.eventStore)
+              
+            event.title = self.eventTitleText.text
+            event.startDate = self.mystartDatePicker.date
+            event.endDate = self.myendDatePicker.date
+            event.notes = self.eventDetailText.text
+            event.calendar = self.eventStore.defaultCalendarForNewEvents
+              do {
+                try self.eventStore.save(event, span: .thisEvent)
+              } catch let error as NSError {
+                  print("failed to save event with error : \(error)")
+              }
+              print("Saved Event")
+          }
+          else{
+          
+              print("failed to save event with error : \(error) or access not granted")
+          }
+        }
+        */
+        
+
+    
+     
+    }
+    
+    
     
     //Place the dots on the Calendar
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -101,7 +138,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         performSegue(withIdentifier: "goToReminder", sender: self)
     }
     
-    //Send to Reminders
+    //Send to Events Creater
     @IBAction func sendDate2(_ sender: Any){
         performSegue(withIdentifier: "goToEvent", sender: self)
     }

@@ -20,6 +20,7 @@
 		AE39037F252CB3C400642FAC /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037E252CB3C300642FAC /* signup.png */; };
 		AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE390385252CC3EB00642FAC /* InformationViewController.swift */; };
 		AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F1831252F58AE00453A01 /* TableCell.swift */; };
+		AE48E0F1255C0F900055127F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48E0F0255C0F900055127F /* Event.swift */; };
 		AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */; };
 		AE53F5CB242DEA33005F9FC3 /* SiteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */; };
 		AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */ = {isa = PBXBuildFile; fileRef = AE53F5CD242DF1A3005F9FC3 /* burns.png */; };
@@ -121,6 +122,8 @@
 		AE39037E252CB3C300642FAC /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		AE390385252CC3EB00642FAC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		AE3F1831252F58AE00453A01 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		AE48E0F0255C0F900055127F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		AE48E0F2255C363F0055127F /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidViewController.swift; sourceTree = "<group>"; };
 		AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		AE53F5CD242DF1A3005F9FC3 /* burns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burns.png; sourceTree = "<group>"; };
@@ -186,7 +189,6 @@
 		AE8E766E243578FA00AC80DF /* petbg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg6.jpg; sourceTree = "<group>"; };
 		AE8E766F243578FA00AC80DF /* petbg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = petbg7.jpg; sourceTree = "<group>"; };
 		AE96B99A255816DC00E5A8CB /* CalEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalEventsViewController.swift; sourceTree = "<group>"; };
-		AE96B99D25584ACA00E5A8CB /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE97D36E252CCCC400E7D3F6 /* firstAid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = firstAid.png; sourceTree = "<group>"; };
 		AE97D370252F476600E7D3F6 /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articles.png; sourceTree = "<group>"; };
 		AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
@@ -378,7 +380,7 @@
 		AEA0D276242E6B58001D0CF9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AE96B99D25584ACA00E5A8CB /* PetAssistDB.db */,
+				AE48E0F2255C363F0055127F /* PetAssistDB.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -437,6 +439,7 @@
 				AEA0D279242E6DC8001D0CF9 /* Data.swift */,
 				AE3F1831252F58AE00453A01 /* TableCell.swift */,
 				AE3875F9254B19DB00EC1D9E /* Video.swift */,
+				AE48E0F0255C0F900055127F /* Event.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */,
 				AE888EE2252F2AC5009AAC21 /* FSCalendarDelegationFactory.m in Sources */,
 				AE888EEC252F2AC5009AAC21 /* FSCalendarHeaderView.m in Sources */,
+				AE48E0F1255C0F900055127F /* Event.swift in Sources */,
 				AE0A5A6424353EB100D91828 /* EventsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

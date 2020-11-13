@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var databaseName : String? = "PetAssistDB.db"
     var databasePath : String?
     var people : [Data] = []
+    var events : [Event] = []
     var trainingOptions : [String] = ["Behavioral training", "Obedience training", "Agility training", "Vocational training"]
     
     var tableName : String = "PetAssist"
@@ -41,11 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let documentsDir = documentPaths[0]
         
         databasePath = documentsDir.appending("/"+databaseName!)
-        
         checkAndCreateDatabase()
         
+        readEventsFromDatabase()
         readDataFromDatabase()
-        
+
         
         return true
     }
@@ -84,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     people.append(data)
                     
                   //  print("Query result")
-                   // print("\(id) | \(name) | \(email) | \(username)")
+                    print("\(id) | \(name) | \(email) | \(username)")
                     
                     
                     
@@ -107,6 +108,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    
+    //Function to read data from the database
+    func readEventsFromDatabase(){
+        
+        print("" + self.databasePath!)
+        
+        events.removeAll()
+        
+        var db : OpaquePointer? = nil
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+            
+            print("successfully opened connection to database at \(self.databasePath)")
+            
+            var queryStatement : OpaquePointer? = nil
+            var queryStatementString : String = "Select * from events"
+            
+            if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK{
+                
+                while sqlite3_step(queryStatement) == SQLITE_ROW{
+                    let id : Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let ctitle = sqlite3_column_text(queryStatement, 1)
+                    let cdetail = sqlite3_column_text(queryStatement, 2)
+                    let cStartDate = sqlite3_column_text(queryStatement, 3)
+                    let cEndDate = sqlite3_column_text(queryStatement, 4)
+                    
+                    let title = String(cString : ctitle!)
+                    let detail = String(cString : cdetail!)
+                    let startDate = String(cString : cStartDate!)
+                    let endDate = String(cString : cEndDate!)
+                    
+                    let event : Event = Event.init()
+                    event.initWithData(theRow: id, theTitle: title, theDetails: detail, theStartDate: startDate, theEndDate: endDate)
+                    events.append(event)
+                    
+                  //  print("Query result")
+                    print("\(id) | \(title) | \(detail) | \(startDate) | \(endDate)" )
+                    
+                    
+                    
+                    
+                    
+                }
+                
+                sqlite3_finalize(queryStatement)
+                
+            }else{
+                print("Select statement could not be prepared")
+            }
+            
+            sqlite3_close(db)
+            
+        }else{
+            print("Unable to open database")
+        }
+        
+        
+    }
     
     //Function to insert data into the database
     func insertIntoDatabase(person : Data) -> Bool{
@@ -158,6 +216,163 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
+    //Function to insert data into the database
+    func insertEventIntoDatabase(event : Event) -> Bool{
+        var db : OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+            var insertStatement : OpaquePointer? = nil
+            let insertString : String = "insert into events values(NULL,?,? ,?,?)"
+            
+            
+            if sqlite3_prepare(db, insertString, -1, &insertStatement, nil) == SQLITE_OK {
+                
+                let titleStr = event.title! as NSString
+                let detailStr = event.details! as NSString
+                let startDateStr = event.startDate! as NSString
+                let endDateStr = event.endDate! as NSString
+                
+                sqlite3_bind_text(insertStatement, 1, titleStr.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement, 2, detailStr.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement, 3, startDateStr.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement, 4, endDateStr.utf8String, -1, nil)
+                
+                if sqlite3_step(insertStatement) == SQLITE_DONE{
+                    
+                    let rowID = sqlite3_last_insert_rowid(db)
+                    print("Successfully inserted row \(rowID)")
+                    
+                }else{
+                    print("Insert statement could not be prepared")
+                    returnCode = false
+                    
+                }
+                
+                sqlite3_finalize(insertStatement)
+                
+                
+            }else{
+                print("Insert statement could not be prepared")
+                returnCode = false
+            }
+            
+            sqlite3_close(insertStatement)
+        }else{
+            print("Unable to open database")
+            returnCode = false
+        }
+        
+        return returnCode
+        
+    }
+    
+    //Function to insert data into the database
+    func editEventIntoDatabase(event : Event) -> Bool{
+        var db : OpaquePointer? = nil
+        var returnCode : Bool = true
+        
+        if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+            var editStatement : OpaquePointer? = nil
+            let editString : String = "UPDATE Events SET Title = ? , Detail = ? , StartDate = ? , EndDate = ? WHERE Id = ?;"
+            
+            
+            if sqlite3_prepare(db, editString, -1, &editStatement, nil) == SQLITE_OK {
+                
+                let eventIDInt = event.id!
+                let titleStr = event.title! as NSString
+                let detailStr = event.details! as NSString
+                let startDateStr = event.startDate! as NSString
+                let endDateStr = event.endDate! as NSString
+                
+                sqlite3_bind_text(editStatement, 1, titleStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 2, detailStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 3, startDateStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 4, endDateStr.utf8String, -1, nil)
+                
+                if sqlite3_step(editStatement) == SQLITE_DONE{
+                    
+                    let rowID = sqlite3_last_insert_rowid(db)
+                    print("Successfully Edited row \(rowID)")
+                    
+                }else{
+                    print("Edit statement could not be prepared")
+                    returnCode = false
+                    
+                }
+                
+                sqlite3_finalize(editStatement)
+                
+                
+            }else{
+                print("Edit statement could not be prepared")
+                returnCode = false
+            }
+            
+            sqlite3_close(editStatement)
+        }else{
+            print("Unable to open database")
+            returnCode = false
+        }
+        
+        return returnCode
+        
+    }
+    
+    
+    //Function to insert data into the database
+       func deleteEventFromDatabase(event : Event) -> Bool{
+           var db : OpaquePointer? = nil
+           var returnCode : Bool = true
+           
+           if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
+               var editStatement : OpaquePointer? = nil
+               let editString : String = "UPDATE Events SET Title = ? , Detail = ? , StartDate = ? , EndDate = ? WHERE Id = ?;"
+               
+               
+               if sqlite3_prepare(db, editString, -1, &editStatement, nil) == SQLITE_OK {
+                   
+                   let eventIDInt = event.id!
+                   let titleStr = event.title! as NSString
+                   let detailStr = event.details! as NSString
+                   let startDateStr = event.startDate! as NSString
+                   let endDateStr = event.endDate! as NSString
+                   
+                   sqlite3_bind_text(editStatement, 1, titleStr.utf8String, -1, nil)
+                   sqlite3_bind_text(editStatement, 2, detailStr.utf8String, -1, nil)
+                   sqlite3_bind_text(editStatement, 3, startDateStr.utf8String, -1, nil)
+                   sqlite3_bind_text(editStatement, 4, endDateStr.utf8String, -1, nil)
+                   
+                   if sqlite3_step(editStatement) == SQLITE_DONE{
+                       
+                       let rowID = sqlite3_last_insert_rowid(db)
+                       print("Successfully Edited row \(rowID)")
+                       
+                   }else{
+                       print("Edit statement could not be prepared")
+                       returnCode = false
+                       
+                   }
+                   
+                   sqlite3_finalize(editStatement)
+                   
+                   
+               }else{
+                   print("Edit statement could not be prepared")
+                   returnCode = false
+               }
+               
+               sqlite3_close(editStatement)
+           }else{
+               print("Unable to open database")
+               returnCode = false
+           }
+           
+           return returnCode
+           
+       }
+    
+    
     //Check and create database if it does not exists already
     func checkAndCreateDatabase(){
         
@@ -177,6 +392,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return
         
     }
+    
+    
     
     
 
