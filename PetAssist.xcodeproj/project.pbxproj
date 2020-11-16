@@ -45,6 +45,7 @@
 		AE7229022550CC8B008387CC /* loginHome.png in Resources */ = {isa = PBXBuildFile; fileRef = AE7229012550CC8A008387CC /* loginHome.png */; };
 		AE72290425523480008387CC /* PetFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72290325523480008387CC /* PetFoodViewController.swift */; };
 		AE72290625523928008387CC /* toys.png in Resources */ = {isa = PBXBuildFile; fileRef = AE72290525523928008387CC /* toys.png */; };
+		AE733D222562A65E00B73E37 /* CustomCalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */; };
 		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
 		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
 		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
@@ -148,6 +149,7 @@
 		AE7229012550CC8A008387CC /* loginHome.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = loginHome.png; sourceTree = "<group>"; };
 		AE72290325523480008387CC /* PetFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFoodViewController.swift; sourceTree = "<group>"; };
 		AE72290525523928008387CC /* toys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toys.png; sourceTree = "<group>"; };
+		AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalTableViewCell.swift; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 				AE3F1831252F58AE00453A01 /* TableCell.swift */,
 				AE3875F9254B19DB00EC1D9E /* Video.swift */,
 				AE48E0F0255C0F900055127F /* Event.swift */,
+				AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -626,6 +629,7 @@
 				AE888EEB252F2AC5009AAC21 /* FSCalendarCalculator.m in Sources */,
 				AE888EE4252F2AC5009AAC21 /* FSCalendarStickyHeader.m in Sources */,
 				AEB11F1F25567EE2001F0CFA /* TrainingViewController.swift in Sources */,
+				AE733D222562A65E00B73E37 /* CustomCalTableViewCell.swift in Sources */,
 				AE53F5E3242DFB73005F9FC3 /* ViewSiteViewController.swift in Sources */,
 				AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */,
 				AE888EE2252F2AC5009AAC21 /* FSCalendarDelegationFactory.m in Sources */,

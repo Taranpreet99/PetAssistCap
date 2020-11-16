@@ -134,15 +134,55 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="110" id="gsC-yv-nRP">
-                                        <rect key="frame" x="0.0" y="28" width="412" height="110"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="168" id="gsC-yv-nRP" customClass="CustomCalTableViewCell" customModule="PetAssist" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="412" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gsC-yv-nRP" id="hYy-zx-mba">
-                                            <rect key="frame" x="0.0" y="0.0" width="412" height="110"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-Ue-f52">
+                                                    <rect key="frame" x="20" y="11" width="154" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="StartDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07o-P7-bYH">
+                                                    <rect key="frame" x="20" y="122" width="200" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EndDate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rt5-b3-ETr">
+                                                    <rect key="frame" x="228" y="122" width="164" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQi-xS-fgP">
+                                                    <rect key="frame" x="14" y="40" width="384" height="74"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calDetail" destination="oQi-xS-fgP" id="FUF-fJ-fJE"/>
+                                            <outlet property="calEndDate" destination="rt5-b3-ETr" id="VZl-xv-bFC"/>
+                                            <outlet property="calStartDate" destination="07o-P7-bYH" id="sVf-1h-Qcm"/>
+                                            <outlet property="calTitle" destination="ieZ-Ue-f52" id="Oer-VT-qrx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tKP-n0-N7S" id="gzj-YF-Jj2"/>
+                                    <outlet property="delegate" destination="tKP-n0-N7S" id="20Q-Xi-fbb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -151,7 +191,7 @@
                     <navigationItem key="navigationItem" title="Scheduler" id="lNC-t1-0Ss"/>
                     <connections>
                         <outlet property="calendar" destination="vYa-qP-Gdy" id="hIp-sQ-kuF"/>
-                        <outlet property="tableView" destination="weg-IK-ezM" id="87q-F2-f1l"/>
+                        <outlet property="tableView" destination="weg-IK-ezM" id="thU-5m-Dyb"/>
                         <segue destination="sEd-Jq-0hd" kind="show" identifier="goToReminder" id="JcB-L1-unx"/>
                         <segue destination="gpP-eh-dnr" kind="show" identifier="goToEvent" id="rry-WJ-TxX"/>
                     </connections>
@@ -1564,7 +1604,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9g-zY-hyU">
-                                <rect key="frame" x="22" y="716" width="371" height="60"/>
+                                <rect key="frame" x="19" y="733" width="371" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="32"/>
@@ -1573,6 +1613,18 @@
                                 </state>
                                 <connections>
                                     <action selector="addEvent" destination="gpP-eh-dnr" eventType="touchUpInside" id="MFo-Kz-mka"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PpX-hb-F7U">
+                                <rect key="frame" x="20" y="710" width="179" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="32"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="editEvent" destination="gpP-eh-dnr" eventType="touchUpInside" id="haQ-0S-ZvB"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cIw-l8-RRi">
@@ -1641,13 +1693,28 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" red="0.16678071019999999" green="0.67025274040000005" blue="0.53018432859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="als-OX-cMR">
+                                <rect key="frame" x="204" y="710" width="190" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="32"/>
+                                <state key="normal" title="Delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteEvent" destination="gpP-eh-dnr" eventType="touchUpInside" id="Ecf-Uc-jbo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kXS-An-H8B"/>
                     </view>
                     <navigationItem key="navigationItem" id="plI-mZ-yH2"/>
                     <connections>
+                        <outlet property="eventAdd" destination="J9g-zY-hyU" id="Zlb-RU-Whe"/>
+                        <outlet property="eventDelete" destination="als-OX-cMR" id="GXi-gv-71W"/>
                         <outlet property="eventDetailText" destination="bXn-Vy-87W" id="Kq8-3g-aCV"/>
+                        <outlet property="eventEdit" destination="PpX-hb-F7U" id="w6G-89-VEY"/>
                         <outlet property="eventTitleText" destination="HN5-eJ-18x" id="r7m-8Z-hqg"/>
                         <outlet property="myendDatePicker" destination="Ek8-U8-768" id="bUH-He-MOL"/>
                         <outlet property="mystartDatePicker" destination="Iup-Os-mN7" id="6E5-vU-uCg"/>

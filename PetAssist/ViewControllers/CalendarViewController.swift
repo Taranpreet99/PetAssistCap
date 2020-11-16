@@ -11,21 +11,9 @@ import EventKit
 
 class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance, UITableViewDelegate, UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-        
-        
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // create a new cell if needed or reuse an old one
-        let cell:UITableViewCell = (self.tableView.dequeueReusableCell(withIdentifier: "cell")!)
-        
-        // set the text from the data model
-        //cell.textLabel?.text = self.animals[indexPath.row]
-        
-        return cell
-    }
+    //app delegate object ot use AppDelegate in this file
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var calendar: FSCalendar!
@@ -33,17 +21,19 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     let date1 = Date()
     var dateText = ""
     
-    //app delegate object ot use AppDelegate in this file
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        appDelegate.readEventsFromDatabase()
+        tableView.reloadData()
         // Do any additional setup after loading the view.
         calendar.delegate = self
         dateFormatter.dateFormat = "yyyy-MM-dd"
         dateText = dateFormatter.string(from: date1)
-        
         
         var titles : [String] = []
         var startDates : [NSDate] = []
@@ -54,7 +44,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         
         //Get all events from phone
         for calendar in calendars {
-            if calendar.title == "Work" {
+            //Check if calendar has title
                 
                 let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
                 let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
@@ -68,7 +58,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                     startDates.append(event.startDate as! NSDate)
                     endDates.append(event.endDate as! NSDate)
                 }
-            }
         }
 
         
@@ -77,6 +66,47 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     }
     
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return appDelegate.events.count
+        
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell: CustomCalTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell1" , for: indexPath) as! CustomCalTableViewCell
+        
+        // set the text from the data model
+        //cell.textLabel?.text = self.animals[indexPath.row]
+        
+        let calEvents = appDelegate.events
+        
+        cell.calTitle?.text = calEvents[indexPath.row].title
+        cell.calDetail?.text = calEvents[indexPath.row].details
+        cell.calStartDate?.text = calEvents[indexPath.row].startDate
+        cell.calEndDate?.text = calEvents[indexPath.row].endDate
+
+        return cell
+    }
+    
+     
+    
+    // When the row is selected
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        appDelegate.eventID = appDelegate.events[indexPath.row].id!
+        
+        performSegue(withIdentifier: "goToEvent", sender: nil)
+    }
+    
+    
+    //Set TableView Cell Row
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150.0
+    }
+    
     //Edit Event
     @IBAction func deleteEvent(){
         
@@ -140,6 +170,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     //Send to Events Creater
     @IBAction func sendDate2(_ sender: Any){
+        appDelegate.eventID = -1
         performSegue(withIdentifier: "goToEvent", sender: self)
     }
     

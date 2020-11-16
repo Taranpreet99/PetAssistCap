@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventStore: EKEventStore?
     
     var selectedURL : String = ""
+    var eventID : Int = -1
+    
     
     var siteData = [String]()
     var listData = [String]()
@@ -279,7 +281,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             if sqlite3_prepare(db, editString, -1, &editStatement, nil) == SQLITE_OK {
                 
-                let eventIDInt = event.id!
+                let eventIDStr = String(event.id!) as NSString
                 let titleStr = event.title! as NSString
                 let detailStr = event.details! as NSString
                 let startDateStr = event.startDate! as NSString
@@ -289,6 +291,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 sqlite3_bind_text(editStatement, 2, detailStr.utf8String, -1, nil)
                 sqlite3_bind_text(editStatement, 3, startDateStr.utf8String, -1, nil)
                 sqlite3_bind_text(editStatement, 4, endDateStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 5, eventIDStr.utf8String, -1, nil)
                 
                 if sqlite3_step(editStatement) == SQLITE_DONE{
                     
@@ -327,29 +330,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            
            if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
                var editStatement : OpaquePointer? = nil
-               let editString : String = "UPDATE Events SET Title = ? , Detail = ? , StartDate = ? , EndDate = ? WHERE Id = ?;"
+               let editString : String = "DELETE FROM Events WHERE Id = ?;"
                
                
                if sqlite3_prepare(db, editString, -1, &editStatement, nil) == SQLITE_OK {
                    
-                   let eventIDInt = event.id!
-                   let titleStr = event.title! as NSString
-                   let detailStr = event.details! as NSString
-                   let startDateStr = event.startDate! as NSString
-                   let endDateStr = event.endDate! as NSString
+                   let eventIDStr = String(event.id!) as NSString
                    
-                   sqlite3_bind_text(editStatement, 1, titleStr.utf8String, -1, nil)
-                   sqlite3_bind_text(editStatement, 2, detailStr.utf8String, -1, nil)
-                   sqlite3_bind_text(editStatement, 3, startDateStr.utf8String, -1, nil)
-                   sqlite3_bind_text(editStatement, 4, endDateStr.utf8String, -1, nil)
-                   
+                   sqlite3_bind_text(editStatement, 1, eventIDStr.utf8String, -1, nil)
+                
                    if sqlite3_step(editStatement) == SQLITE_DONE{
                        
                        let rowID = sqlite3_last_insert_rowid(db)
-                       print("Successfully Edited row \(rowID)")
+                       print("Successfully Deleted row \(rowID)")
                        
                    }else{
-                       print("Edit statement could not be prepared")
+                       print("Delete statement could not be prepared")
                        returnCode = false
                        
                    }
@@ -358,7 +354,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                    
                    
                }else{
-                   print("Edit statement could not be prepared")
+                   print("Delete statement could not be prepared")
                    returnCode = false
                }
                
