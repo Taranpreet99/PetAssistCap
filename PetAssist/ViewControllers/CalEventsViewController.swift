@@ -14,12 +14,8 @@ class CalEventsViewController: UIViewController {
 
     
     let eventStore : EKEventStore = EKEventStore()
-          
-    // 'EKEntityTypeReminder' or 'EKEntityTypeEvent'
 
-    
-    
-
+    //Buttons on view controllers
     @IBOutlet weak var eventAdd: UIButton!
     @IBOutlet weak var eventEdit: UIButton!
     @IBOutlet weak var eventDelete: UIButton!
@@ -53,7 +49,10 @@ class CalEventsViewController: UIViewController {
         let eventIDChosen = self.appDelegate.eventID
         
         // Do any additional setup after loading the view.
+        
+        //Setup for either Adding Event or Removing/Editing Event
         if eventIDChosen != -1 {
+            //Remove/Editing Event
             eventAdd.isHidden = true
             eventEdit.isHidden = false
             eventDelete.isHidden = false
@@ -61,6 +60,7 @@ class CalEventsViewController: UIViewController {
             let formatter3 = DateFormatter()
             formatter3.dateFormat = "yyyy-MM-dd hh:mm"
             
+            //Get the event for chosen event
             for event in eventsHolder {
                 if eventIDChosen == event.id {
                     //Set the values in the view controller
@@ -76,6 +76,7 @@ class CalEventsViewController: UIViewController {
                 }
             }
         }else{
+            //Adding Event
             eventAdd.isHidden = false
             eventEdit.isHidden = true
             eventDelete.isHidden = true
@@ -158,7 +159,6 @@ class CalEventsViewController: UIViewController {
         //Edit Event in Phone
         
         //Delete Event in Phone
-        var eventPhoneId = ""
         let calendars = eventStore.calendars(for: .event)
                
         //Get all events from phone
@@ -166,9 +166,9 @@ class CalEventsViewController: UIViewController {
                    //Check if calendar has title
                        
                        let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
-                       let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
+            let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
                        
-                       let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: oneMonthAfter as Date, calendars: [calendar])
+                       let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: timeAfter as Date, calendars: [calendar])
                        
                        var events = eventStore.events(matching: predicate)
                        
@@ -184,7 +184,9 @@ class CalEventsViewController: UIViewController {
                                    catch let error {
                                     print(error.localizedDescription)
                                    }
-                           }
+                           }else{
+                            print("No Event Found")
+                        }
                        }
         }
         
@@ -260,8 +262,6 @@ class CalEventsViewController: UIViewController {
     @IBAction func deleteEvent(){
         
         //Delete Event from phone
-        
-        var eventPhoneId = ""
         let calendars = eventStore.calendars(for: .event)
         
         //Get all events from phone
@@ -269,9 +269,9 @@ class CalEventsViewController: UIViewController {
             //Check if calendar has title
                 
                 let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
-                let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
+                let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
                 
-                let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: oneMonthAfter as Date, calendars: [calendar])
+                let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: timeAfter as Date, calendars: [calendar])
                 
                 var events = eventStore.events(matching: predicate)
                 
@@ -286,48 +286,12 @@ class CalEventsViewController: UIViewController {
                             catch let error {
                                 print(error.localizedDescription)
                             }
+                    }else{
+                        print("No Events Found")
                     }
                 }
         }
-       // return
-
-        /*
-        let eventIDChosen = self.appDelegate.eventID
-        let formatter3 = DateFormatter()
-        formatter3.dateFormat = "yyyy-MM-dd hh:mm"
-        var stDate = Date() as NSDate?
-        var enDate = Date() as NSDate?
-        for event in appDelegate.events {
-            if eventIDChosen == event.id {
-                let stDate = formatter3.date(from: event.startDate!)! as NSDate?
-                let enDate = formatter3.date(from: event.endDate!)! as NSDate?
-            }
-        }
-        
-        eventStore.requestAccess(to: .event) { (granted, error) in
-            
-               var startDate = stDate
-               var endDate = enDate
-            let predicate2 = self.appDelegate.eventStore!.predicateForEvents(withStart: startDate! as Date, end: endDate! as Date, calendars: nil)
-               
-               print("startDate:\(startDate) endDate:\(endDate)")
-            var eV = self.appDelegate.eventStore!.events(matching: predicate2) as [EKEvent]?
-               
-               if eV != nil {
-                   for i in eV! {
-                       print("Title  \(i.title)" )
-                       print("stareDate: \(i.startDate)" )
-                       print("endDate: \(i.endDate)" )
-                       do{
-                        (try self.appDelegate.eventStore!.remove(i, span: EKSpan.thisEvent, commit: true))
-                       }
-                       catch let error {
-                       }
-                       
-                   }
-               }
-        }
-        */
+      
            //Delete Events from database
            //Empty fields validation
            if(eventTitleText.text == "" || eventDetailText.text == "" || mystartDatePicker.date > myendDatePicker.date){
@@ -375,9 +339,5 @@ class CalEventsViewController: UIViewController {
         
         return textField.resignFirstResponder()
     }
-    
-    //Add to events database
-    
-    
 
 }

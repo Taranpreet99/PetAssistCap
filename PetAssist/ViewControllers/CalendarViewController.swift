@@ -45,21 +45,27 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         datesWithNoEvents = []
         datesWithMultipleEvents = []
         
+        //Place events in organized collection
         for event in eventHolder {
             //Get String in format yyyy-MM-dd
             let eventStrSub = event.startDate!.prefix(10)
             let eventStr = String(eventStrSub)
             
-            
+            // Check if event is in the single event collection
             if datesWithEvent.contains(eventStr){
+                // Remove Event from single event collection
+                // Add Event to No Event to prevent readding to Single Collection
+                // Add Event to Multiple Event collection
                 datesWithNoEvents.append(eventStr)
                 
                 datesWithEvent.remove(at: datesWithEvent.firstIndex(of: eventStr)!)
                 print("M:\(eventStr)")
                 datesWithMultipleEvents.append(eventStr)
             }else{
+                //Check if event is being readded
                 if datesWithNoEvents.contains(eventStr){
                 }else{
+                    //Add event to single view collection
                     print("E:\(eventStr)")
                     datesWithEvent.append(eventStr)
                 }
@@ -68,6 +74,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             
         }
         
+        // Remove all previous events for date for new events to for date selected
+        // Add all events for the date and refresh tableview and calendar
         eventsForDate.removeAll()
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
@@ -100,12 +108,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         
     }
     
-
+    //Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
         return eventsForDate.count
     }
     
+    // Event Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // create a new cell if needed or reuse an old one
@@ -132,7 +141,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     }
     
     
-    //Set TableView Cell Row
+    //Set TableView Cell Row Height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130.0
     }
@@ -165,7 +174,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         //dateText = string
         dateSelectedText = string
         
-        
+        // Remove all previous events for date for new events to for date selected
+        // Add all events for the date and refresh tableview
         eventsForDate.removeAll()
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
