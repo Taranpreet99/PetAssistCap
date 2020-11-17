@@ -40,7 +40,11 @@ class CalEventsViewController: UIViewController {
     //app delegate object ot use AppDelegate in this file
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-
+    //Orginal Values of the id
+    var oldEventTitle = ""
+    var oldEventDetails = ""
+    var oldStartDate = Date()
+    var oldEndDate = Date()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +63,16 @@ class CalEventsViewController: UIViewController {
             
             for event in eventsHolder {
                 if eventIDChosen == event.id {
+                    //Set the values in the view controller
                     eventTitleText.text = event.title
                     eventDetailText.text = event.details
                     mystartDatePicker.date = formatter3.date(from: event.startDate!)!
                     myendDatePicker.date = formatter3.date(from: event.endDate!)!
+                    //Save values
+                    oldEventTitle = event.title!
+                    oldEventDetails = event.details!
+                    oldStartDate = formatter3.date(from: event.startDate!)!
+                    oldEndDate = formatter3.date(from: event.endDate!)!
                 }
             }
         }else{
@@ -75,8 +85,8 @@ class CalEventsViewController: UIViewController {
     
     //Add Event
     @IBAction func addEvent(){
-        
-        /*
+
+        //Add event to phone
         eventStore.requestAccess(to: .event) { (granted, error) in
           
           if (granted) && (error == nil) {
@@ -102,8 +112,8 @@ class CalEventsViewController: UIViewController {
               print("failed to save event with error : \(error) or access not granted")
           }
         }
-        */
-        
+
+        //Add Event in Database
         //Empty fields validation
         if(eventTitleText.text == "" || eventDetailText.text == "" || mystartDatePicker.date > myendDatePicker.date){
                    
@@ -145,7 +155,40 @@ class CalEventsViewController: UIViewController {
     //Edit Event
     @IBAction func editEvent(){
         
-        /*
+        //Edit Event in Phone
+        
+        //Delete Event in Phone
+        var eventPhoneId = ""
+        let calendars = eventStore.calendars(for: .event)
+               
+        //Get all events from phone
+        for calendar in calendars {
+                   //Check if calendar has title
+                       
+                       let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
+                       let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
+                       
+                       let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: oneMonthAfter as Date, calendars: [calendar])
+                       
+                       var events = eventStore.events(matching: predicate)
+                       
+                       for event in events {
+                           if event.title == oldEventTitle && event.notes == oldEventDetails && event.startDate == oldStartDate &&
+                               event.endDate == oldEndDate
+                               {
+                              // eventPhoneId = event.eventIdentifier
+                                   do{
+                                       (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
+                                        print("Passed Removed")
+                                   }
+                                   catch let error {
+                                    print(error.localizedDescription)
+                                   }
+                           }
+                       }
+        }
+        
+        //Save Event in Phone
         eventStore.requestAccess(to: .event) { (granted, error) in
           
           if (granted) && (error == nil) {
@@ -171,8 +214,8 @@ class CalEventsViewController: UIViewController {
               print("failed to save event with error : \(error) or access not granted")
           }
         }
-        */
         
+        //Edited Event from database
         //Empty fields validation
         if(eventTitleText.text == "" || eventDetailText.text == "" || mystartDatePicker.date > myendDatePicker.date){
                    
@@ -215,9 +258,76 @@ class CalEventsViewController: UIViewController {
     
     //Delete Event
     @IBAction func deleteEvent(){
-           
         
-           
+        //Delete Event from phone
+        
+        var eventPhoneId = ""
+        let calendars = eventStore.calendars(for: .event)
+        
+        //Get all events from phone
+        for calendar in calendars {
+            //Check if calendar has title
+                
+                let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
+                let oneMonthAfter = NSDate(timeIntervalSinceNow: +30*24*3600)
+                
+                let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: oneMonthAfter as Date, calendars: [calendar])
+                
+                var events = eventStore.events(matching: predicate)
+                
+                for event in events {
+                    if event.title == oldEventTitle || event.notes == oldEventDetails || event.startDate == oldStartDate ||
+                        event.endDate == oldEndDate
+                        {
+                       // eventPhoneId = event.eventIdentifier
+                            do{
+                                (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
+                            }
+                            catch let error {
+                            }
+                    }
+                }
+        }
+       // return
+
+        /*
+        let eventIDChosen = self.appDelegate.eventID
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy-MM-dd hh:mm"
+        var stDate = Date() as NSDate?
+        var enDate = Date() as NSDate?
+        for event in appDelegate.events {
+            if eventIDChosen == event.id {
+                let stDate = formatter3.date(from: event.startDate!)! as NSDate?
+                let enDate = formatter3.date(from: event.endDate!)! as NSDate?
+            }
+        }
+        
+        eventStore.requestAccess(to: .event) { (granted, error) in
+            
+               var startDate = stDate
+               var endDate = enDate
+            let predicate2 = self.appDelegate.eventStore!.predicateForEvents(withStart: startDate! as Date, end: endDate! as Date, calendars: nil)
+               
+               print("startDate:\(startDate) endDate:\(endDate)")
+            var eV = self.appDelegate.eventStore!.events(matching: predicate2) as [EKEvent]?
+               
+               if eV != nil {
+                   for i in eV! {
+                       print("Title  \(i.title)" )
+                       print("stareDate: \(i.startDate)" )
+                       print("endDate: \(i.endDate)" )
+                       do{
+                        (try self.appDelegate.eventStore!.remove(i, span: EKSpan.thisEvent, commit: true))
+                       }
+                       catch let error {
+                       }
+                       
+                   }
+               }
+        }
+        */
+           //Delete Events from database
            //Empty fields validation
            if(eventTitleText.text == "" || eventDetailText.text == "" || mystartDatePicker.date > myendDatePicker.date){
                       
