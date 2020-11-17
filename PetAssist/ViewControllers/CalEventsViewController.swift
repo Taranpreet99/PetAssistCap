@@ -276,7 +276,7 @@ class CalEventsViewController: UIViewController {
                 var events = eventStore.events(matching: predicate)
                 
                 for event in events {
-                    if event.title == oldEventTitle || event.notes == oldEventDetails || event.startDate == oldStartDate ||
+                    if event.title == oldEventTitle && event.notes == oldEventDetails && event.startDate == oldStartDate &&
                         event.endDate == oldEndDate
                         {
                        // eventPhoneId = event.eventIdentifier
@@ -284,6 +284,7 @@ class CalEventsViewController: UIViewController {
                                 (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
                             }
                             catch let error {
+                                print(error.localizedDescription)
                             }
                     }
                 }

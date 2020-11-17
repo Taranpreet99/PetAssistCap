@@ -29,9 +29,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     var datesWithMultipleEvents = [String]()
 
+    //Events for the date
     var eventsForDate = [Event]()
     
     override func viewWillAppear(_ animated: Bool) {
+        //Refresh Events
         appDelegate.readEventsFromDatabase()
 
         
@@ -44,6 +46,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         datesWithMultipleEvents = []
         
         for event in eventHolder {
+            //Get String in format yyyy-MM-dd
             let eventStrSub = event.startDate!.prefix(10)
             let eventStr = String(eventStrSub)
             
@@ -61,6 +64,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                     datesWithEvent.append(eventStr)
                 }
             }
+            
+            
         }
         
         eventsForDate.removeAll()
@@ -129,7 +134,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     //Set TableView Cell Row
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return 130.0
     }
     
     
