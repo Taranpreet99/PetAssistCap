@@ -45,6 +45,10 @@ class CalEventsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        eventDetailText.layer.borderWidth = 1
+        eventDetailText.layer.borderColor = UIColor.systemGray.cgColor
+        
+        
         let eventsHolder = appDelegate.events
         let eventIDChosen = self.appDelegate.eventID
         
@@ -68,6 +72,7 @@ class CalEventsViewController: UIViewController {
                     eventDetailText.text = event.details
                     mystartDatePicker.date = formatter3.date(from: event.startDate!)!
                     myendDatePicker.date = formatter3.date(from: event.endDate!)!
+                    print("\(event.startDate) | \(event.endDate)")
                     //Save values
                     oldEventTitle = event.title!
                     oldEventDetails = event.details!
