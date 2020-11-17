@@ -62,7 +62,8 @@ class CalEventsViewController: UIViewController {
             eventDelete.isHidden = false
             
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyy-MM-dd hh:mm"
+            formatter3.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+            formatter3.dateFormat = "yyyy-MM-dd HH:mm"
             
             //Get the event for chosen event
             for event in eventsHolder {
@@ -135,7 +136,8 @@ class CalEventsViewController: UIViewController {
                
             
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyy-MM-dd hh:mm"
+            formatter3.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+            formatter3.dateFormat = "yyyy-MM-dd HH:mm"
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
             
@@ -238,7 +240,8 @@ class CalEventsViewController: UIViewController {
                
             
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyy-MM-dd hh:mm"
+            formatter3.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+            formatter3.dateFormat = "yyyy-MM-dd HH:mm"
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
             
@@ -313,7 +316,8 @@ class CalEventsViewController: UIViewController {
                   
                
                let formatter3 = DateFormatter()
-               formatter3.dateFormat = "yyyy-MM-dd hh:mm"
+               formatter3.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+               formatter3.dateFormat = "yyyy-MM-dd HH:mm"
                let startDate = formatter3.string(from: mystartDatePicker.date)
                let endDate = formatter3.string(from: myendDatePicker.date)
                
