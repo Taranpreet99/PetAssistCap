@@ -108,6 +108,20 @@ class CalEventsViewController: UIViewController {
             event.endDate = self.myendDatePicker.date
             event.notes = self.eventDetailText.text
             event.calendar = self.eventStore.defaultCalendarForNewEvents
+            var addedAlarms = 0
+            var evStartDate = event.startDate
+            while evStartDate!.compare(event.endDate) == .orderedDescending {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                evStartDate = evStartDate!.addingTimeInterval(24*60*60)
+                event.addAlarm(alarm)
+            }
+            if addedAlarms == 0 {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                event.addAlarm(alarm)
+            }
+            
               do {
                 try self.eventStore.save(event, span: .thisEvent)
               } catch let error as NSError {
@@ -169,9 +183,6 @@ class CalEventsViewController: UIViewController {
                 datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
             }
             print(datesInEventStr)
-            
-            //Add the startdate that turned into
-            
             
                    let event : Event = Event.init()
             event.initWithData(theRow: 0, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
@@ -243,6 +254,19 @@ class CalEventsViewController: UIViewController {
             event.endDate = self.myendDatePicker.date
             event.notes = self.eventDetailText.text
             event.calendar = self.eventStore.defaultCalendarForNewEvents
+            var addedAlarms = 0
+            var evStartDate = event.startDate
+            while evStartDate!.compare(event.endDate) == .orderedDescending {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                evStartDate = evStartDate!.addingTimeInterval(24*60*60)
+                event.addAlarm(alarm)
+            }
+            if addedAlarms == 0 {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                event.addAlarm(alarm)
+            }
               do {
                 try self.eventStore.save(event, span: .thisEvent)
               } catch let error as NSError {
@@ -288,9 +312,9 @@ class CalEventsViewController: UIViewController {
             //Checking Whether the two dates are the same
             while datePickerStart!.compare(datePickerEnd!) != .orderedSame {
                 if datesInEventStr == "" {
-                               datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+                    datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
                 }else{
-                               datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+                    datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
                 }
                 datePickerStart =  datePickerStart!.addingTimeInterval(24*60*60)
             }
@@ -304,10 +328,10 @@ class CalEventsViewController: UIViewController {
             
             let eventsID = appDelegate.eventID
             
-                   let event : Event = Event.init()
+            let event : Event = Event.init()
             event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
                    
-                   let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+            let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
             let returnCode = mainDelegate.editEventIntoDatabase(event: event);
                    
