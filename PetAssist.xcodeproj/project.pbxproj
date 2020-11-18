@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -46,6 +46,20 @@
 		AE72290425523480008387CC /* PetFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE72290325523480008387CC /* PetFoodViewController.swift */; };
 		AE72290625523928008387CC /* toys.png in Resources */ = {isa = PBXBuildFile; fileRef = AE72290525523928008387CC /* toys.png */; };
 		AE733D222562A65E00B73E37 /* CustomCalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */; };
+		AE733DC92565B0C700B73E37 /* FirebaseDatabase.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DC42565B0C700B73E37 /* FirebaseDatabase.xcframework */; };
+		AE733DCA2565B0C700B73E37 /* leveldb-library.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DC52565B0C700B73E37 /* leveldb-library.xcframework */; };
+		AE733DCB2565B0C700B73E37 /* FirebaseAuth.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DC72565B0C700B73E37 /* FirebaseAuth.xcframework */; };
+		AE733DCC2565B0C700B73E37 /* GTMSessionFetcher.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DC82565B0C700B73E37 /* GTMSessionFetcher.xcframework */; };
+		AE733DD82565B21E00B73E37 /* nanopb.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DCE2565B21E00B73E37 /* nanopb.xcframework */; };
+		AE733DD92565B21E00B73E37 /* GoogleAppMeasurement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DCF2565B21E00B73E37 /* GoogleAppMeasurement.framework */; };
+		AE733DDA2565B21E00B73E37 /* PromisesObjC.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD02565B21E00B73E37 /* PromisesObjC.xcframework */; };
+		AE733DDB2565B21E00B73E37 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD12565B21E00B73E37 /* FirebaseAnalytics.framework */; };
+		AE733DDC2565B21E00B73E37 /* FirebaseCoreDiagnostics.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD22565B21E00B73E37 /* FirebaseCoreDiagnostics.xcframework */; };
+		AE733DDD2565B21E00B73E37 /* FirebaseInstallations.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD32565B21E00B73E37 /* FirebaseInstallations.xcframework */; };
+		AE733DDE2565B21E00B73E37 /* FirebaseCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD42565B21E00B73E37 /* FirebaseCore.xcframework */; };
+		AE733DDF2565B21E00B73E37 /* GoogleDataTransport.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD52565B21E00B73E37 /* GoogleDataTransport.xcframework */; };
+		AE733DE02565B21E00B73E37 /* FIRAnalyticsConnector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD62565B21E00B73E37 /* FIRAnalyticsConnector.framework */; };
+		AE733DE12565B21E00B73E37 /* GoogleUtilities.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE733DD72565B21E00B73E37 /* GoogleUtilities.xcframework */; };
 		AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE7E9E0024300A4600E68054 /* AVFoundation.framework */; };
 		AE888EBE252F2AA1009AAC21 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */; };
 		AE888EE0252F2AC5009AAC21 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */; };
@@ -150,6 +164,21 @@
 		AE72290525523928008387CC /* toys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toys.png; sourceTree = "<group>"; };
 		AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalTableViewCell.swift; sourceTree = "<group>"; };
 		AE733D232564D5D100B73E37 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
+		AE733DC22565B0C700B73E37 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Firebase/Firebase.h; sourceTree = "<group>"; };
+		AE733DC42565B0C700B73E37 /* FirebaseDatabase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseDatabase.xcframework; sourceTree = "<group>"; };
+		AE733DC52565B0C700B73E37 /* leveldb-library.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "leveldb-library.xcframework"; sourceTree = "<group>"; };
+		AE733DC72565B0C700B73E37 /* FirebaseAuth.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseAuth.xcframework; sourceTree = "<group>"; };
+		AE733DC82565B0C700B73E37 /* GTMSessionFetcher.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GTMSessionFetcher.xcframework; sourceTree = "<group>"; };
+		AE733DCE2565B21E00B73E37 /* nanopb.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = nanopb.xcframework; sourceTree = "<group>"; };
+		AE733DCF2565B21E00B73E37 /* GoogleAppMeasurement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleAppMeasurement.framework; sourceTree = "<group>"; };
+		AE733DD02565B21E00B73E37 /* PromisesObjC.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = PromisesObjC.xcframework; sourceTree = "<group>"; };
+		AE733DD12565B21E00B73E37 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		AE733DD22565B21E00B73E37 /* FirebaseCoreDiagnostics.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseCoreDiagnostics.xcframework; sourceTree = "<group>"; };
+		AE733DD32565B21E00B73E37 /* FirebaseInstallations.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseInstallations.xcframework; sourceTree = "<group>"; };
+		AE733DD42565B21E00B73E37 /* FirebaseCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseCore.xcframework; sourceTree = "<group>"; };
+		AE733DD52565B21E00B73E37 /* GoogleDataTransport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleDataTransport.xcframework; sourceTree = "<group>"; };
+		AE733DD62565B21E00B73E37 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
+		AE733DD72565B21E00B73E37 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -239,12 +268,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE53F5EC24308C76005F9FC3 /* CoreGraphics.framework in Frameworks */,
+				AE733DC92565B0C700B73E37 /* FirebaseDatabase.xcframework in Frameworks */,
+				AE733DE12565B21E00B73E37 /* GoogleUtilities.xcframework in Frameworks */,
+				AE733DCC2565B0C700B73E37 /* GTMSessionFetcher.xcframework in Frameworks */,
+				AE733DE02565B21E00B73E37 /* FIRAnalyticsConnector.framework in Frameworks */,
+				AE733DDA2565B21E00B73E37 /* PromisesObjC.xcframework in Frameworks */,
+				AE733DD82565B21E00B73E37 /* nanopb.xcframework in Frameworks */,
+				AE733DD92565B21E00B73E37 /* GoogleAppMeasurement.framework in Frameworks */,
+				AE733DDD2565B21E00B73E37 /* FirebaseInstallations.xcframework in Frameworks */,
 				AE53F5EA24308C4D005F9FC3 /* CoreLocation.framework in Frameworks */,
 				AE53F5E824308C3B005F9FC3 /* MapKit.framework in Frameworks */,
+				AE733DCA2565B0C700B73E37 /* leveldb-library.xcframework in Frameworks */,
 				AE7E9E0124300A4600E68054 /* AVFoundation.framework in Frameworks */,
+				AE733DCB2565B0C700B73E37 /* FirebaseAuth.xcframework in Frameworks */,
 				AEA0D27D242E72E4001D0CF9 /* libsqlite3.tbd in Frameworks */,
+				AE733DDE2565B21E00B73E37 /* FirebaseCore.xcframework in Frameworks */,
+				AE733DDC2565B21E00B73E37 /* FirebaseCoreDiagnostics.xcframework in Frameworks */,
 				AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */,
 				AE53F5E1242DFB49005F9FC3 /* WebKit.framework in Frameworks */,
+				AE733DDB2565B21E00B73E37 /* FirebaseAnalytics.framework in Frameworks */,
+				AE733DDF2565B21E00B73E37 /* GoogleDataTransport.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +384,44 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
+		AE733DC32565B0C700B73E37 /* FirebaseDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				AE733DC42565B0C700B73E37 /* FirebaseDatabase.xcframework */,
+				AE733DC52565B0C700B73E37 /* leveldb-library.xcframework */,
+			);
+			name = FirebaseDatabase;
+			path = Firebase/FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		AE733DC62565B0C700B73E37 /* FirebaseAuth */ = {
+			isa = PBXGroup;
+			children = (
+				AE733DC72565B0C700B73E37 /* FirebaseAuth.xcframework */,
+				AE733DC82565B0C700B73E37 /* GTMSessionFetcher.xcframework */,
+			);
+			name = FirebaseAuth;
+			path = Firebase/FirebaseAuth;
+			sourceTree = "<group>";
+		};
+		AE733DCD2565B21E00B73E37 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				AE733DCE2565B21E00B73E37 /* nanopb.xcframework */,
+				AE733DCF2565B21E00B73E37 /* GoogleAppMeasurement.framework */,
+				AE733DD02565B21E00B73E37 /* PromisesObjC.xcframework */,
+				AE733DD12565B21E00B73E37 /* FirebaseAnalytics.framework */,
+				AE733DD22565B21E00B73E37 /* FirebaseCoreDiagnostics.xcframework */,
+				AE733DD32565B21E00B73E37 /* FirebaseInstallations.xcframework */,
+				AE733DD42565B21E00B73E37 /* FirebaseCore.xcframework */,
+				AE733DD52565B21E00B73E37 /* GoogleDataTransport.xcframework */,
+				AE733DD62565B21E00B73E37 /* FIRAnalyticsConnector.framework */,
+				AE733DD72565B21E00B73E37 /* GoogleUtilities.xcframework */,
+			);
+			name = FirebaseAnalytics;
+			path = Firebase/FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
 		AE888EBF252F2AC4009AAC21 /* FSCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +489,10 @@
 		AEABA0362418116200733848 /* PetAssist */ = {
 			isa = PBXGroup;
 			children = (
+				AE733DC22565B0C700B73E37 /* Firebase.h */,
+				AE733DCD2565B21E00B73E37 /* FirebaseAnalytics */,
+				AE733DC62565B0C700B73E37 /* FirebaseAuth */,
+				AE733DC32565B0C700B73E37 /* FirebaseDatabase */,
 				AEC856212541AAC7005BBD52 /* Assets.bundle */,
 				AEC856232541AB21005BBD52 /* YTPlayerView.h */,
 				AEC856242541AB21005BBD52 /* YTPlayerView.m */,
@@ -783,11 +868,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseMLModelInterpreter",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseAnalytics",
+					"$(PROJECT_DIR)/PetAssist/Firebase/GoogleSignIn",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebasePerformance",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseMLVision",
+				);
 				INFOPLIST_FILE = PetAssist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";
@@ -803,11 +897,20 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseMLModelInterpreter",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseAnalytics",
+					"$(PROJECT_DIR)/PetAssist/Firebase/GoogleSignIn",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebasePerformance",
+					"$(PROJECT_DIR)/PetAssist/Firebase/FirebaseMLVision",
+				);
 				INFOPLIST_FILE = PetAssist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";
