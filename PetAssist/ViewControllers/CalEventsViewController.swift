@@ -110,15 +110,17 @@ class CalEventsViewController: UIViewController {
             event.calendar = self.eventStore.defaultCalendarForNewEvents
             var addedAlarms = 0
             var evStartDate = event.startDate
-            while evStartDate!.compare(event.endDate) == .orderedDescending {
+            while evStartDate!.compare(event.endDate) == .orderedAscending {
                 let alarm = EKAlarm(absoluteDate: evStartDate!)
                 addedAlarms = addedAlarms + 1
+                print("AddedAlarms:\(addedAlarms)")
                 evStartDate = evStartDate!.addingTimeInterval(24*60*60)
                 event.addAlarm(alarm)
             }
             if addedAlarms == 0 {
                 let alarm = EKAlarm(absoluteDate: evStartDate!)
                 addedAlarms = addedAlarms + 1
+                print("AddedAlarms1:\(addedAlarms)")
                 event.addAlarm(alarm)
             }
             
@@ -215,29 +217,29 @@ class CalEventsViewController: UIViewController {
         for calendar in calendars {
                    //Check if calendar has title
                        
-                       let timeAgo = NSDate(timeIntervalSinceNow: -20*30*24*3600)
+            let timeAgo = NSDate(timeIntervalSinceNow: -20*30*24*3600)
             let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
                        
-                       let predicate = eventStore.predicateForEvents(withStart: timeAgo as Date, end: timeAfter as Date, calendars: [calendar])
+            let predicate = eventStore.predicateForEvents(withStart: timeAgo as Date, end: timeAfter as Date, calendars: [calendar])
                        
-                       var events = eventStore.events(matching: predicate)
+            var events = eventStore.events(matching: predicate)
                        
-                       for event in events {
-                           if event.title == oldEventTitle && event.notes == oldEventDetails && event.startDate == oldStartDate &&
-                               event.endDate == oldEndDate
-                               {
-                              // eventPhoneId = event.eventIdentifier
-                                   do{
-                                       (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
-                                        print("Passed Removed")
-                                   }
-                                   catch let error {
-                                    print(error.localizedDescription)
-                                   }
-                           }else{
-                            print("No Event Found")
-                        }
+           for event in events {
+               if event.title == oldEventTitle && event.notes == oldEventDetails && event.startDate == oldStartDate &&
+                   event.endDate == oldEndDate
+                   {
+                  // eventPhoneId = event.eventIdentifier
+                       do{
+                           (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
+                            print("Passed Removed")
                        }
+                       catch let error {
+                        print(error.localizedDescription)
+                       }
+               }else{
+                print("No Event Found")
+            }
+           }
         }
         
         //Save Event in Phone
@@ -256,7 +258,7 @@ class CalEventsViewController: UIViewController {
             event.calendar = self.eventStore.defaultCalendarForNewEvents
             var addedAlarms = 0
             var evStartDate = event.startDate
-            while evStartDate!.compare(event.endDate) == .orderedDescending {
+            while evStartDate!.compare(event.endDate) == .orderedAscending {
                 let alarm = EKAlarm(absoluteDate: evStartDate!)
                 addedAlarms = addedAlarms + 1
                 evStartDate = evStartDate!.addingTimeInterval(24*60*60)
