@@ -134,14 +134,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     let cdetail = sqlite3_column_text(queryStatement, 2)
                     let cStartDate = sqlite3_column_text(queryStatement, 3)
                     let cEndDate = sqlite3_column_text(queryStatement, 4)
+                    let cDates = sqlite3_column_text(queryStatement, 5)
                     
                     let title = String(cString : ctitle!)
                     let detail = String(cString : cdetail!)
                     let startDate = String(cString : cStartDate!)
                     let endDate = String(cString : cEndDate!)
+                    let dates =  String(cString: cDates!)
                     
                     let event : Event = Event.init()
-                    event.initWithData(theRow: id, theTitle: title, theDetails: detail, theStartDate: startDate, theEndDate: endDate)
+                    event.initWithData(theRow: id, theTitle: title, theDetails: detail, theStartDate: startDate, theEndDate: endDate, datesInEvent: dates)
                     events.append(event)
                     
                   //  print("Query result")
@@ -225,7 +227,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
             var insertStatement : OpaquePointer? = nil
-            let insertString : String = "insert into events values(NULL,?,? ,?,?)"
+            let insertString : String = "insert into events values(NULL,?,? ,?,?,?)"
             
             
             if sqlite3_prepare(db, insertString, -1, &insertStatement, nil) == SQLITE_OK {
@@ -234,11 +236,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let detailStr = event.details! as NSString
                 let startDateStr = event.startDate! as NSString
                 let endDateStr = event.endDate! as NSString
+                let datesStr = event.datesInEvent! as NSString
                 
                 sqlite3_bind_text(insertStatement, 1, titleStr.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 2, detailStr.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 3, startDateStr.utf8String, -1, nil)
                 sqlite3_bind_text(insertStatement, 4, endDateStr.utf8String, -1, nil)
+                sqlite3_bind_text(insertStatement, 5, datesStr.utf8String, -1, nil)
                 
                 if sqlite3_step(insertStatement) == SQLITE_DONE{
                     
@@ -276,7 +280,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if sqlite3_open(self.databasePath, &db) == SQLITE_OK{
             var editStatement : OpaquePointer? = nil
-            let editString : String = "UPDATE Events SET Title = ? , Detail = ? , StartDate = ? , EndDate = ? WHERE Id = ?;"
+            let editString : String = "UPDATE Events SET Title = ? , Detail = ? , StartDate = ? , EndDate = ? , DatesOfEvent = ? WHERE Id = ?;"
             
             
             if sqlite3_prepare(db, editString, -1, &editStatement, nil) == SQLITE_OK {
@@ -286,12 +290,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 let detailStr = event.details! as NSString
                 let startDateStr = event.startDate! as NSString
                 let endDateStr = event.endDate! as NSString
+                let datesStr = event.datesInEvent! as NSString
                 
                 sqlite3_bind_text(editStatement, 1, titleStr.utf8String, -1, nil)
                 sqlite3_bind_text(editStatement, 2, detailStr.utf8String, -1, nil)
                 sqlite3_bind_text(editStatement, 3, startDateStr.utf8String, -1, nil)
                 sqlite3_bind_text(editStatement, 4, endDateStr.utf8String, -1, nil)
-                sqlite3_bind_text(editStatement, 5, eventIDStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 5, datesStr.utf8String, -1, nil)
+                sqlite3_bind_text(editStatement, 6, eventIDStr.utf8String, -1, nil)
                 
                 if sqlite3_step(editStatement) == SQLITE_DONE{
                     

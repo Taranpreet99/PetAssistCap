@@ -124,7 +124,6 @@
 		AE390385252CC3EB00642FAC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		AE3F1831252F58AE00453A01 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		AE48E0F0255C0F900055127F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		AE48E0F2255C363F0055127F /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidViewController.swift; sourceTree = "<group>"; };
 		AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SiteCell.swift; sourceTree = "<group>"; };
 		AE53F5CD242DF1A3005F9FC3 /* burns.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burns.png; sourceTree = "<group>"; };
@@ -150,6 +149,7 @@
 		AE72290325523480008387CC /* PetFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFoodViewController.swift; sourceTree = "<group>"; };
 		AE72290525523928008387CC /* toys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toys.png; sourceTree = "<group>"; };
 		AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalTableViewCell.swift; sourceTree = "<group>"; };
+		AE733D232564D5D100B73E37 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		AEA0D276242E6B58001D0CF9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AE48E0F2255C363F0055127F /* PetAssistDB.db */,
+				AE733D232564D5D100B73E37 /* PetAssistDB.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";

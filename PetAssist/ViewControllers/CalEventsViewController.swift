@@ -93,6 +93,7 @@ class CalEventsViewController: UIViewController {
     //Add Event
     @IBAction func addEvent(){
 
+        
         //Add event to phone
         eventStore.requestAccess(to: .event) { (granted, error) in
           
@@ -119,6 +120,9 @@ class CalEventsViewController: UIViewController {
               print("failed to save event with error : \(error) or access not granted")
           }
         }
+        
+        //Add to Reminders (Optional)
+        
 
         //Add Event in Database
         //Empty fields validation
@@ -140,9 +144,37 @@ class CalEventsViewController: UIViewController {
             formatter3.dateFormat = "yyyy-MM-dd HH:mm"
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
+            var datesInEventStr = ""
+            //Get all dates in between start and end date inclusive
+            let formatter4 = DateFormatter()
+            formatter4.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+            formatter4.dateFormat = "yyyy-MM-dd"
+            //Get dates in yyyy-MM-dd format in Date datatype
+            var datePickerStart = formatter4.date(from: String(startDate.prefix(10)))
+            var datePickerEnd = formatter4.date(from: String(endDate.prefix(10)))
+            //Checking Whether the two dates are the same
+            while datePickerStart!.compare(datePickerEnd!) != .orderedSame {
+                if datesInEventStr == "" {
+                    datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+                }else{
+                    datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+                }
+                datePickerStart =  datePickerStart!.addingTimeInterval(24*60*60)
+                //print(datePickerStart)
+            }
+            //Last Add to datesInEventStr
+            if datesInEventStr == "" {
+                datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+            }else{
+                datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+            }
+            print(datesInEventStr)
+            
+            //Add the startdate that turned into
+            
             
                    let event : Event = Event.init()
-            event.initWithData(theRow: 0, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate)
+            event.initWithData(theRow: 0, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
                    
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
@@ -172,10 +204,10 @@ class CalEventsViewController: UIViewController {
         for calendar in calendars {
                    //Check if calendar has title
                        
-                       let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
+                       let timeAgo = NSDate(timeIntervalSinceNow: -20*30*24*3600)
             let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
                        
-                       let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: timeAfter as Date, calendars: [calendar])
+                       let predicate = eventStore.predicateForEvents(withStart: timeAgo as Date, end: timeAfter as Date, calendars: [calendar])
                        
                        var events = eventStore.events(matching: predicate)
                        
@@ -236,7 +268,7 @@ class CalEventsViewController: UIViewController {
                    alertController.addAction(cancel)
                    present(alertController,animated: true)
                    
-               }else{
+        }else{
                
             
             let formatter3 = DateFormatter()
@@ -245,10 +277,35 @@ class CalEventsViewController: UIViewController {
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
             
+            var datesInEventStr = ""
+            //Get all dates in between start and end date inclusive
+            let formatter4 = DateFormatter()
+            formatter4.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+            formatter4.dateFormat = "yyyy-MM-dd"
+            //Get dates in yyyy-MM-dd format in Date datatype
+            var datePickerStart = formatter4.date(from: String(startDate.prefix(10)))
+            var datePickerEnd = formatter4.date(from: String(endDate.prefix(10)))
+            //Checking Whether the two dates are the same
+            while datePickerStart!.compare(datePickerEnd!) != .orderedSame {
+                if datesInEventStr == "" {
+                               datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+                }else{
+                               datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+                }
+                datePickerStart =  datePickerStart!.addingTimeInterval(24*60*60)
+            }
+            //Last Add to datesInEventStr
+            if datesInEventStr == "" {
+                        datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+            }else{
+                        datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+            }
+            print(datesInEventStr)
+            
             let eventsID = appDelegate.eventID
             
                    let event : Event = Event.init()
-            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate)
+            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
                    
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
@@ -276,10 +333,10 @@ class CalEventsViewController: UIViewController {
         for calendar in calendars {
             //Check if calendar has title
                 
-                let oneMonthAgo = NSDate(timeIntervalSinceNow: -30*24*3600)
+                let timeAgo = NSDate(timeIntervalSinceNow: -20*30*24*3600)
                 let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
                 
-                let predicate = eventStore.predicateForEvents(withStart: oneMonthAgo as Date, end: timeAfter as Date, calendars: [calendar])
+                let predicate = eventStore.predicateForEvents(withStart: timeAgo as Date, end: timeAfter as Date, calendars: [calendar])
                 
                 var events = eventStore.events(matching: predicate)
                 
@@ -324,7 +381,7 @@ class CalEventsViewController: UIViewController {
                 let eventsID = appDelegate.eventID
             
                       let event : Event = Event.init()
-               event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate)
+            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: "")
                       
                       let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                       

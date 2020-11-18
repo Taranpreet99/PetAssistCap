@@ -47,31 +47,33 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         
         //Place events in organized collection
         for event in eventHolder {
-            //Get String in format yyyy-MM-dd
-            let eventStrSub = event.startDate!.prefix(10)
-            let eventStr = String(eventStrSub)
             
-            // Check if event is in the single event collection
-            if datesWithEvent.contains(eventStr){
-                // Remove Event from single event collection
-                // Add Event to No Event to prevent readding to Single Collection
-                // Add Event to Multiple Event collection
-                datesWithNoEvents.append(eventStr)
-                
-                datesWithEvent.remove(at: datesWithEvent.firstIndex(of: eventStr)!)
-                print("M:\(eventStr)")
-                datesWithMultipleEvents.append(eventStr)
-            }else{
-                //Check if event is being readded
-                if datesWithNoEvents.contains(eventStr){
+            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            
+            // Determine dots in the date
+            for eventStr in eventStrArray {
+                print(eventStr)
+                // Check if event is in the single event collection
+                if datesWithEvent.contains(eventStr){
+                    // Remove Event from single event collection
+                    // Add Event to No Event to prevent readding to Single Collection
+                    // Add Event to Multiple Event collection
+                    datesWithNoEvents.append(eventStr)
+                    
+                    datesWithEvent.remove(at: datesWithEvent.firstIndex(of: eventStr)!)
+                    print("M:\(eventStr)")
+                    datesWithMultipleEvents.append(eventStr)
                 }else{
-                    //Add event to single view collection
-                    print("E:\(eventStr)")
-                    datesWithEvent.append(eventStr)
+                    //Check if event is being readded
+                    if datesWithNoEvents.contains(eventStr){
+                    }else{
+                        //Add event to single view collection
+                        print("E:\(eventStr)")
+                        datesWithEvent.append(eventStr)
+                    }
                 }
+                
             }
-            
-            
         }
         
         // Remove all previous events for date for new events to for date selected
@@ -80,10 +82,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
         for event in appDelegate.events{
-            let eventStrSub = event.startDate?.prefix(10)
-            let eventStr = String(eventStrSub!)
-            if dateSelectedText == eventStr {
-                eventsForDate.append(event)
+            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            
+            // Determine dots in the date
+            for eventStr in eventStrArray {
+                if dateSelectedText == eventStr {
+                    eventsForDate.append(event)
+                }
             }
         }
         tableView.reloadData()
@@ -180,10 +185,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
         for event in appDelegate.events{
-            let eventStrSub = event.startDate?.prefix(10)
-            let eventStr = String(eventStrSub!)
-            if dateSelectedText == eventStr {
-                eventsForDate.append(event)
+            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            
+            // Determine dots in the date
+            for eventStr in eventStrArray {
+                if dateSelectedText == eventStr {
+                    eventsForDate.append(event)
+                }
             }
         }
         
