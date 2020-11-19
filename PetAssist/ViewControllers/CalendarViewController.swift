@@ -33,8 +33,17 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     var eventsForDate = [Event]()
     
     override func viewWillAppear(_ animated: Bool) {
+        //Alert if user is not logged in
+        if appDelegate.loggedOnID == -1 {
+            //Alert
+            let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar." , preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            present(alertController,animated: true)
+        }
+        
         //Refresh Events
-        appDelegate.readEventsFromDatabase()
+        appDelegate.readEventsFromDatabaseWithID()
 
         
         let eventHolder = appDelegate.events
@@ -200,8 +209,17 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     //Send to Events Creater
     @IBAction func sendDate2(_ sender: Any){
-        appDelegate.eventID = -1
-        performSegue(withIdentifier: "goToEvent", sender: self)
+        //Alert if user is not logged in
+        if appDelegate.loggedOnID == -1 {
+            //Alert
+            let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar features." , preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(cancel)
+            present(alertController,animated: true)
+        }else{
+            appDelegate.eventID = -1
+            performSegue(withIdentifier: "goToEvent", sender: self)
+        }
     }
         
 }

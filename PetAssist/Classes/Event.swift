@@ -15,14 +15,16 @@ class Event: NSObject {
        var startDate :String?
        var endDate : String?
        var datesInEvent : String?
+       var entriesID : Int?
     
        //function to store data object
-    func initWithData(theRow i: Int, theTitle t : String, theDetails d :String, theStartDate sd : String, theEndDate ed : String, datesInEvent datInEv : String){
+    func initWithData(theRow i: Int, theTitle t : String, theDetails d :String, theStartDate sd : String, theEndDate ed : String, datesInEvent datInEv : String, entriesID entID : Int){
            id = i
            title = t
            details = d
            startDate = sd
            endDate = ed
            datesInEvent = datInEv
+           entriesID = entID
        }
 }

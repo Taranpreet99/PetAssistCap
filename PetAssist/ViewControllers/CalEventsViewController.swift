@@ -137,8 +137,6 @@ class CalEventsViewController: UIViewController {
           }
         }
         
-        //Add to Reminders (Optional)
-        
 
         //Add Event in Database
         //Empty fields validation
@@ -187,7 +185,7 @@ class CalEventsViewController: UIViewController {
             print(datesInEventStr)
             
                    let event : Event = Event.init()
-            event.initWithData(theRow: 0, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
+            event.initWithData(theRow: 0, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
                    
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
@@ -331,7 +329,7 @@ class CalEventsViewController: UIViewController {
             let eventsID = appDelegate.eventID
             
             let event : Event = Event.init()
-            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr)
+            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
                    
             let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
@@ -407,7 +405,7 @@ class CalEventsViewController: UIViewController {
                 let eventsID = appDelegate.eventID
             
                       let event : Event = Event.init()
-            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: "")
+            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: eventDetailText.text!, theStartDate: startDate, theEndDate: endDate, datesInEvent: "", entriesID: appDelegate.loggedOnID)
                       
                       let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                       

@@ -163,7 +163,6 @@
 		AE72290325523480008387CC /* PetFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFoodViewController.swift; sourceTree = "<group>"; };
 		AE72290525523928008387CC /* toys.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toys.png; sourceTree = "<group>"; };
 		AE733D212562A65E00B73E37 /* CustomCalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCalTableViewCell.swift; sourceTree = "<group>"; };
-		AE733D232564D5D100B73E37 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE733DC22565B0C700B73E37 /* Firebase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Firebase/Firebase.h; sourceTree = "<group>"; };
 		AE733DC42565B0C700B73E37 /* FirebaseDatabase.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = FirebaseDatabase.xcframework; sourceTree = "<group>"; };
 		AE733DC52565B0C700B73E37 /* leveldb-library.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = "leveldb-library.xcframework"; sourceTree = "<group>"; };
@@ -179,6 +178,7 @@
 		AE733DD52565B21E00B73E37 /* GoogleDataTransport.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleDataTransport.xcframework; sourceTree = "<group>"; };
 		AE733DD62565B21E00B73E37 /* FIRAnalyticsConnector.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FIRAnalyticsConnector.framework; sourceTree = "<group>"; };
 		AE733DD72565B21E00B73E37 /* GoogleUtilities.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = GoogleUtilities.xcframework; sourceTree = "<group>"; };
+		AE733DE22565E04100B73E37 /* PetAssistDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PetAssistDB.db; sourceTree = "<group>"; };
 		AE7E9E0024300A4600E68054 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AE888EBD252F2AA1009AAC21 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		AE888EC0252F2AC4009AAC21 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
@@ -463,7 +463,7 @@
 		AEA0D276242E6B58001D0CF9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				AE733D232564D5D100B73E37 /* PetAssistDB.db */,
+				AE733DE22565E04100B73E37 /* PetAssistDB.db */,
 			);
 			path = Database;
 			sourceTree = "<group>";
