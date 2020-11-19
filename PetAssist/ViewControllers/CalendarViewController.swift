@@ -32,6 +32,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     //Events for the date
     var eventsForDate = [Event]()
     
+
+    
     override func viewWillAppear(_ animated: Bool) {
         //Alert if user is not logged in
         if appDelegate.loggedOnID == -1 {
@@ -108,7 +110,16 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+/*
+        ref.child("Accounts").observe(.value, with: { snapshot in
+            guard let value = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            print("Value: \(value)")
+        })
+  */
+        
 
         // Do any additional setup after loading the view.
 

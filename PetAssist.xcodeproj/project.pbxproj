@@ -19,6 +19,7 @@
 		AE39037D252CB3BE00642FAC /* signin.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037C252CB3BE00642FAC /* signin.png */; };
 		AE39037F252CB3C400642FAC /* signup.png in Resources */ = {isa = PBXBuildFile; fileRef = AE39037E252CB3C300642FAC /* signup.png */; };
 		AE390386252CC3EB00642FAC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE390385252CC3EB00642FAC /* InformationViewController.swift */; };
+		AE3B61622566753B0017DD93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AE3B61612566753B0017DD93 /* GoogleService-Info.plist */; };
 		AE3F1832252F58AE00453A01 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3F1831252F58AE00453A01 /* TableCell.swift */; };
 		AE48E0F1255C0F900055127F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE48E0F0255C0F900055127F /* Event.swift */; };
 		AE53F5C9242DEA0E005F9FC3 /* FirstAidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */; };
@@ -120,7 +121,6 @@
 		AEE54A3D254CDCC600EE6315 /* disease.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3C254CDCC600EE6315 /* disease.png */; };
 		AEE54A3F254CE95000EE6315 /* tutorials.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3E254CE95000EE6315 /* tutorials.png */; };
 		AEF7F1AE254885E900BDF6D7 /* Home.png in Resources */ = {isa = PBXBuildFile; fileRef = AEF7F1AD254885E900BDF6D7 /* Home.png */; };
-		AEF7F1B02548D46900BDF6D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEF7F1AF2548D46900BDF6D7 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +136,7 @@
 		AE39037C252CB3BE00642FAC /* signin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signin.png; sourceTree = "<group>"; };
 		AE39037E252CB3C300642FAC /* signup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signup.png; sourceTree = "<group>"; };
 		AE390385252CC3EB00642FAC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		AE3B61612566753B0017DD93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AE3F1831252F58AE00453A01 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		AE48E0F0255C0F900055127F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		AE53F5C8242DEA0E005F9FC3 /* FirstAidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAidViewController.swift; sourceTree = "<group>"; };
@@ -259,7 +260,6 @@
 		AEE54A3C254CDCC600EE6315 /* disease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disease.png; sourceTree = "<group>"; };
 		AEE54A3E254CE95000EE6315 /* tutorials.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorials.png; sourceTree = "<group>"; };
 		AEF7F1AD254885E900BDF6D7 /* Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Home.png; sourceTree = "<group>"; };
-		AEF7F1AF2548D46900BDF6D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -504,7 +504,7 @@
 				AEABA04A2418166600733848 /* Storyboards */,
 				AEABA03E2418116600733848 /* Assets.xcassets */,
 				AEABA0432418116600733848 /* Info.plist */,
-				AEF7F1AF2548D46900BDF6D7 /* GoogleService-Info.plist */,
+				AE3B61612566753B0017DD93 /* GoogleService-Info.plist */,
 			);
 			path = PetAssist;
 			sourceTree = "<group>";
@@ -645,6 +645,7 @@
 				AE0A5A742435522900D91828 /* bonbg.png in Resources */,
 				AEF7F1AE254885E900BDF6D7 /* Home.png in Resources */,
 				AE53F5D5242DF1A3005F9FC3 /* burns.png in Resources */,
+				AE3B61622566753B0017DD93 /* GoogleService-Info.plist in Resources */,
 				AE7228FC2550CC71008387CC /* petArticles.png in Resources */,
 				AE0A5A6624354B4600D91828 /* petBg.jpg in Resources */,
 				AEC41D5B252B451300C00B2C /* reminder.png in Resources */,
@@ -667,7 +668,6 @@
 				AE97D36F252CCCC500E7D3F6 /* firstAid.png in Resources */,
 				AEABA03D2418116200733848 /* Main.storyboard in Resources */,
 				AE8E7673243578FB00AC80DF /* petbg4.jpg in Resources */,
-				AEF7F1B02548D46900BDF6D7 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,7 +881,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";
@@ -910,7 +910,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = "Taran-Yu.PetAssist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PetAssist/ViewControllers/PetAssist-Bridging-Header.h";

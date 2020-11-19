@@ -11,6 +11,7 @@ import SQLite3
 import UserNotifications
 import EventKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -36,6 +37,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var identifier : String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
+        
+        var ref: DatabaseReference!
+
+        ref = Database.database().reference()
+        
+        ref.child("Accounts").observe(.value, with: { snapshot in
+            guard let value = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            print("Value:\(value)")
+        })
+        
         // Override point for customization after application launch.
         
         let notiCenter = UNUserNotificationCenter.current()

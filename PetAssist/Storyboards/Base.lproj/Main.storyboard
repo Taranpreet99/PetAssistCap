@@ -281,6 +281,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4ye-FM-e8s"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kvL-yx-glN"/>
                     <connections>
                         <outlet property="tfConfirmPassword" destination="g6r-Ng-WyR" id="ybF-mZ-q8R"/>
                         <outlet property="tfEmail" destination="DmE-su-mNn" id="kk0-zf-SJ0"/>
@@ -512,6 +513,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zZB-ud-6FG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="tQ6-5w-3N9"/>
                     <connections>
                         <outlet property="tableView" destination="Lbj-kn-z9v" id="RAU-6x-FIx"/>
                         <segue destination="TrQ-Rd-SqG" kind="show" identifier="ArticleToSite" id="bWc-ft-iUA"/>
@@ -1467,6 +1469,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0yo-xx-a4s"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q42-Lk-RT0"/>
                     <connections>
                         <outlet property="tableName" destination="kbX-Nk-U2Z" id="vTj-wZ-ip2"/>
                         <outlet property="tableView" destination="Rve-Xc-hOU" id="owK-Jd-vzl"/>
