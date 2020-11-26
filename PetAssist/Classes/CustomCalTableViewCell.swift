@@ -12,8 +12,6 @@ class CustomCalTableViewCell: UITableViewCell {
 
     @IBOutlet weak var calTitle: UILabel!
 
-    @IBOutlet weak var calDetail: UILabel!
-
     @IBOutlet weak var calStartDate: UILabel!
 
     @IBOutlet weak var calEndDate: UILabel!

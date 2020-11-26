@@ -36,7 +36,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     override func viewWillAppear(_ animated: Bool) {
         //Alert if user is not logged in
-        if appDelegate.loggedOnID == -1 {
+        if appDelegate.loggedOnID == "-1" {
             //Alert
             let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar." , preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -59,7 +59,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         //Place events in organized collection
         for event in eventHolder {
             
-            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
             
             // Determine dots in the date
             for eventStr in eventStrArray {
@@ -93,7 +93,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
         for event in appDelegate.events{
-            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
             
             // Determine dots in the date
             for eventStr in eventStrArray {
@@ -110,17 +110,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-/*
-        ref.child("Accounts").observe(.value, with: { snapshot in
-            guard let value = snapshot.value as? [String: Any] else {
-                return
-            }
-            
-            print("Value: \(value)")
-        })
-  */
-        
-
         // Do any additional setup after loading the view.
 
         calendar.delegate = self
@@ -128,10 +117,38 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         dateText = dateFormatter.string(from: date1)
         
         dateSelectedText = dateFormatter.string(from: Date())
-        
-       
-        
     }
+    
+    //Get String from date "item1,item2"
+    func getStringfromDate(event: Event) -> String{
+        var datesInEventStr = ""
+        //Get all dates in between start and end date inclusive
+        let formatter4 = DateFormatter()
+        formatter4.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
+        formatter4.dateFormat = "yyyy-MM-dd"
+        //Get dates in yyyy-MM-dd format in Date datatype
+        var datePickerStart = formatter4.date(from: String(event.startDate!.prefix(10)))
+        var datePickerEnd = formatter4.date(from: String(event.endDate!.prefix(10)))
+        //Checking Whether the two dates are the same
+        while datePickerStart!.compare(datePickerEnd!) != .orderedSame {
+            if datesInEventStr == "" {
+                datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+            }else{
+                datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+            }
+            datePickerStart =  datePickerStart!.addingTimeInterval(24*60*60)
+            //print(datePickerStart)
+        }
+        //Last Add to datesInEventStr
+        if datesInEventStr == "" {
+            datesInEventStr = datesInEventStr + formatter4.string(from: datePickerStart!)
+        }else{
+            datesInEventStr = datesInEventStr + "," + formatter4.string(from: datePickerStart!)
+        }
+        //print(datesInEventStr)
+        return datesInEventStr
+    }
+    
     
     //Number of Rows
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -147,15 +164,33 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         
         let calEvents = eventsForDate
         
+        let startDateChanged = change24hrsToAmPm(date: calEvents[indexPath.row].startDate!)
+        let endDateChanged = change24hrsToAmPm(date: calEvents[indexPath.row].endDate!)
+        
         cell.calTitle?.text = calEvents[indexPath.row].title
-        cell.calDetail?.text = calEvents[indexPath.row].details
-        cell.calStartDate?.text = calEvents[indexPath.row].startDate
-        cell.calEndDate?.text = calEvents[indexPath.row].endDate
+        cell.calStartDate?.text = startDateChanged
+        cell.calEndDate?.text = endDateChanged
 
         return cell
     }
     
      
+    // 24 hrs to AM/PM
+    func change24hrsToAmPm(date: String) -> String {
+        let formatter3 = DateFormatter()
+        formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let dateF = formatter3.date(from: date)
+        
+        formatter3.dateFormat = "yyyy-MM-dd hh:mm a"
+        
+        let dateFS = formatter3.string(from: dateF!)
+        //print(dateFS)
+        
+        return dateFS
+        
+    }
+    
     
     // When the row is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -193,7 +228,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     
     //Select date from Calendar UI
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        //Save date and print out string 
+        //Save date and print out string
         let string = dateFormatter.string(from: date)
         print("\(string)")
         //dateText = string
@@ -205,7 +240,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         let formatter5 = DateFormatter()
         formatter5.dateFormat = "yyyy-MM-dd"
         for event in appDelegate.events{
-            let eventStrArray = event.datesInEvent!.components(separatedBy: ",")
+            let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
             
             // Determine dots in the date
             for eventStr in eventStrArray {
@@ -221,14 +256,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     //Send to Events Creater
     @IBAction func sendDate2(_ sender: Any){
         //Alert if user is not logged in
-        if appDelegate.loggedOnID == -1 {
+        if appDelegate.loggedOnID == "-1" {
             //Alert
             let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar features." , preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(cancel)
             present(alertController,animated: true)
         }else{
-            appDelegate.eventID = -1
+            appDelegate.eventID = "-1"
             performSegue(withIdentifier: "goToEvent", sender: self)
         }
     }

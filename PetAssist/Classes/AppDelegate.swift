@@ -27,10 +27,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventStore: EKEventStore?
     
     var selectedURL : String = ""
-    var eventID : Int = -1
+    var eventID : String = "-1"
     
     //See if user is signed in
-    var loggedOnID = -1
+    var loggedOnID = "-1"
     
     var siteData = [String]()
     var listData = [String]()
@@ -148,19 +148,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if sqlite3_prepare_v2(db, queryStatementString, -1, &queryStatement, nil) == SQLITE_OK{
                 
                 while sqlite3_step(queryStatement) == SQLITE_ROW{
-                    let id : Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let cId = sqlite3_column_text(queryStatement, 0)
                     let ctitle = sqlite3_column_text(queryStatement, 1)
                     let cdetail = sqlite3_column_text(queryStatement, 2)
                     let cStartDate = sqlite3_column_text(queryStatement, 3)
                     let cEndDate = sqlite3_column_text(queryStatement, 4)
                     let cDates = sqlite3_column_text(queryStatement, 5)
-                    let entID = Int(sqlite3_column_int(queryStatement, 6))
+                    let cEntID = sqlite3_column_text(queryStatement, 6)
                     
+                    let id = String(cString : cId!)
                     let title = String(cString : ctitle!)
                     let detail = String(cString : cdetail!)
                     let startDate = String(cString : cStartDate!)
                     let endDate = String(cString : cEndDate!)
                     let dates =  String(cString: cDates!)
+                    let entID = String(cString: cEntID!)
                     
                     let event : Event = Event.init()
                     event.initWithData(theRow: id, theTitle: title, theDetails: detail, theStartDate: startDate, theEndDate: endDate, datesInEvent: dates, entriesID: entID)
@@ -214,20 +216,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
                 
                 while sqlite3_step(queryStatement) == SQLITE_ROW{
-                    let id : Int = Int(sqlite3_column_int(queryStatement, 0))
+                    let cId = sqlite3_column_text(queryStatement, 0)
                     let ctitle = sqlite3_column_text(queryStatement, 1)
                     let cdetail = sqlite3_column_text(queryStatement, 2)
                     let cStartDate = sqlite3_column_text(queryStatement, 3)
                     let cEndDate = sqlite3_column_text(queryStatement, 4)
                     let cDates = sqlite3_column_text(queryStatement, 5)
-                    let entID = Int(sqlite3_column_int(queryStatement, 6))
+                    let cEntID = sqlite3_column_text(queryStatement, 6)
                     
+                    let id = String(cString : cId!)
                     let title = String(cString : ctitle!)
                     let detail = String(cString : cdetail!)
                     let startDate = String(cString : cStartDate!)
                     let endDate = String(cString : cEndDate!)
                     let dates =  String(cString: cDates!)
-                   
+                    let entID = String(cString: cEntID!)
                     
                     let event : Event = Event.init()
                     event.initWithData(theRow: id, theTitle: title, theDetails: detail, theStartDate: startDate, theEndDate: endDate, datesInEvent: dates, entriesID: entID)

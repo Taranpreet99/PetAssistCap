@@ -9,16 +9,16 @@
 import UIKit
 
 class Event: NSObject {
-       var id : Int?
+       var id : String?
        var title: String?
        var details : String?
        var startDate :String?
        var endDate : String?
        var datesInEvent : String?
-       var entriesID : Int?
+       var entriesID : String?
     
        //function to store data object
-    func initWithData(theRow i: Int, theTitle t : String, theDetails d :String, theStartDate sd : String, theEndDate ed : String, datesInEvent datInEv : String, entriesID entID : Int){
+    func initWithData(theRow i: String, theTitle t : String, theDetails d :String, theStartDate sd : String, theEndDate ed : String, datesInEvent datInEv : String, entriesID entID : String){
            id = i
            title = t
            details = d
