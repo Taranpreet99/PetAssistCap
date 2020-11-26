@@ -205,7 +205,7 @@
             <objects>
                 <viewController id="Wyo-IQ-XLO" customClass="RegisterViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ulp-pf-8No">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSn-3d-S0t">
@@ -528,7 +528,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPs-bU-cnl">
@@ -589,19 +589,20 @@
                         <outlet property="pass" destination="FSK-lf-LFS" id="tMV-vb-nmI"/>
                         <outlet property="uname" destination="TbQ-q1-2h9" id="zcV-Sl-peb"/>
                         <segue destination="Wyo-IQ-XLO" kind="presentation" identifier="SegueToRegister" id="KVh-QB-OBX"/>
-                        <segue destination="y11-mx-Lre" kind="show" identifier="SegueToHomePage" id="AHI-24-gac"/>
+                        <segue destination="ppv-Pv-jCK" kind="unwind" identifier="unwindtoHomePage" unwindAction="unwindToHomePageWithSender:" id="xVA-0t-xfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ppv-Pv-jCK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-4400" y="82"/>
+            <point key="canvasLocation" x="-4510" y="82"/>
         </scene>
         <!--PetAssist-->
         <scene sceneID="dRI-mS-b2G">
             <objects>
                 <viewController id="y11-mx-Lre" customClass="HomePageViewController" customModule="PetAssist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owH-nm-5nd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hi, Welcome to PetAssist!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePg-eH-K1w">
@@ -623,14 +624,6 @@
                                     <segue destination="cav-rh-v8f" kind="show" id="3TC-wL-Mlw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PI-i1-9F2">
-                                <rect key="frame" x="216" y="595" width="150" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="loginHome.png"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="rXh-JB-yeS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CZm-dJ-47k">
                                 <rect key="frame" x="48" y="442" width="150" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -648,22 +641,42 @@
                                     <segue destination="Ect-4Y-9OR" kind="show" id="xgV-6I-4UN"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0PI-i1-9F2">
+                                <rect key="frame" x="216" y="595" width="150" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="loginHome.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="rXh-JB-yeS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="nF9-js-Yp9"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="PetAssist" id="gH2-Bg-raJ">
                         <barButtonItem key="backBarButtonItem" title="Back" id="6lC-XP-Yen"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="HyA-IA-Jhe">
+                            <connections>
+                                <action selector="logoutWithSender:" destination="y11-mx-Lre" id="kQP-4h-7ae"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="HyA-IA-Jhe" id="BSB-IY-iCm"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToLogin" id="gIo-mr-aBI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHv-Ch-fcP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2439.130434782609" y="81.696428571428569"/>
         </scene>
-        <!--Training-->
+        <!--Home-->
         <scene sceneID="PGe-Q9-fQ1">
             <objects>
-                <tabBarController title="Training" id="PcS-FW-tMk" sceneMemberID="viewController">
+                <tabBarController title="Home" interfaceStyle="light" id="PcS-FW-tMk" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BsE-xb-T4m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -682,7 +695,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qn-0p-CsD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2228" y="-655"/>
+            <point key="canvasLocation" x="-2088" y="-746"/>
         </scene>
         <!--Pet Training-->
         <scene sceneID="MkQ-vZ-XMb">
@@ -1729,12 +1742,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mvT-PC-oN9"/>
-        <segue reference="9vi-vk-lNn"/>
-        <segue reference="N49-Hy-3FA"/>
-        <segue reference="AHI-24-gac"/>
-        <segue reference="rXh-JB-yeS"/>
-        <segue reference="XTN-q1-0Ld"/>
+        <segue reference="3oA-oQ-G8t"/>
+        <segue reference="jR1-Iy-ibh"/>
+        <segue reference="xgV-6I-4UN"/>
+        <segue reference="gIo-mr-aBI"/>
+        <segue reference="3TC-wL-Mlw"/>
         <segue reference="0SL-lM-HnR"/>
         <segue reference="wlX-qV-Z5w"/>
     </inferredMetricsTieBreakers>

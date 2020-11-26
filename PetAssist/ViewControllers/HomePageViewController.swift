@@ -12,6 +12,8 @@ class HomePageViewController: UIViewController {
     
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    @IBOutlet var logoutButton : UIBarButtonItem!
+    
     @IBAction func unwindToHomePage(sender : UIStoryboardSegue){
         
     }
@@ -25,10 +27,42 @@ class HomePageViewController: UIViewController {
         
         
     }
+    
+    @IBAction func logout(sender: Any){
+        
+        if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
+        
+            logoutButton.title = "Login"
+            UserDefaults.standard.set(false, forKey: "IsUserLoggedIn")
+            print("user is logged in")
+            
+        }else{
+            
+            performSegue(withIdentifier: "segueToLogin", sender: nil)
+            
+        }
+        
+    }
+    
+  func changeLogoutbuttonName(){
+    logoutButton.title = "Logout"
+}
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+                
+         if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
+        
+            logoutButton.title = "Logout"
+            
+         }else{
+            
+            logoutButton.title = "Login"
+        }
+
+        
         // Do any additional setup after loading the view.
     }
     
