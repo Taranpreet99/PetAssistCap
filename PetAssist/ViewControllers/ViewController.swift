@@ -78,7 +78,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
             //If both username and password are correct - segue
         if(count == 2){
-            self.performSegue(withIdentifier: "SegueToHomePage", sender: nil)
+            self.navigationController?.popToRootViewController(animated: true)
+            //self.performSegue(withIdentifier: "SegueToHomePage", sender: nil)
         }
         else{//else username is incorrect
                 
