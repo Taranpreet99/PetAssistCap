@@ -53,7 +53,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 if(mainDelegate.people[i].password == pass.text){
                     
                     count = 2
-                    mainDelegate.loggedOnID =  "\(mainDelegate.people[i].id!)"
+                    //Test Name for the logged in user
+                    mainDelegate.loggedOnID =  "testacc"
                     break
                    
                 }else{

@@ -41,6 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use Firebase library to configure APIs
         FirebaseApp.configure()
         
+        /*
         var ref: DatabaseReference!
 
         ref = Database.database().reference()
@@ -52,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             print("Value:\(value)")
         })
-        
+        */
         // Override point for customization after application launch.
         
         let notiCenter = UNUserNotificationCenter.current()
@@ -128,6 +129,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
     }
+    
+    
+    
+    
     
     
     //Function to read data from the database

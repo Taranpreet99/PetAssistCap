@@ -42,16 +42,189 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
             alertController.addAction(cancel)
             present(alertController,animated: true)
-        }
+        }else{
         
-        //Refresh Events
-        appDelegate.readEventsFromDatabaseWithID()
+            //Refresh Events
+            //appDelegate.readEventsFromDatabaseWithID()
+            //let a = readEventsFromFirebase()
+            //print("Event Count --- \(a)")
+            readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
+            reloadCalendarViewContoller()
 
+        }
+    }
+
+    func reloadCalendarViewContoller(){
+        determineNumOfEventsForDates()
+        getEventsForSelectedDate()
+    }
+    
+    //Function to read all events from firebase, choose the events with right structure
+    func readEventsFromFirebase() -> Int{
+        var rootRef: DatabaseReference!
+
+        var eventCount = 0
         
+        appDelegate.events.removeAll()
+        //var newItems: [GroceryItem] = []
+        
+        //Root of Data
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+        eventRef.observe(.value, with: { snapshot in
+            
+            guard let value = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            //Every Key in Events
+            for key in value.keys {
+                
+                //Every child in Event
+                eventRef.child(key).observeSingleEvent(of: .value, with: {
+                    snapshot in
+                    
+                    if let eventDict = snapshot.value as? [String:Any] {
+                         //Do not cast print it directly may be score is Int not string
+                        //print(userDict.keys)
+                        let userName = eventDict["Username"] ?? "Not There"
+                        let eventsID = eventDict["EventsID"] ?? "Not There"
+                        let title = eventDict["Subject"] ?? "Not There"
+                        let sd = eventDict["Start"] ?? "Not There"
+                        let ed = eventDict["End"] ?? "Not There"
+                        if String(describing: userName) != "Not There"{
+                            print("\(userName) | \(eventsID) | \(title) | \(sd) | \(ed)")
+                            //print("Count:\(eventDict.count)")
+                            
+                            let cId = eventsID as! Int
+                            let title = title
+                            let detail = ""
+                            let startDate = sd
+                            let endDate = ed
+                            let dates =  ""
+                            let entID = userName
+                            
+                            let id = "\(cId)"
+                            let event : Event = Event.init()
+                            event.initWithData(theRow: id , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
+                            //print("Event ID: \(event.id)")
+                            
+                            self.appDelegate.events.append(event)
+                            print("Event Count: \(self.appDelegate.events.count)")
+                            eventCount = eventCount + 1
+                            self.reloadCalendarViewContoller()
+                        }
+                    }
+                    
+                })
+                
+            }
+         
+        })
+        return eventCount
+    }
+    
+    //Function to read events from firebase
+    func readEventsFromFirebaseWithUsername(username: String) -> Int{
+        var rootRef: DatabaseReference!
+
+        var eventCount = 0
+        
+        appDelegate.events.removeAll()
+        //var newItems: [GroceryItem] = []
+        
+        //Root of Data
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+        eventRef.observe(.value, with: { snapshot in
+            
+            guard let value = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            //Every Key in Events
+            for key in value.keys {
+                
+                //Every child in Event
+                eventRef.child(key).observeSingleEvent(of: .value, with: {
+                    snapshot in
+                    
+                    if let eventDict = snapshot.value as? [String:Any] {
+                         //Do not cast print it directly may be score is Int not string
+                        //print(userDict.keys)
+                        let userName = eventDict["Username"] ?? "Not There"
+                        let eventsID = eventDict["EventsID"] ?? "Not There"
+                        let title = eventDict["Subject"] ?? "Not There"
+                        let sd = eventDict["Start"] ?? "Not There"
+                        let ed = eventDict["End"] ?? "Not There"
+                        if String(describing: userName) == username{
+                            print("\(userName) | \(eventsID) | \(title) | \(sd) | \(ed)")
+                            //print("Count:\(eventDict.count)")
+                            
+                            let cId = eventsID as! Int
+                            let title = title
+                            let detail = ""
+                            let startDate = sd
+                            let endDate = ed
+                            let dates =  ""
+                            let entID = userName
+                            
+                            let id = "\(cId)"
+                            let event : Event = Event.init()
+                            event.initWithData(theRow: id , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
+                            //print("Event ID: \(event.id)")
+                            
+                            self.appDelegate.events.append(event)
+                            print("Event Count: \(self.appDelegate.events.count)")
+                            eventCount = eventCount + 1
+                            self.reloadCalendarViewContoller()
+                        }
+                    }
+                    
+                })
+                
+            }
+         
+        })
+        return eventCount
+    }
+    
+    func getEventsForSelectedDate(){
+        
+        // Remove all previous events for date for new events to for date selected
+        // Add all events for the date and refresh tableview and calendar
+        eventsForDate.removeAll()
+        let formatter5 = DateFormatter()
+        formatter5.dateFormat = "yyyy-MM-dd"
+        for event in appDelegate.events{
+            //Get events dates in between
+            let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
+            
+            // For event in between dates
+            for eventStr in eventStrArray {
+                //If date matches selected date
+                if dateSelectedText == eventStr {
+                    //Add to EventsForDate which is a collection date selected events
+                    eventsForDate.append(event)
+                }
+            }
+        }
+        //Reload Table and Calendar
+        tableView.reloadData()
+        calendar.reloadData()
+    }
+    
+    func determineNumOfEventsForDates(){
         let eventHolder = appDelegate.events
+        print("Holder: \(eventHolder.count)")
         let formatter3 = DateFormatter()
         formatter3.dateFormat = "yyyy-MM-dd"
         
+        //Empty all collections
         datesWithEvent = []
         datesWithNoEvents = []
         datesWithMultipleEvents = []
@@ -59,6 +232,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         //Place events in organized collection
         for event in eventHolder {
             
+            //Get all events dates in between
             let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
             
             // Determine dots in the date
@@ -87,26 +261,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             }
         }
         
-        // Remove all previous events for date for new events to for date selected
-        // Add all events for the date and refresh tableview and calendar
-        eventsForDate.removeAll()
-        let formatter5 = DateFormatter()
-        formatter5.dateFormat = "yyyy-MM-dd"
-        for event in appDelegate.events{
-            let eventStrArray = getStringfromDate(event: event).components(separatedBy: ",")
-            
-            // Determine dots in the date
-            for eventStr in eventStrArray {
-                if dateSelectedText == eventStr {
-                    eventsForDate.append(event)
-                }
-            }
-        }
-        tableView.reloadData()
-        calendar.reloadData()
-        
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,6 +272,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         dateText = dateFormatter.string(from: date1)
         
         dateSelectedText = dateFormatter.string(from: Date())
+        
+       // appDelegate.readEventsFromFirebase()
     }
     
     //Get String from date "item1,item2"
