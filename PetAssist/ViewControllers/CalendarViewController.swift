@@ -48,9 +48,10 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             //appDelegate.readEventsFromDatabaseWithID()
             //let a = readEventsFromFirebase()
             //print("Event Count --- \(a)")
-            //if appDelegate.loadCalendarAndTable == 0 {
-            readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
-           // }else{
+            if appDelegate.loadCalendarAndTable == 0 {
+                readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
+                appDelegate.loadCalendarAndTable = 1
+            }//else{
             //    appDelegate.loadCalendarAndTable = 0
             //}
             reloadCalendarViewContoller()

@@ -87,7 +87,7 @@ class CalEventsViewController: UIViewController {
     @IBAction func addEvent(){
 
         
-        saveEventInPhone()
+
         
 
         //Add Event in SQLLite Database
@@ -104,6 +104,9 @@ class CalEventsViewController: UIViewController {
                    
                }else{
                
+            //After tehe check
+            
+            saveEventInPhone()
             
             let formatter3 = DateFormatter()
             formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
@@ -121,7 +124,7 @@ class CalEventsViewController: UIViewController {
             
         }
         
-        appDelegate.loadCalendarAndTable = 1
+        //appDelegate.loadCalendarAndTable = 1
         //Go back to previous view controller
            _ = navigationController?.popViewController(animated: true)
     }
@@ -160,8 +163,7 @@ class CalEventsViewController: UIViewController {
         
         //Edit Event in Phone
         
-        deleteEventFromPhone()
-        saveEventInPhone()
+
         
         
         //Edited Event from database
@@ -177,7 +179,11 @@ class CalEventsViewController: UIViewController {
                    present(alertController,animated: true)
                    
         }else{
-               
+            //After the check
+            
+            deleteEventFromPhone()
+            saveEventInPhone()
+            
             
             let formatter3 = DateFormatter()
             formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
