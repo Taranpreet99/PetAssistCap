@@ -45,7 +45,7 @@ class CalEventsViewController: UIViewController {
         
         
         let eventsHolder = appDelegate.events
-        let eventIDChosen = self.appDelegate.eventID
+        let eventIDChosen = self.appDelegate.eventKey
         
         // Do any additional setup after loading the view.
         
@@ -57,12 +57,11 @@ class CalEventsViewController: UIViewController {
             eventDelete.isHidden = false
             
             let formatter3 = DateFormatter()
-            formatter3.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
-            formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
             
             //Get the event for chosen event
             for event in eventsHolder {
-                if eventIDChosen == event.id {
+                if eventIDChosen == event.key {
                     //Set the values in the view controller
                     eventTitleText.text = event.title
                     mystartDatePicker.date = formatter3.date(from: event.startDate!)!
@@ -107,7 +106,7 @@ class CalEventsViewController: UIViewController {
                
             
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
             var datesInEventStr = ""
@@ -129,11 +128,10 @@ class CalEventsViewController: UIViewController {
     
     
     func addEventtoFirebase(event: Event){
-        let eventKeyValue = ["End" : event.endDate!,
-                             "EventsID" : Int(event.id!) ,
-                             "Start" : event.startDate!,
+        let eventKeyValue = ["end" : event.endDate!,
+                             "start" : event.startDate!,
                              "Subject" : event.title!,
-                             "Username" : event.entriesID!] as [String : Any]
+                             "UserName" : event.entriesID!] as [String : Any]
         
         var rootRef: DatabaseReference!
         
@@ -147,7 +145,6 @@ class CalEventsViewController: UIViewController {
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         
         childEventRef.setValue(eventKeyValue){
-        //child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
           (error:Error?, ref:DatabaseReference) in
           if let error = error {
             print("Data could not be saved: \(error).")
@@ -183,7 +180,7 @@ class CalEventsViewController: UIViewController {
                
             
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
             let startDate = formatter3.string(from: mystartDatePicker.date)
             let endDate = formatter3.string(from: myendDatePicker.date)
             
@@ -208,11 +205,10 @@ class CalEventsViewController: UIViewController {
     
     
     func editEventinFirebase(event: Event){
-        let eventKeyValue = ["End" : event.endDate!,
-                             "EventsID" : Int(event.id!) ,
-                             "Start" : event.startDate!,
+        let eventKeyValue = ["end" : event.endDate!,
+                             "start" : event.startDate!,
                              "Subject" : event.title!,
-                             "Username" : event.entriesID!] as [String : Any]
+                             "UserName" : event.entriesID!] as [String : Any]
         
         var rootRef: DatabaseReference!
         

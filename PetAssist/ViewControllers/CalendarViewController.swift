@@ -89,16 +89,13 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                     if let eventDict = snapshot.value as? [String:Any] {
                          //Do not cast print it directly may be score is Int not string
                         //print(userDict.keys)
-                        let userName = eventDict["Username"] ?? "Not There"
-                        let eventsID = eventDict["EventsID"] ?? "Not There"
+                        let userName = eventDict["UserName"] ?? "Not There"
                         let title = eventDict["Subject"] ?? "Not There"
-                        let sd = eventDict["Start"] ?? "Not There"
-                        let ed = eventDict["End"] ?? "Not There"
+                        let sd = eventDict["start"] ?? "Not There"
+                        let ed = eventDict["end"] ?? "Not There"
                         if String(describing: userName) != "Not There"{
-                            print("\(userName) | \(eventsID) | \(title) | \(sd) | \(ed)")
-                            //print("Count:\(eventDict.count)")
+                            print("\(userName) | \(title) | \(sd) | \(ed)")
                             
-                            let cId = eventsID as! Int
                             let title = title
                             let detail = ""
                             let startDate = sd
@@ -106,10 +103,10 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                             let dates =  ""
                             let entID = userName
                             
-                            let id = "\(cId)"
                             let event : Event = Event.init()
-                            event.initWithData(theRow: id , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
+                            event.initWithData(theRow: "0" , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
                             //print("Event ID: \(event.id)")
+                            event.key = key
                             
                             self.appDelegate.events.append(event)
                             print("Event Count: \(self.appDelegate.events.count)")
@@ -156,16 +153,16 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                     if let eventDict = snapshot.value as? [String:Any] {
                          //Do not cast print it directly may be score is Int not string
                         //print(userDict.keys)
-                        let userName = eventDict["Username"] ?? "Not There"
-                        let eventsID = eventDict["EventsID"] ?? "Not There"
+                        let userName = eventDict["UserName"] ?? "Not There"
+                        //let eventsID = eventDict["EventsID"] ?? "0"
                         let title = eventDict["Subject"] ?? "Not There"
-                        let sd = eventDict["Start"] ?? "Not There"
-                        let ed = eventDict["End"] ?? "Not There"
+                        let sd = eventDict["start"] ?? "Not There"
+                        let ed = eventDict["end"] ?? "Not There"
                         if String(describing: userName) == username{
-                            print("\(userName) | \(eventsID) | \(title) | \(sd) | \(ed)")
+                            print("\(userName) | \(title) | \(sd) | \(ed)")
                             //print("Count:\(eventDict.count)")
                             
-                            let cId = eventsID as! Int
+                            //let cId = eventsID as! Int
                             let title = title
                             let detail = ""
                             let startDate = sd
@@ -173,9 +170,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                             let dates =  ""
                             let entID = userName
                             
-                            let id = "\(cId)"
+                            //let id = "\(cId)"
                             let event : Event = Event.init()
-                            event.initWithData(theRow: id , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
+                            event.initWithData(theRow: "0" , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
                             //Add Key
                             event.key = key
                             //print("Event ID: \(event.id)")
@@ -337,7 +334,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     // 24 hrs to AM/PM
     func change24hrsToAmPm(date: String) -> String {
         let formatter3 = DateFormatter()
-        formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
         
         let dateF = formatter3.date(from: date)
         
@@ -354,7 +351,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     // When the row is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        appDelegate.eventID = eventsForDate[indexPath.row].id!
+        //appDelegate.eventID = eventsForDate[indexPath.row].id!
         appDelegate.eventKey = eventsForDate[indexPath.row].key!
         performSegue(withIdentifier: "goToEvent", sender: nil)
     }
@@ -422,7 +419,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             alertController.addAction(cancel)
             present(alertController,animated: true)
         }else{
-            appDelegate.eventID = "-1"
+            appDelegate.eventKey = "-1"
+            //appDelegate.eventID = "-1"
             performSegue(withIdentifier: "goToEvent", sender: self)
         }
     }
