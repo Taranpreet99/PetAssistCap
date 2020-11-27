@@ -180,10 +180,10 @@ class CalEventsViewController: UIViewController {
     
     func addEventtoFirebase(event: Event){
         let eventKeyValue = ["End" : event.endDate!,
-                             "EventsID" : event.id! ,
+                             "EventsID" : Int(event.id!) ,
                              "Start" : event.startDate!,
                              "Subject" : event.title!,
-                             "Username" : event.entriesID!]
+                             "Username" : event.entriesID!] as [String : Any]
         
         var rootRef: DatabaseReference!
         
@@ -192,9 +192,10 @@ class CalEventsViewController: UIViewController {
         //Child of Root, Events
         let eventRef = rootRef.child("Events")
 
+        
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        eventRef.setValue(eventKeyValue){
+        eventRef.child("test").setValue(eventKeyValue){
         //child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
           (error:Error?, ref:DatabaseReference) in
           if let error = error {
@@ -318,17 +319,17 @@ class CalEventsViewController: UIViewController {
         }
         
      //Go back to previous view controller
-    //    _ = navigationController?.popViewController(animated: true)
+      //  _ = navigationController?.popViewController(animated: true)
         
     }
     
     
     func editEventinFirebase(event: Event){
         let eventKeyValue = ["End" : event.endDate!,
-                             "EventsID" : event.id! ,
+                             "EventsID" : Int(event.id!) ,
                              "Start" : event.startDate!,
                              "Subject" : event.title!,
-                             "Username" : event.entriesID!]
+                             "Username" : event.entriesID!] as [String : Any]
         
         var rootRef: DatabaseReference!
         
