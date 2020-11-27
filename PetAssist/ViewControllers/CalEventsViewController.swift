@@ -121,9 +121,9 @@ class CalEventsViewController: UIViewController {
             
         }
         
-        
+        appDelegate.loadCalendarAndTable = 1
         //Go back to previous view controller
-        //   _ = navigationController?.popViewController(animated: true)
+           _ = navigationController?.popViewController(animated: true)
     }
     
     
@@ -198,8 +198,9 @@ class CalEventsViewController: UIViewController {
             
         }
         
+        appDelegate.loadCalendarAndTable = 1
      //Go back to previous view controller
-      //  _ = navigationController?.popViewController(animated: true)
+        _ = navigationController?.popViewController(animated: true)
         
     }
     
@@ -236,8 +237,10 @@ class CalEventsViewController: UIViewController {
             
             deleteEventFromFirebase()
            
+        appDelegate.loadCalendarAndTable = 1
+        
         //Go back to previous view controller
-        //   _ = navigationController?.popViewController(animated: true)
+           _ = navigationController?.popViewController(animated: true)
            
     }
     
@@ -285,17 +288,32 @@ class CalEventsViewController: UIViewController {
                 var events = eventStore.events(matching: predicate)
                 
                 for event in events {
-                    if event.title == oldEventTitle && event.startDate == oldStartDate && event.endDate == oldEndDate
+                    if event.title == oldEventTitle
                         {
+                            
+                            //  &&
+                            let formatter3 = DateFormatter()
+                            formatter3.dateFormat = "yyyy-MM-dd'T'HH:mm"
+                            print("Event Found")
+                            
+                            if(formatter3.string(from: event.startDate!) == formatter3.string(from: oldStartDate) && formatter3.string(from: event.endDate!) == formatter3.string(from: oldEndDate)){
+                                    print("Event Matched")
+                                    do{
+                                        (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
+                                    }
+                                    catch let error {
+                                        print(error.localizedDescription)
+                                    }
+                            
+                            }
+                            
+                         
+
                        // eventPhoneId = event.eventIdentifier
-                            do{
-                                (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
-                            }
-                            catch let error {
-                                print(error.localizedDescription)
-                            }
+
                     }else{
-                        print("No Events Found")
+                        //It will print the if the event is found and won't if it isn't
+                        //print("No Events Found")
                     }
                 }
         }

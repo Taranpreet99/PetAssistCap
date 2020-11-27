@@ -48,7 +48,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             //appDelegate.readEventsFromDatabaseWithID()
             //let a = readEventsFromFirebase()
             //print("Event Count --- \(a)")
+            //if appDelegate.loadCalendarAndTable == 0 {
             readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
+           // }else{
+            //    appDelegate.loadCalendarAndTable = 0
+            //}
             reloadCalendarViewContoller()
 
         }
@@ -129,7 +133,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
 
         var eventCount = 0
         
-        appDelegate.events.removeAll()
+        //appDelegate.events.removeAll()
+        
         //var newItems: [GroceryItem] = []
         
         //Root of Data
@@ -138,6 +143,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         //Child of Root, Events
         let eventRef = rootRef.child("Events")
         eventRef.observe(.value, with: { snapshot in
+            self.appDelegate.events.removeAll()
             
             guard let value = snapshot.value as? [String: Any] else {
                 return
@@ -236,7 +242,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             
             // Determine dots in the date
             for eventStr in eventStrArray {
-                print(eventStr)
+                //print(eventStr)
                 // Check if event is in the single event collection
                 if datesWithEvent.contains(eventStr){
                     // Remove Event from single event collection
@@ -245,14 +251,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                     datesWithNoEvents.append(eventStr)
                     
                     datesWithEvent.remove(at: datesWithEvent.firstIndex(of: eventStr)!)
-                    print("M:\(eventStr)")
+                    //print("M:\(eventStr)")
                     datesWithMultipleEvents.append(eventStr)
                 }else{
                     //Check if event is being readded
                     if datesWithNoEvents.contains(eventStr){
                     }else{
                         //Add event to single view collection
-                        print("E:\(eventStr)")
+                      //  print("E:\(eventStr)")
                         datesWithEvent.append(eventStr)
                     }
                 }
@@ -273,6 +279,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         dateSelectedText = dateFormatter.string(from: Date())
         
        // appDelegate.readEventsFromFirebase()
+
     }
     
     //Get String from date "item1,item2"
@@ -280,7 +287,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         var datesInEventStr = ""
         //Get all dates in between start and end date inclusive
         let formatter4 = DateFormatter()
-        formatter4.locale = NSLocale.init(localeIdentifier: "NL" ) as Locale
         formatter4.dateFormat = "yyyy-MM-dd"
         //Get dates in yyyy-MM-dd format in Date datatype
         var datePickerStart = formatter4.date(from: String(event.startDate!.prefix(10)))
@@ -386,7 +392,7 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         //Save date and print out string
         let string = dateFormatter.string(from: date)
-        print("\(string)")
+        //print("\(string)")
         //dateText = string
         dateSelectedText = string
         

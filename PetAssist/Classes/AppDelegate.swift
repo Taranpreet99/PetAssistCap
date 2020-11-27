@@ -27,8 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var eventStore: EKEventStore?
     
     var selectedURL : String = ""
-    var eventID : String = "-1"
-    var eventKey : String = ""
+    var eventID : String = "-1" //No Longer Used
+    var eventKey : String = "" //Identifer for event
+    
+    var loadCalendarAndTable = 0
+    
     //See if user is signed in
     var loggedOnID = "-1"
     
@@ -66,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         databasePath = documentsDir.appending("/"+databaseName!)
         checkAndCreateDatabase()
         
-        readEventsFromDatabase()
+        //readEventsFromDatabase()
         readDataFromDatabase()
 
         
