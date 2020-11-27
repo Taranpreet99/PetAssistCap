@@ -88,48 +88,7 @@ class CalEventsViewController: UIViewController {
     @IBAction func addEvent(){
 
         
-        //Add event to phone
-        eventStore.requestAccess(to: .event) { (granted, error) in
-          
-          if (granted) && (error == nil) {
-              print("granted \(granted)")
-              print("error \(error)")
-              
-            let event:EKEvent = EKEvent(eventStore: self.eventStore)
-              
-            event.title = self.eventTitleText.text
-            event.startDate = self.mystartDatePicker.date
-            event.endDate = self.myendDatePicker.date
-            //event.notes = self.eventDetailText.text
-            event.calendar = self.eventStore.defaultCalendarForNewEvents
-            var addedAlarms = 0
-            var evStartDate = event.startDate
-            while evStartDate!.compare(event.endDate) == .orderedAscending {
-                let alarm = EKAlarm(absoluteDate: evStartDate!)
-                addedAlarms = addedAlarms + 1
-                print("AddedAlarms:\(addedAlarms)")
-                evStartDate = evStartDate!.addingTimeInterval(24*60*60)
-                event.addAlarm(alarm)
-            }
-            if addedAlarms == 0 {
-                let alarm = EKAlarm(absoluteDate: evStartDate!)
-                addedAlarms = addedAlarms + 1
-                print("AddedAlarms1:\(addedAlarms)")
-                event.addAlarm(alarm)
-            }
-            
-              do {
-                try self.eventStore.save(event, span: .thisEvent)
-              } catch let error as NSError {
-                  print("failed to save event with error : \(error)")
-              }
-              print("Saved Event")
-          }
-          else{
-          
-              print("failed to save event with error : \(error) or access not granted")
-          }
-        }
+        saveEventInPhone()
         
 
         //Add Event in SQLLite Database
@@ -155,21 +114,12 @@ class CalEventsViewController: UIViewController {
             
             
                    let event : Event = Event.init()
-            event.initWithData(theRow: "0", theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
+            event.initWithData(theRow: "1", theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
                    
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
             addEventtoFirebase(event: event)
             
-           // let returnCode = mainDelegate.insertEventIntoDatabase(event: event);
-  /*
-                   var returnMsg : String = "Inserted Successfully"
-                   
-                 if returnCode == false { returnMsg = "Insertion failed"}
-                    
-                 print("\(returnMsg)")
-               }
- */
         }
         
         
@@ -192,10 +142,11 @@ class CalEventsViewController: UIViewController {
         //Child of Root, Events
         let eventRef = rootRef.child("Events")
 
+        let childEventRef = eventRef.childByAutoId()
         
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
         
-        eventRef.child("test").setValue(eventKeyValue){
+        childEventRef.setValue(eventKeyValue){
         //child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
           (error:Error?, ref:DatabaseReference) in
           if let error = error {
@@ -212,77 +163,9 @@ class CalEventsViewController: UIViewController {
         
         //Edit Event in Phone
         
-        //Delete Event in Phone
-        let calendars = eventStore.calendars(for: .event)
-               
-        //Get all events from phone
-        for calendar in calendars {
-                   //Check if calendar has title
-                       
-            let timeAgo = NSDate(timeIntervalSinceNow: -20*30*24*3600)
-            let timeAfter = NSDate(timeIntervalSinceNow: +20*30*24*3600)
-                       
-            let predicate = eventStore.predicateForEvents(withStart: timeAgo as Date, end: timeAfter as Date, calendars: [calendar])
-                       
-            var events = eventStore.events(matching: predicate)
-                       
-           for event in events {
-               if event.title == oldEventTitle && event.notes == oldEventDetails && event.startDate == oldStartDate &&
-                   event.endDate == oldEndDate
-                   {
-                  // eventPhoneId = event.eventIdentifier
-                       do{
-                           (try eventStore.remove(event, span: EKSpan.thisEvent, commit: true))
-                            print("Passed Removed")
-                       }
-                       catch let error {
-                        print(error.localizedDescription)
-                       }
-               }else{
-                print("No Event Found")
-            }
-           }
-        }
+        deleteEventFromPhone()
+        saveEventInPhone()
         
-        //Save Event in Phone
-        eventStore.requestAccess(to: .event) { (granted, error) in
-          
-          if (granted) && (error == nil) {
-              print("granted \(granted)")
-              print("error \(error)")
-              
-            let event:EKEvent = EKEvent(eventStore: self.eventStore)
-              
-            event.title = self.eventTitleText.text
-            event.startDate = self.mystartDatePicker.date
-            event.endDate = self.myendDatePicker.date
-            //event.notes = self.eventDetailText.text
-            event.calendar = self.eventStore.defaultCalendarForNewEvents
-            var addedAlarms = 0
-            var evStartDate = event.startDate
-            while evStartDate!.compare(event.endDate) == .orderedAscending {
-                let alarm = EKAlarm(absoluteDate: evStartDate!)
-                addedAlarms = addedAlarms + 1
-                evStartDate = evStartDate!.addingTimeInterval(24*60*60)
-                event.addAlarm(alarm)
-            }
-            if addedAlarms == 0 {
-                let alarm = EKAlarm(absoluteDate: evStartDate!)
-                addedAlarms = addedAlarms + 1
-                event.addAlarm(alarm)
-            }
-              do {
-                try self.eventStore.save(event, span: .thisEvent)
-              } catch let error as NSError {
-                  print("failed to save event with error : \(error)")
-              }
-              print("Saved Event")
-          }
-          else{
-          
-              print("failed to save event with error : \(error) or access not granted")
-          }
-        }
         
         //Edited Event from database
         //Empty fields validation
@@ -343,15 +226,53 @@ class CalEventsViewController: UIViewController {
         eventRef.child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
           (error:Error?, ref:DatabaseReference) in
           if let error = error {
-            print("Data could not be saved: \(error).")
+            print("Edit Data could not be saved: \(error).")
           } else {
-            print("Data saved successfully!")
+            print("Edit Data saved successfully!")
           }
         }
     }
     
     //Delete Event
     @IBAction func deleteEvent(){
+        
+            deleteEventFromPhone()
+            
+            deleteEventFromFirebase()
+           
+        //Go back to previous view controller
+        //   _ = navigationController?.popViewController(animated: true)
+           
+    }
+    
+    
+    func deleteEventFromFirebase(){
+        var rootRef: DatabaseReference!
+        
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+        
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        eventRef.child(mainDelegate.eventKey).removeValue(){
+        //child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
+          (error:Error?, ref:DatabaseReference) in
+          if let error = error {
+            print("Data could not be removed: \(error).")
+          } else {
+            print("Data removed successfully!")
+          }
+        }
+        
+        //Go back to previous view controller
+        //   _ = navigationController?.popViewController(animated: true)
+
+    }
+        
+    
+    func deleteEventFromPhone(){
         
         //Delete Event from phone
         let calendars = eventStore.calendars(for: .event)
@@ -382,34 +303,50 @@ class CalEventsViewController: UIViewController {
                     }
                 }
         }
-            
-            deleteEventFromFirebase()
-           
-        //Go back to previous view controller
-        //   _ = navigationController?.popViewController(animated: true)
-           
     }
     
-    
-    func deleteEventFromFirebase(){
-        var rootRef: DatabaseReference!
+    func saveEventInPhone(){
         
-        rootRef = Database.database().reference()
-        
-        //Child of Root, Events
-        let eventRef = rootRef.child("Events")
-        
-        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-        eventRef.child(mainDelegate.eventKey).removeValue()
-        
-        //Go back to previous view controller
-        //   _ = navigationController?.popViewController(animated: true)
-
+        //Save Event in Phone
+        eventStore.requestAccess(to: .event) { (granted, error) in
+          
+          if (granted) && (error == nil) {
+              print("granted \(granted)")
+              print("error \(error)")
+              
+            let event:EKEvent = EKEvent(eventStore: self.eventStore)
+              
+            event.title = self.eventTitleText.text
+            event.startDate = self.mystartDatePicker.date
+            event.endDate = self.myendDatePicker.date
+            //event.notes = self.eventDetailText.text
+            event.calendar = self.eventStore.defaultCalendarForNewEvents
+            var addedAlarms = 0
+            var evStartDate = event.startDate
+            while evStartDate!.compare(event.endDate) == .orderedAscending {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                evStartDate = evStartDate!.addingTimeInterval(24*60*60)
+                event.addAlarm(alarm)
+            }
+            if addedAlarms == 0 {
+                let alarm = EKAlarm(absoluteDate: evStartDate!)
+                addedAlarms = addedAlarms + 1
+                event.addAlarm(alarm)
+            }
+              do {
+                try self.eventStore.save(event, span: .thisEvent)
+              } catch let error as NSError {
+                  print("failed to save event with error : \(error)")
+              }
+              print("Saved Event")
+          }
+          else{
+          
+              print("failed to save event with error : \(error) or access not granted")
+          }
+        }
     }
-        
-    
-    
     
     //Hide keyboard when touched outside text field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
