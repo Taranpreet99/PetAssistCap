@@ -16,6 +16,7 @@ class Event: NSObject {
        var endDate : String?
        var datesInEvent : String?
        var entriesID : String?
+       var key : String?
     
        //function to store data object
     func initWithData(theRow i: String, theTitle t : String, theDetails d :String, theStartDate sd : String, theEndDate ed : String, datesInEvent datInEv : String, entriesID entID : String){

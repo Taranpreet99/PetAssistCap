@@ -176,6 +176,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                             let id = "\(cId)"
                             let event : Event = Event.init()
                             event.initWithData(theRow: id , theTitle: title as! String, theDetails: detail, theStartDate: startDate as! String, theEndDate: endDate as! String, datesInEvent: dates, entriesID: entID as! String)
+                            //Add Key
+                            event.key = key
                             //print("Event ID: \(event.id)")
                             
                             self.appDelegate.events.append(event)
@@ -353,14 +355,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         appDelegate.eventID = eventsForDate[indexPath.row].id!
-        
+        appDelegate.eventKey = eventsForDate[indexPath.row].key!
         performSegue(withIdentifier: "goToEvent", sender: nil)
     }
     
     
     //Set TableView Cell Row Height
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 130.0
+        return 100.0
     }
     
     

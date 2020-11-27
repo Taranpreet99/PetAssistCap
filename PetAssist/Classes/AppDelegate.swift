@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var selectedURL : String = ""
     var eventID : String = "-1"
-    
+    var eventKey : String = ""
     //See if user is signed in
     var loggedOnID = "-1"
     

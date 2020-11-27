@@ -132,7 +132,7 @@ class CalEventsViewController: UIViewController {
         }
         
 
-        //Add Event in Database
+        //Add Event in SQLLite Database
         //Empty fields validation
         if(eventTitleText.text == "" || mystartDatePicker.date > myendDatePicker.date){
                    
@@ -159,17 +159,50 @@ class CalEventsViewController: UIViewController {
                    
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
-            let returnCode = mainDelegate.insertEventIntoDatabase(event: event);
-                   
+            addEventtoFirebase(event: event)
+            
+           // let returnCode = mainDelegate.insertEventIntoDatabase(event: event);
+  /*
                    var returnMsg : String = "Inserted Successfully"
                    
                  if returnCode == false { returnMsg = "Insertion failed"}
                     
                  print("\(returnMsg)")
                }
+ */
+        }
+        
         
         //Go back to previous view controller
-           _ = navigationController?.popViewController(animated: true)
+        //   _ = navigationController?.popViewController(animated: true)
+    }
+    
+    
+    func addEventtoFirebase(event: Event){
+        let eventKeyValue = ["End" : event.endDate!,
+                             "EventsID" : event.id! ,
+                             "Start" : event.startDate!,
+                             "Subject" : event.title!,
+                             "Username" : event.entriesID!]
+        
+        var rootRef: DatabaseReference!
+        
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        eventRef.setValue(eventKeyValue){
+        //child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
+          (error:Error?, ref:DatabaseReference) in
+          if let error = error {
+            print("Data could not be saved: \(error).")
+          } else {
+            print("Data saved successfully!")
+          }
+        }
     }
     
     
@@ -277,20 +310,43 @@ class CalEventsViewController: UIViewController {
             let event : Event = Event.init()
             event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
                    
-            let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-                   
-            let returnCode = mainDelegate.editEventIntoDatabase(event: event);
-                   
-                   var returnMsg : String = "Edited Row Successfully"
-                   
-                 if returnCode == false { returnMsg = "Edited Row failed"}
-                    
-                 print("\(returnMsg)")
-               }
+
+          
+            
+            editEventinFirebase(event: event)
+            
+        }
         
      //Go back to previous view controller
-        _ = navigationController?.popViewController(animated: true)
+    //    _ = navigationController?.popViewController(animated: true)
         
+    }
+    
+    
+    func editEventinFirebase(event: Event){
+        let eventKeyValue = ["End" : event.endDate!,
+                             "EventsID" : event.id! ,
+                             "Start" : event.startDate!,
+                             "Subject" : event.title!,
+                             "Username" : event.entriesID!]
+        
+        var rootRef: DatabaseReference!
+        
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        eventRef.child(mainDelegate.eventKey).updateChildValues(eventKeyValue){
+          (error:Error?, ref:DatabaseReference) in
+          if let error = error {
+            print("Data could not be saved: \(error).")
+          } else {
+            print("Data saved successfully!")
+          }
+        }
     }
     
     //Delete Event
@@ -325,47 +381,33 @@ class CalEventsViewController: UIViewController {
                     }
                 }
         }
-      
-           //Delete Events from database
-           //Empty fields validation
-           if(eventTitleText.text == "" || mystartDatePicker.date > myendDatePicker.date){
-                      
-                      let alertController = UIAlertController(title: "Missing fields", message: "Please make sure you are not missing any fields." , preferredStyle: .alert)
-                      
-                      let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                      
-                      
-                      alertController.addAction(cancel)
-                      present(alertController,animated: true)
-                      
-                  }else{
-                  
-               
-               let formatter3 = DateFormatter()
-               formatter3.dateFormat = "yyyy-MM-dd HH:mm:ss"
-               let startDate = formatter3.string(from: mystartDatePicker.date)
-               let endDate = formatter3.string(from: myendDatePicker.date)
-               
-                let eventsID = appDelegate.eventID
             
-                      let event : Event = Event.init()
-            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: "", entriesID: appDelegate.loggedOnID)
-                      
-                      let mainDelegate = UIApplication.shared.delegate as! AppDelegate
-                      
-               let returnCode = mainDelegate.deleteEventFromDatabase(event: event);
-                      
-                      var returnMsg : String = "Deleted Row Successfully"
-                      
-                    if returnCode == false { returnMsg = "Delete Row failed"}
-                       
-                    print("\(returnMsg)")
-                  }
+            deleteEventFromFirebase()
            
         //Go back to previous view controller
-           _ = navigationController?.popViewController(animated: true)
+        //   _ = navigationController?.popViewController(animated: true)
            
-       }
+    }
+    
+    
+    func deleteEventFromFirebase(){
+        var rootRef: DatabaseReference!
+        
+        rootRef = Database.database().reference()
+        
+        //Child of Root, Events
+        let eventRef = rootRef.child("Events")
+        
+        let mainDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        eventRef.child(mainDelegate.eventKey).removeValue()
+        
+        //Go back to previous view controller
+        //   _ = navigationController?.popViewController(animated: true)
+
+    }
+        
+    
     
     
     //Hide keyboard when touched outside text field
@@ -375,3 +417,4 @@ class CalEventsViewController: UIViewController {
     }
 
 }
+
