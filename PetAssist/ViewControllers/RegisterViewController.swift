@@ -42,12 +42,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             password = tfConfirmPassword.text
             
-            let person : Data = Data.init()
-            person.initWithData(theRow: 0, theName: tfName.text!, theEmail: tfEmail.text!, theUsername: tfUsername.text!, thePassword: password)
+            /*
+            //let person : Data = Data.init()
+            //person.initWithData(theRow: 0, theName: tfName.text!, theEmail: tfEmail.text!, theUsername: tfUsername.text!, thePassword: password)
             
             let mainDelegate = UIApplication.shared.delegate as! AppDelegate
             
-           let returnCode = mainDelegate.insertIntoDatabase(person: person)
+           //let returnCode = mainDelegate.insertIntoDatabase(person: person)
             
             var returnMsg : String = "Registered Successfully"
             
@@ -69,6 +70,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             alertController.addAction(login)
             alertController.addAction(cancel)
             present(alertController,animated: true)
+ */
         }else{
             let alertController = UIAlertController(title: "Password Does not match", message: "Please make sure you enter same password in both fields", preferredStyle: .alert)
             

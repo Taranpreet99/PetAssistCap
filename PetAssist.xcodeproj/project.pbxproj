@@ -90,7 +90,6 @@
 		AE97D371252F476600E7D3F6 /* articles.png in Resources */ = {isa = PBXBuildFile; fileRef = AE97D370252F476600E7D3F6 /* articles.png */; };
 		AE97D373252F492D00E7D3F6 /* ArticlesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */; };
 		AEA0D275242E682C001D0CF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */; };
-		AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D279242E6DC8001D0CF9 /* Data.swift */; };
 		AEA0D27D242E72E4001D0CF9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */; };
 		AEA0D27E242E72E4001D0CF9 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */; };
 		AEA0D280242E7897001D0CF9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */; };
@@ -225,7 +224,6 @@
 		AE97D370252F476600E7D3F6 /* articles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = articles.png; sourceTree = "<group>"; };
 		AE97D372252F492D00E7D3F6 /* ArticlesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewController.swift; sourceTree = "<group>"; };
 		AEA0D274242E682C001D0CF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
-		AEA0D279242E6DC8001D0CF9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		AEA0D27B242E72E4001D0CF9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		AEA0D27C242E72E4001D0CF9 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		AEA0D27F242E7897001D0CF9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -523,7 +521,6 @@
 			children = (
 				AE53F5CA242DEA33005F9FC3 /* SiteCell.swift */,
 				AEABA0372418116200733848 /* AppDelegate.swift */,
-				AEA0D279242E6DC8001D0CF9 /* Data.swift */,
 				AE3F1831252F58AE00453A01 /* TableCell.swift */,
 				AE3875F9254B19DB00EC1D9E /* Video.swift */,
 				AE48E0F0255C0F900055127F /* Event.swift */,
@@ -683,7 +680,6 @@
 				AE96B99B255816DC00E5A8CB /* CalEventsViewController.swift in Sources */,
 				AE3875FA254B19DB00EC1D9E /* Video.swift in Sources */,
 				AE888EEF252F2AC5009AAC21 /* FSCalendarAppearance.m in Sources */,
-				AEA0D27A242E6DC8001D0CF9 /* Data.swift in Sources */,
 				AEABA03A2418116200733848 /* ViewController.swift in Sources */,
 				AEE54A39254C9E8900EE6315 /* OneTableViewController.swift in Sources */,
 				AE62F81325419D6000107D36 /* DogFoodViewController.swift in Sources */,

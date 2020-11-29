@@ -49,11 +49,14 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             //let a = readEventsFromFirebase()
             //print("Event Count --- \(a)")
             if appDelegate.loadCalendarAndTable == 0 {
+                var rootRef: DatabaseReference!
+                rootRef = Database.database().reference()
+                let eventRef = rootRef.child("Events")
+                eventRef.removeAllObservers()
+                
                 readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
                 appDelegate.loadCalendarAndTable = 1
-            }//else{
-            //    appDelegate.loadCalendarAndTable = 0
-            //}
+            }
             reloadCalendarViewContoller()
 
         }
@@ -427,7 +430,6 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
             present(alertController,animated: true)
         }else{
             appDelegate.eventKey = "-1"
-            //appDelegate.eventID = "-1"
             performSegue(withIdentifier: "goToEvent", sender: self)
         }
     }

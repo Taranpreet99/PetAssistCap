@@ -70,12 +70,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         checkAndCreateDatabase()
         
         //readEventsFromDatabase()
-        readDataFromDatabase()
+        //readDataFromDatabase()
 
         
         return true
     }
-
+/*
     //Function to read data from the database
     func readDataFromDatabase(){
         
@@ -134,7 +134,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-    
+*/
     
     
     
@@ -267,7 +267,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
     }
-    
+    /*
     //Function to insert data into the database
     func insertIntoDatabase(person : Data) -> Bool{
         var db : OpaquePointer? = nil
@@ -317,7 +317,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return returnCode
         
     }
-    
+ */
+ 
     //Function to insert data into the database
     func insertEventIntoDatabase(event : Event) -> Bool{
         var db : OpaquePointer? = nil
