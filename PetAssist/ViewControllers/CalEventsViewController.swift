@@ -197,8 +197,9 @@ class CalEventsViewController: UIViewController {
             let eventsID = appDelegate.eventID
             
             let event : Event = Event.init()
-            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
+          //  event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
                    
+            event.initWithData(theRow: eventsID, theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: UserDefaults.standard.string(forKey: "Username") as! String)
 
           
             
