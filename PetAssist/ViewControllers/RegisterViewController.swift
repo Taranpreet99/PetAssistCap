@@ -21,6 +21,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     //Confirm password textfield
     @IBOutlet var tfConfirmPassword : UITextField!
     
+    @IBOutlet var address : UITextField!
+    @IBOutlet var dogName : UITextField!
+    @IBOutlet var dogBreed : UITextField!
+    @IBOutlet var dogDOB : UITextField!
+    @IBOutlet var dogGender : UITextField!
+    @IBOutlet var tfLastName : UITextField!
+    
     //Function to be performed when add button is clicked
     @IBAction func addPerson(sender : Any){
         

@@ -115,6 +115,7 @@
 		AEC41D61252B48E300C00B2C /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC41D60252B48E200C00B2C /* menu.png */; };
 		AEC856222541AAC7005BBD52 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AEC856212541AAC7005BBD52 /* Assets.bundle */; };
 		AEC856252541AB21005BBD52 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC856242541AB21005BBD52 /* YTPlayerView.m */; };
+		AED675A92576D59900A05BBB /* appLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = AED675A82576D59900A05BBB /* appLogo.png */; };
 		AEE54A39254C9E8900EE6315 /* OneTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */; };
 		AEE54A3B254CD9D500EE6315 /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3A254CD9D400EE6315 /* health.png */; };
 		AEE54A3D254CDCC600EE6315 /* disease.png in Resources */ = {isa = PBXBuildFile; fileRef = AEE54A3C254CDCC600EE6315 /* disease.png */; };
@@ -253,6 +254,7 @@
 		AEC856212541AAC7005BBD52 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		AEC856232541AB21005BBD52 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		AEC856242541AB21005BBD52 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		AED675A82576D59900A05BBB /* appLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appLogo.png; sourceTree = "<group>"; };
 		AEE54A38254C9E8900EE6315 /* OneTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTableViewController.swift; sourceTree = "<group>"; };
 		AEE54A3A254CD9D400EE6315 /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health.png; sourceTree = "<group>"; };
 		AEE54A3C254CDCC600EE6315 /* disease.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disease.png; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 		AE53F5CC242DF18D005F9FC3 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				AED675A82576D59900A05BBB /* appLogo.png */,
 				AE7229012550CC8A008387CC /* loginHome.png */,
 				AE7228FF2550CC82008387CC /* newPet (1).png */,
 				AE7228FD2550CC7B008387CC /* petFood (1).png */,
@@ -637,6 +640,7 @@
 				AEC41D59252B44B500C00B2C /* map.png in Resources */,
 				AE0A5A6E24354F7B00D91828 /* petBg2.jpg in Resources */,
 				AE53F5D9242DF1A3005F9FC3 /* eyeinjury.png in Resources */,
+				AED675A92576D59900A05BBB /* appLogo.png in Resources */,
 				AEE54A3F254CE95000EE6315 /* tutorials.png in Resources */,
 				AE8E7672243578FB00AC80DF /* petbg5.jpeg in Resources */,
 				AE0A5A742435522900D91828 /* bonbg.png in Resources */,
