@@ -23,8 +23,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     //Variable to use AppDelegate in this class
     let mainDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
+    let vc = HomePageViewController()
+    
     //Unwind the segue to this page
     @IBAction func unwindToHome(sender : UIStoryboardSegue){
+
         
     }
     
@@ -168,8 +172,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                         
                                         print("Password Success")
                                         self.mainDelegate.loggedOnID =  username
+                                        self.mainDelegate.firstName = accDict["FirstName"] as! String
+                                        UserDefaults.standard.set(username, forKey: "Username")
                                         self.mainDelegate.loadCalendarAndTable = 0
                                         UserDefaults.standard.set(true, forKey: "IsUserLoggedIn")
+                                        UserDefaults.standard.set("\(self.mainDelegate.firstName)", forKey: "UserFirstName")
                                         self.performSegue(withIdentifier: "unwindtoHomePage", sender: nil)
                                     }else{
                                         

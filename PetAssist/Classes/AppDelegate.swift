@@ -35,6 +35,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //See if user is signed in
     var loggedOnID = "-1"
     
+    //First name of the logged in user
+    var firstName = "Sample"
+    
     var siteData = [String]()
     var listData = [String]()
     var identifier : String = ""

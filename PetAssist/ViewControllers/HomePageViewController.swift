@@ -14,9 +14,44 @@ class HomePageViewController: UIViewController {
     
     @IBOutlet var logoutButton : UIBarButtonItem!
     
+    
+    @IBOutlet var lblWelcome : UILabel!
+    
     @IBAction func unwindToHomePage(sender : UIStoryboardSegue){
         
+        homePageItems()
+        
+        
+        
     }
+    
+    @IBAction func onClickLogin(){
+        
+        if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
+            
+            alertAlreadyLoggedIn(message: "A user is already logged in, do you want to logout current user?", title: "Already logged In")
+            
+        }else{
+            
+            self.performSegue(withIdentifier: "segueToLogin", sender: nil)
+            
+        }
+        
+    }
+    
+    func homePageItems(){
+        if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
+        
+            lblWelcome.text = "Hi \(UserDefaults.standard.object(forKey: "UserFirstName") as! String ), Welcome to PetAssist!"
+            logoutButton.title = "Logout"
+            
+         }else{
+            
+            lblWelcome.text = "Welcome to PetAssist!"
+            logoutButton.title = "login"
+        }
+    }
+    
     
     @IBAction func onClickNewPet(){
         mainDelegate.tableName = "Getting a new pet?"
@@ -31,41 +66,55 @@ class HomePageViewController: UIViewController {
     @IBAction func logout(sender: Any){
         
         if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
+                      
+                        alertAlreadyLoggedIn(message: "Do you want to logout?", title: "Loogut Request")
+                          
+                       }else{
+                          
+                           self.performSegue(withIdentifier: "segueToLogin", sender: nil)
+                          
+                      }
         
-            logoutButton.title = "Login"
-            UserDefaults.standard.set(false, forKey: "IsUserLoggedIn")
-            print("user is logged in")
-            
-        }else{
-            
-            performSegue(withIdentifier: "segueToLogin", sender: nil)
-            
-        }
         
     }
-    
-  func changeLogoutbuttonName(){
-    logoutButton.title = "Logout"
-}
-  
 
+
+    func logoutFunc(){
+               
+                   logoutButton.title = "Login"
+        lblWelcome.text = "Welcome to PetAssist!"
+        UserDefaults.standard.set(false, forKey: "IsUserLoggedIn")
+            
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
                 
-         if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == true){
-        
-            logoutButton.title = "Logout"
-            
-         }else{
-            
-            logoutButton.title = "Login"
-        }
+         homePageItems()
 
         
         // Do any additional setup after loading the view.
     }
     
+    
+    func alertAlreadyLoggedIn(message: String, title: String){
+        
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+                                      
+                                      let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                                      
+                                      let logout = UIAlertAction(title: "Logout", style: .default){
+                                          (UIAlertAction) in
+                                          
+                                        self.logoutFunc()
+                                      }
+                                      
+                                      alertController.addAction(cancel)
+                                      alertController.addAction(logout)
+                                      self.present(alertController,animated: true)
+        
+    }
 
    
 

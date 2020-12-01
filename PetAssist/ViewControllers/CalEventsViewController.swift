@@ -116,8 +116,10 @@ class CalEventsViewController: UIViewController {
             
             
                    let event : Event = Event.init()
-            event.initWithData(theRow: "1", theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
-                   
+            //event.initWithData(theRow: "1", theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: appDelegate.loggedOnID)
+
+            event.initWithData(theRow: "1", theTitle: eventTitleText.text!, theDetails: "", theStartDate: startDate, theEndDate: endDate, datesInEvent: datesInEventStr, entriesID: UserDefaults.standard.string(forKey: "Username") as! String)
+
                    let mainDelegate = UIApplication.shared.delegate as! AppDelegate
                    
             addEventtoFirebase(event: event)

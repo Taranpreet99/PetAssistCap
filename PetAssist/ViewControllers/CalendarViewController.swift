@@ -35,8 +35,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
 
     
     override func viewWillAppear(_ animated: Bool) {
+        
+        
         //Alert if user is not logged in
-        if appDelegate.loggedOnID == "-1" {
+       // if appDelegate.loggedOnID == "-1" {
+        if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == false){
             //Alert
             let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar." , preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -54,7 +57,10 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
                 let eventRef = rootRef.child("Events")
                 eventRef.removeAllObservers()
                 
-                readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
+               // readEventsFromFirebaseWithUsername(username: appDelegate.loggedOnID)
+                
+                //Made this change because of the "Keep user logged in" Feature
+                readEventsFromFirebaseWithUsername(username: UserDefaults.standard.string(forKey: "Username") as! String)
                 appDelegate.loadCalendarAndTable = 1
             }
             reloadCalendarViewContoller()
@@ -422,7 +428,8 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     //Send to Events Creater
     @IBAction func sendDate2(_ sender: Any){
         //Alert if user is not logged in
-        if appDelegate.loggedOnID == "-1" {
+       // if appDelegate.loggedOnID == "-1" {
+        if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == false){
             //Alert
             let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar features." , preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
