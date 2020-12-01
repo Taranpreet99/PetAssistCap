@@ -10,6 +10,7 @@
 import UIKit
 import CommonCrypto
 import Foundation
+import CryptoKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
@@ -152,23 +153,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     snapshot in
                     
                     if let accDict = snapshot.value as? [String:Any] {
-                        let userName = accDict["Username"] ?? "Not There"
-                        let passWord = accDict["Password"] ?? "Not There"
-                        if String(describing: userName) != "Not There" ||
-                            String(describing: passWord) != "Not There" {
+                        let userName = "\(accDict["Username"] ?? "")"
+                        let passWord = "\(accDict["Password"] ?? "")"
+                        
+                        if String(describing: userName) != "" ||
+                            String(describing: passWord) != "" {
+                        
                             print("\(userName) | \(passWord)")
                             
                                 if(username == "\(userName)"){
                                     print("User: \(username)")
-                                    let md5Data = self.MD5(string:"\(username)" + password)
-                                    let md5Hex =  md5Data.map { String(format: "%02hhx", $0) }.joined()
-                                    print("md5Hex: \(md5Hex)")
-
-                                    let md5Base64 = md5Data.base64EncodedString()
-                                    print("md5Base64: \(md5Base64)")
+                                    let usrNameLower = "\(username)"
+                                    var combined =  "\(password)" + usrNameLower.lowercased()
+                                    combined = combined.md5()!
                                     
+                                    //print(password)
+                                    //print(combined)
                                     
-                                    if(password == "\(passWord)"){
+                                    if(passWord == combined){
                                         
                                         print("Password Success")
                                         self.mainDelegate.loggedOnID =  username
@@ -252,3 +254,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
 }
 
+
+
+
+
+
+extension String {
+    /**
+        Get the MD5 hash of this String
+     
+        - returns: MD5 hash of this String
+     */
+    func md5() -> String! {
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CUnsignedInt(self.lengthOfBytes(using: String.Encoding.utf8))
+        let digestLength = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLength)
+        
+        CC_MD5(str!, strLen, result)
+        
+        let hash = NSMutableString()
+        
+        for i in 0..<digestLength {
+            hash.appendFormat("%02x", result[i])
+        }
+        
+        result.deinitialize(count: digestLength)
+        
+        return String(format: hash as String)
+    }
+}
