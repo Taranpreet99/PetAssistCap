@@ -80,33 +80,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
  */
             
             
-            count =  readAndLoginFromFirebase(username: uname.text!, password: pass.text!)
-            print(count)
+            readAndLoginFromFirebase(username: uname.text!, password: pass.text!)
  
             //If both username and password are correct - segue
-        if(count == 2){
-            UserDefaults.standard.set(true, forKey: "IsUserLoggedIn")
-            self.performSegue(withIdentifier: "unwindtoHomePage", sender: nil)
-        
-            
-        }
-        else{//else username is incorrect
-                
-                let alertController = UIAlertController(title: "Incorrect Username", message: "Username that you have entered does not exist. Either register or try again", preferredStyle: .alert)
-                
-                let cancel = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
-                
-                let register = UIAlertAction(title: "Register", style: .default){
-                    (UIAlertAction) in
-                    
-                    self.performSegue(withIdentifier: "SegueToRegister", sender: nil)
-                }
-                
-                alertController.addAction(cancel)
-                alertController.addAction(register)
-                present(alertController,animated: true)
-                
-        }
+
         
         }
         
@@ -141,12 +118,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     //Function to read all People from firebase, choose the person with right username and  - Ryan
-    func readAndLoginFromFirebase(username : String, password : String) -> Int{
+    func readAndLoginFromFirebase(username : String, password : String){
         var rootRef: DatabaseReference!
         
         print("Reading from Database")
         //mainDelegate.people.removeAll()
-        var count = 0
         //Root of Data
         rootRef = Database.database().reference()
         
@@ -154,14 +130,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let accRef = rootRef.child("Accounts")
         accRef.observeSingleEvent(of: .value, with: { snapshot in
             
+
+            
             guard let value = snapshot.value as? [String: Any] else {
                 return
             }
             
+            var userCountInTotal = value.keys.count
+            var userCountNoMatch = 0
+            
             //Every Key in Accounts
             for key in value.keys {
                 
-                //Every child in Account
+                
+                //Every child in Account in this one time
                 accRef.child(key).observeSingleEvent(of: .value, with: {
                     snapshot in
                     
@@ -172,7 +154,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                             String(describing: passWord) != "Not There" {
                             print("\(userName) | \(passWord)")
                             
-                            if(count != 2){
                                 if(username == "\(userName)"){
                                     print("User: \(username)")
                                     let md5Data = self.MD5(string:"\(username)" + password)
@@ -185,12 +166,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                     
                                     if(password == "\(passWord)"){
                                         
-                                        print("Success")
+                                        print("Password Success")
                                         self.mainDelegate.loggedOnID =  username
                                         self.mainDelegate.loadCalendarAndTable = 0
-                                        count = 2
+                                        UserDefaults.standard.set(true, forKey: "IsUserLoggedIn")
+                                        self.performSegue(withIdentifier: "unwindtoHomePage", sender: nil)
                                     }else{
-                                        //print("Success")
+                                        
+                                        print("Password Failed")
                                         //Incorrect password
                                         let alertController = UIAlertController(title: "Incorrect Password!", message: "Please enter correct password" , preferredStyle: .alert)
                                         
@@ -201,20 +184,61 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                        self.present(alertController,animated: true)
                                     }
                                 }else{
-                                    count = 1
+                                    //Usernaem doesn't match for this user
+                                    userCountNoMatch = userCountNoMatch + 1
+                                    /*
+                                    let alertController = UIAlertController(title: "Incorrect Username", message: "Username that you have entered does not exist. Either register or try again", preferredStyle: .alert)
+                                    
+                                    let cancel = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
+                                    
+                                    let register = UIAlertAction(title: "Register", style: .default){
+                                        (UIAlertAction) in
+                                        
+                                        self.performSegue(withIdentifier: "SegueToRegister", sender: nil)
+                                    }
+                                    
+                                    alertController.addAction(cancel)
+                                    alertController.addAction(register)
+                                    self.present(alertController,animated: true)
+ */
                                 }
-                            }
-                          
+                            
+                            
                         
+                        }else{
+                        //Username and Password Not Extracted
+                            userCountNoMatch = userCountNoMatch + 1
                         }
                     }
                     
+                    if(userCountNoMatch == userCountInTotal){
+                        print("User Doesn't Match")
+                        
+                        let alertController = UIAlertController(title: "Incorrect Username", message: "Username that you have entered does not exist. Either register or try again", preferredStyle: .alert)
+                        
+                        let cancel = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
+                        
+                        let register = UIAlertAction(title: "Register", style: .default){
+                            (UIAlertAction) in
+                            
+                            self.performSegue(withIdentifier: "SegueToRegister", sender: nil)
+                        }
+                        
+                        alertController.addAction(cancel)
+                        alertController.addAction(register)
+                        self.present(alertController,animated: true)
+                        
+                    }
+                    
                 })
-                
+                //After Every Account
             }
-         
+ 
         })
-        return count
+        
+        
+        
+        
     }
     
     
