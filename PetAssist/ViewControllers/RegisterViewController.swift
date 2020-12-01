@@ -125,6 +125,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         let childAccRef = accRef.childByAutoId()
         
+        let pass = tfConfirmPassword.text!.md5()
+        
         let accKeyValue = ["AccountID" : childAccRef.key!,
                              "Address" : "",
                              "DogAge" : "",
@@ -133,7 +135,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
                              "Email" : tfEmail.text!,
                              "FirstName" : tfName.text!,
                              "LastName" : tfName.text!,
-                             "Password" : tfConfirmPassword.text!,
+                             "Password" : pass!,
                              "Username" : tfUsername.text!] as [String : Any]
         
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
