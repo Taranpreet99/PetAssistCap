@@ -25,7 +25,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CC7831B2-5AE3-4937-B9A0-0A9E9AD91E71"
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PetAssist/ViewControllers/RegisterViewController.swift"
@@ -34,22 +34,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "68"
             endingLineNumber = "68"
-            landmarkName = "addPerson(sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "EC42310D-7F2C-43FE-9B65-A7B067BE6B67"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PetAssist/ViewControllers/RegisterViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
             landmarkName = "addPerson(sender:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -40,6 +40,9 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         //Alert if user is not logged in
        // if appDelegate.loggedOnID == "-1" {
         if(UserDefaults.standard.bool(forKey: "IsUserLoggedIn") == false){
+            
+            appDelegate.events.removeAll()
+            reloadCalendarViewContoller()
             //Alert
             let alertController = UIAlertController(title: "Not Logged In", message: "Please log in to use calendar." , preferredStyle: .alert)
             let cancel = UIAlertAction(title: "OK", style: .cancel, handler: nil)
