@@ -81,7 +81,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
             
             
     */
-                addAccounttoFirebase()
+            CheckAndAddInFirebase(username: tfUsername.text!)
+                //addAccounttoFirebase()
             
         }else{
             let alertController = UIAlertController(title: "Password Does not match", message: "Please make sure you enter same password in both fields", preferredStyle: .alert)
@@ -125,17 +126,19 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
         let childAccRef = accRef.childByAutoId()
         
-        let pass = tfConfirmPassword.text!.md5()
+        var pass = tfConfirmPassword.text! + tfUsername.text!.lowercased()
+        pass = pass.md5()
         
         let accKeyValue = ["AccountID" : childAccRef.key!,
-                             "Address" : "",
-                             "DogAge" : "",
-                             "DogGender" : "",
-                             "DogName" : "",
+                           "Address" : address.text ?? "",
+                           "DogAge" : dogDOB.text ?? "",
+                           "DogBreed" : dogBreed.text ?? "",
+                           "DogGender" : dogGender.text ?? "",
+                           "DogName" : dogName.text ?? "",
                              "Email" : tfEmail.text!,
                              "FirstName" : tfName.text!,
-                             "LastName" : tfName.text!,
-                             "Password" : pass!,
+                             "LastName" : tfLastName.text!,
+                             "Password" : pass,
                              "Username" : tfUsername.text!] as [String : Any]
         
         let mainDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -167,6 +170,98 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         present(alertController,animated: true)
     }
    
+    
+    
+    
+    
+    
+    
+    //Function to read all People from firebase, Check if username already exist - Ryan
+    func CheckAndAddInFirebase(username : String){
+           var rootRef: DatabaseReference!
+           print("Reading from Database")
+           //mainDelegate.people.removeAll()
+           //Root of Data
+           rootRef = Database.database().reference()
+           
+           //Child of Root, Accounts
+           let accRef = rootRef.child("Accounts")
+           accRef.observeSingleEvent(of: .value, with: { snapshot in
+               
+
+               
+               guard let value = snapshot.value as? [String: Any] else {
+                   return
+               }
+               
+               var userCountInTotal = value.keys.count
+               var userCountNoMatch = 0
+
+               //Every Key in Accounts
+               for key in value.keys {
+                   
+                   
+                   //Every child in Account in this one time
+                   accRef.child(key).observeSingleEvent(of: .value, with: {
+                       snapshot in
+                       
+                       if let accDict = snapshot.value as? [String:Any] {
+                           let userName = "\(accDict["Username"] ?? "")"
+                           
+                           if String(describing: userName) != ""{
+                           
+                              
+                               
+                                   if(username == "\(userName)"){
+                                    //Print Message User Already Exist
+                                    let alertController = UIAlertController(title: "Username Exist", message: "Username already exist. Try another username", preferredStyle: .alert)
+                                    
+                                    let cancel = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
+                                    
+                                    alertController.addAction(cancel)
+                                    self.present(alertController,animated: true)
+                                   }else{
+                                     userCountNoMatch = userCountNoMatch + 1
+                                   }
+                               
+                               
+                           
+                           }else{
+                           //Username and Password Not Extracted
+                               userCountNoMatch = userCountNoMatch + 1
+                           }
+                       }
+                       
+                       if(userCountNoMatch == userCountInTotal){
+                           print("User Doesn't Match")
+                           //Function to Add Account
+                            self.addAccounttoFirebase()
+                           
+                       }
+                       
+                   })
+                   //After Every Account
+               }
+    
+           })
+           
+           
+           
+           
+       }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
 }
 

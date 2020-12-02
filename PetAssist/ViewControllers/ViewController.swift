@@ -168,7 +168,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                     combined = combined.md5()!
                                     
                                     //print(password)
-                                    //print(combined)
+                                    print("Check \(userName) :" +  combined)
                                     
                                     if(passWord == combined){
                                         
