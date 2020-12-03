@@ -32,6 +32,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
     //Events for the date
     var eventsForDate = [Event]()
     
+    //To Fix the delete event bug
+    @IBAction func unwindToCalendarVC(sender : UIStoryboardSegue){
+        
+        reloadCalendarViewContoller()
+    }
 
     
     override func viewWillAppear(_ animated: Bool) {

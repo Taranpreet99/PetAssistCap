@@ -88,8 +88,6 @@ class CalEventsViewController: UIViewController {
 
         
 
-        
-
         //Add Event in SQLLite Database
         //Empty fields validation
         if(eventTitleText.text == "" || mystartDatePicker.date > myendDatePicker.date){
@@ -249,7 +247,7 @@ class CalEventsViewController: UIViewController {
         appDelegate.loadCalendarAndTable = 1
         
         //Go back to previous view controller
-           _ = navigationController?.popViewController(animated: true)
+         //  _ = navigationController?.popViewController(animated: true)
            
     }
     
@@ -271,6 +269,10 @@ class CalEventsViewController: UIViewController {
             print("Data could not be removed: \(error).")
           } else {
             print("Data removed successfully!")
+            
+            //Go back to previous VC
+            //To fix the delete event bug
+            self.performSegue(withIdentifier: "unwindToCalendarVC", sender: nil)
           }
         }
         
