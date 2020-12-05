@@ -145,11 +145,11 @@ class CalendarViewController: UIViewController,FSCalendarDelegate, FSCalendarDat
         return eventCount
     }
     
-    //Function to read events from firebase
+    //Function to read events from firebase with specific username - Ryan
     func readEventsFromFirebaseWithUsername(username: String){
         var rootRef: DatabaseReference!
 
-        var eventCount = 0
+        var eventCount = 0 //Debug Purposes
 
         //Root of Data
         rootRef = Database.database().reference()
