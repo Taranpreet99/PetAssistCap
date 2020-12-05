@@ -195,21 +195,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                                 }else{
                                     //Usernaem doesn't match for this user
                                     userCountNoMatch = userCountNoMatch + 1
-                                    /*
-                                    let alertController = UIAlertController(title: "Incorrect Username", message: "Username that you have entered does not exist. Either register or try again", preferredStyle: .alert)
-                                    
-                                    let cancel = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
-                                    
-                                    let register = UIAlertAction(title: "Register", style: .default){
-                                        (UIAlertAction) in
-                                        
-                                        self.performSegue(withIdentifier: "SegueToRegister", sender: nil)
-                                    }
-                                    
-                                    alertController.addAction(cancel)
-                                    alertController.addAction(register)
-                                    self.present(alertController,animated: true)
- */
+
                                 }
                             
                             
